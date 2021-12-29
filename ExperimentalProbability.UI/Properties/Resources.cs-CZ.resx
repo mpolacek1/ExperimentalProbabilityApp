@@ -130,7 +130,7 @@
     <value>Tento jev je pravdivý pokud všechny tři vytažené kuličky mají jinou barvu.</value>
   </data>
   <data name="Description_BagOfColoredBalls_Condition_Second" xml:space="preserve">
-    <value>Tento jev je pravdivý pokud všechny tři vytažené kuličky mají jinou barvu.</value>
+    <value>Tento jev je pravdivý pokud všechny tři vytažené kuličky mají stejnou barvu.</value>
   </data>
   <data name="Description_DiceRoll" xml:space="preserve">
     <value>Tento typ kalkulace pracuje s šestistrannou kostkou.</value>
