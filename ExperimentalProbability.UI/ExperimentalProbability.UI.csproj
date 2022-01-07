@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <StartupObject>ExperimentalProbability.UI.App</StartupObject>
     <PlatformTarget>AnyCPU</PlatformTarget>
