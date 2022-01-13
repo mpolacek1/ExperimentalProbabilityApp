@@ -154,26 +154,44 @@ namespace ExperimentalProbability.UI
             }
         }
 
-        private static string GetCurrentItemText(int selectedType) => selectedType switch
+        private static string GetCurrentItemText(int selectedType)
         {
-            0 => Properties.Resources.Text_ColoredBalls_Color,
-            1 => Properties.Resources.Text_Dice_Side,
-            _ => throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}"),
-        };
+            switch (selectedType)
+	        {
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}");
+                case 0:
+                    return Properties.Resources.Text_ColoredBalls_Color;
+                case 1:
+                    return Properties.Resources.Text_Dice_Side;
+            };
+        }
 
-        private static string GetCurrentSelectionText(int selectedType) => selectedType switch
+        private static string GetCurrentSelectionText(int selectedType)
         {
-            0 => Properties.Resources.Text_Selection_ColoredBalls_Color,
-            1 => Properties.Resources.Text_Selection_Dice_Side,
-            _ => throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}"),
-        };
+            switch (selectedType)
+	        {
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}");
+                case 0:
+                    return Properties.Resources.Text_Selection_ColoredBalls_Color;
+                case 1:
+                    return Properties.Resources.Text_Selection_Dice_Side;
+            };
+        }
 
-        private IConvertible[] GetCurrentItemsSource(int selectedType) => selectedType switch
+        private IConvertible[] GetCurrentItemsSource(int selectedType)
         {
-            0 => GetColoredBallsItemSource(),
-            1 => GetDiceItemSource(int.TryParse(Pool_Size.Text, out int numberOfSides) ? numberOfSides : 0),
-            _ => throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}"),
-        };
+            switch (selectedType)
+	        {
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}");
+                case 0:
+                    return GetColoredBallsItemSource();
+                case 1:
+                    return GetDiceItemSource(int.TryParse(Pool_Size.Text, out int numberOfSides) ? numberOfSides : 0);
+            };
+        }
 
         private IConvertible[] GetColoredBallsItemSource()
         {
