@@ -1,6 +1,9 @@
 ﻿using ExperimentalProbability.Calculations.Models;
 using ExperimentalProbability.Calculations.Types;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,150 +14,253 @@ namespace ExperimentalProbability.UI
 {
     public partial class MainWindow : Window
     {
-        private readonly string[] Types = new string[3]
+        private readonly string[] Types = new string[2]
         {
-            Properties.Resources.Type_Empty,
-            Properties.Resources.Type_BagOfColoredBalls,
-            Properties.Resources.Type_DiceRoll,
+            Properties.Resources.Type_ColoredBalls,
+            Properties.Resources.Type_Dice,
         };
 
-        private readonly string[] Empty_Conditions = new string[1]
+        private readonly string[] Colors = new string[9]
         {
-            Properties.Resources.Condition_NotAvailable,
-        };
-
-        private readonly string[] BagOfColoredBalls_Conditions = new string[2]
-        {
-            Properties.Resources.BagOfColoredBalls_Condition_First,
-            Properties.Resources.BagOfColoredBalls_Condition_Second,
-        };
-
-        private readonly string[] DiceRoll_Conditions = new string[2]
-        {
-            Properties.Resources.DiceRoll_Condition_First,
-            Properties.Resources.DiceRoll_Condition_Second,
+            Properties.Resources.Color_Black,
+            Properties.Resources.Color_Brown,
+            Properties.Resources.Color_White,
+            Properties.Resources.Color_Red,
+            Properties.Resources.Color_Orange,
+            Properties.Resources.Color_Yellow,
+            Properties.Resources.Color_Green,
+            Properties.Resources.Color_Blue,
+            Properties.Resources.Color_Violet,
         };
 
         public MainWindow()
         {
             InitializeComponent();
-            UpdateControlsContent();
         }
 
-        private void UpdateControlsContent()
+        private void Window_Activated(object sender, EventArgs e)
         {
-            Header_Settings.Text = Properties.Resources.Header_Settings;
-            Text_Type.Text = Properties.Resources.Text_Type;
-            Box_Types.ItemsSource = Types;
-            Text_Condition.Text = Properties.Resources.Text_Condition;
-            Text_Simulations.Text = Properties.Resources.Text_Simulations;
-            NumberOfSimulations.Text = Properties.Resources.Simulations_Default;
-
-            Header_Description.Text = Properties.Resources.Header_Description;
-            Header_Description_Type.Text = Properties.Resources.Header_Description_Type;
-            Header_Description_Condition.Text = Properties.Resources.Header_Description_Condition;
-
-            Header_Results.Text = Properties.Resources.Header_Results;
-
+            Title = Properties.Resources.MainWindow_Title;
+            UpdateCalculationSettingsControls();
             Button_Run.Content = Properties.Resources.Button_Run;
         }
 
-        private void Box_Types_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void UpdateCalculationSettingsControls()
         {
-            string[] itemsSource = Empty_Conditions;
-            string descriptionType = "";
-            bool buttonEnabled = false;
+            Header1_Settings_Calculation.Text = Properties.Resources.Header1_Settings_Calculation;
+            Text_Simulations.Text = Properties.Resources.Text_Simulations;
+            Simulations.Text = Properties.Resources.Default_Simulations;
 
-            switch (Box_Types.SelectedIndex)
-            {
-                case 1:
-                    itemsSource = BagOfColoredBalls_Conditions;
-                    descriptionType = Properties.Resources.Desription_BagOfColoredBalls;
-                    buttonEnabled = true;
-                    break;
-                case 2:
-                    itemsSource = DiceRoll_Conditions;
-                    descriptionType = Properties.Resources.Description_DiceRoll;
-                    buttonEnabled = true;
-                    break;
-            }
+            Header2_Settings_Type.Text = Properties.Resources.Header2_Settings_Type;
+            Selection_Type.Text = Properties.Resources.Text_Selection_Type;
+            Selection_Type.ItemsSource = Types;
 
-            Description_Type.Text = descriptionType;
-            Box_Conditions.ItemsSource = itemsSource;
-            Box_Conditions.SelectedIndex = 0;
-            Button_Run.IsEnabled = buttonEnabled;
+            Header3_Settings_Pool.Text = Properties.Resources.Header3_Settings_Pool;
+
+            Header2_Settings_Condition.Text = Properties.Resources.Header2_Settings_Condition;
         }
 
-        private void Box_Conditions_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Selection_Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (Box_Types.SelectedIndex)
+            switch (Selection_Type.SelectedIndex)
             {
+                default:
+                    Button_Run.IsEnabled = false;
+                    Panel_Settings_Pool_ColoredBalls.Visibility = Visibility.Collapsed;
+                    break;
+                case 0:
+                    UpdateCurrentTypeControls(
+                        Properties.Resources.Text_Pool_Size_ColoredBalls,
+                        Properties.Resources.Default_Pool_Size_ColoredBalls,
+                        Visibility.Visible,
+                        new Thickness(0, 0, 1, 0),
+                        new Thickness(0, 0, 10, 0),
+                        Dock.Right,
+                        Properties.Resources.Text_Condition_ColoredBalls_NumberOfTakenItems,
+                        Properties.Resources.Default_Condition_ColoredBalls_NumberOfTakenItems
+                    );
+                    Text_ColoredBalls_NumberOfColors.Text = Properties.Resources.Text_ColoredBalls_NumberOfColors;
+                    ColoredBalls_NumberOfColors.Text = Properties.Resources.Default_ColoredBalls_NumberOfColors;
+                    ColoredBalls_Check_EqualNumberOfColors.Content = Properties.Resources.Text_ColoredBalls_Check_EqualNumberOfColors;
+                    ColoredBalls_Check_EqualNumberOfColors.IsChecked = false;
+                    break;
                 case 1:
-                    Description_Condition.Text = GetConditionDescription(new string[2]
+                    UpdateCurrentTypeControls(
+                        Properties.Resources.Text_Pool_Size_Dice,
+                        Properties.Resources.Default_Pool_Size_Dice,
+                        Visibility.Collapsed,
+                        new Thickness(0, 0, 0, 1),
+                        new Thickness(0),
+                        Dock.Bottom,
+                        Properties.Resources.Text_Condition_Dice_NumberOfTakenItems,
+                        Properties.Resources.Default_Condition_Dice_NumberOfTakenItems
+                    );
+                    break;
+            }
+        }
+
+        private void UpdateCurrentTypeControls(string poolText, string poolSize, Visibility visibilityColoredBalls, Thickness borderThickness, Thickness marginAndPadding, Dock dock, string textNumberOfTakenItems, string defaultNumberOfTakenItems)
+        {
+            Border_Settings_Pool_Size.Visibility = Visibility.Visible;
+            Text_Pool_Size.Text = poolText;
+            Pool_Size.Text = poolSize;
+            Panel_Settings_Pool_ColoredBalls.Visibility = visibilityColoredBalls;
+            Border_Settings_Type.BorderThickness = borderThickness;
+            Border_Settings_Type.Margin = marginAndPadding;
+            Border_Settings_Type.Padding = marginAndPadding;
+            DockPanel.SetDock(Panel_Settings_Condition, dock);
+            Panel_Settings_Condition.Visibility = Visibility.Visible;
+            Text_Condition_NumberOfTakenItems.Text = textNumberOfTakenItems;
+            Condition_NumberOfTakenItems.Text = defaultNumberOfTakenItems;
+            Button_Run.IsEnabled = true;
+        }
+
+        private void Pool_Size_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Selection_Type.SelectedIndex == 1)
+            {
+                GenerateSelectionChildrenForPanel(
+                    Condition_NumberOfTakenItems,
+                    Panel_Condition_Selection_Outcome,
+                    GetCurrentItemText(Selection_Type.SelectedIndex),
+                    GetCurrentSelectionText(Selection_Type.SelectedIndex),
+                    GetCurrentItemsSource(Selection_Type.SelectedIndex)
+                );
+            }
+        }
+
+        private void ColoredBalls_NumberOfColors_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            GenerateSelectionChildrenForPanel(
+                ColoredBalls_NumberOfColors,
+                Panel_ColoredBalls_Selection_Color,
+                Properties.Resources.Text_ColoredBalls_Color,
+                Properties.Resources.Text_Selection_ColoredBalls_Color,
+                Colors
+            );
+        }
+
+        private void Condition_NumberOfTakenItems_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Selection_Type.SelectedIndex != -1)
+            {
+                GenerateSelectionChildrenForPanel(
+                    Condition_NumberOfTakenItems,
+                    Panel_Condition_Selection_Outcome,
+                    GetCurrentItemText(Selection_Type.SelectedIndex),
+                    GetCurrentSelectionText(Selection_Type.SelectedIndex),
+                    GetCurrentItemsSource(Selection_Type.SelectedIndex)
+                );
+            }
+        }
+
+        private static string GetCurrentItemText(int selectedType) => selectedType switch
+        {
+            0 => Properties.Resources.Text_ColoredBalls_Color,
+            1 => Properties.Resources.Text_Dice_Side,
+            _ => throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}"),
+        };
+
+        private static string GetCurrentSelectionText(int selectedType) => selectedType switch
+        {
+            0 => Properties.Resources.Text_Selection_ColoredBalls_Color,
+            1 => Properties.Resources.Text_Selection_Dice_Side,
+            _ => throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}"),
+        };
+
+        private IConvertible[] GetCurrentItemsSource(int selectedType) => selectedType switch
+        {
+            0 => GetColoredBallsItemSource(),
+            1 => GetDiceItemSource(int.TryParse(Pool_Size.Text, out int numberOfSides) ? numberOfSides : 0),
+            _ => throw new ArgumentOutOfRangeException(nameof(selectedType), $"{selectedType}"),
+        };
+
+        private IConvertible[] GetColoredBallsItemSource()
+        {
+            var chosenColors = new List<IConvertible>();
+
+            foreach (StackPanel panelChild in Panel_ColoredBalls_Selection_Color.Children)
+            {
+                foreach (ComboBox child in panelChild.Children)
+                {
+                    if (chosenColors.Contains(Colors[child.SelectedIndex]) == false)
                     {
-                        Properties.Resources.Description_BagOfColoredBalls_Condition_First,
-                        Properties.Resources.Description_BagOfColoredBalls_Condition_Second,
-                    });
-                    break;
-                case 2:
-                    Description_Condition.Text = GetConditionDescription(new string[2]
+                        chosenColors.Add(Colors[child.SelectedIndex]);
+                    }
+                }
+            }
+
+            return chosenColors.ToArray();
+        }
+
+        private static IConvertible[] GetDiceItemSource(int numberOfSides)
+        {
+            var sides = new IConvertible[numberOfSides];
+
+            for (int i = 0; i < numberOfSides; i++)
+            {
+                sides[i] = i + 1;
+            }
+
+            return sides;
+        }
+
+        private static void GenerateSelectionChildrenForPanel(TextBox sender, Panel currentPanel, string itemText, string selectionText, IConvertible[] itemsSource)
+        {
+            currentPanel.Children.Clear();
+
+            if (sender.Text != string.Empty
+                && int.TryParse(sender.Text, out int numberOfItems) == true)
+            {
+                for (int i = 0; i < numberOfItems; i++)
+                {
+                    var builder = new StringBuilder(itemText);
+                    builder.Append(' ');
+                    builder.Append(i + 1);
+                    builder.Append(':');
+
+                    var textBlock = new TextBlock()
                     {
-                        Properties.Resources.Description_DiceRoll_Condition_First,
-                        Properties.Resources.Description_DiceRoll_Condition_Second,
-                    });
-                    break;
+                        Text = builder.ToString(),
+                        Margin = new Thickness(0, 0, 5, 0),
+                    };
+
+                    var comboBox = new ComboBox()
+                    {
+                        IsEditable = true,
+                        IsReadOnly = true,
+                        Text = selectionText,
+                        ItemsSource = itemsSource,
+                    };
+
+                    var stackPanel = new StackPanel()
+                    {
+                        Orientation = Orientation.Horizontal,
+                        Margin = new Thickness(0, 0, 0, 5),
+                    };
+                    stackPanel.Children.Add(textBlock);
+                    stackPanel.Children.Add(comboBox);
+
+                    currentPanel.Children.Add(stackPanel);
+                }
             }
         }
 
-        private string GetConditionDescription(string[] descriptions)
+        private void Button_Run_Click(object sender, RoutedEventArgs e)
         {
-            string description = descriptions[0];
 
-            if (Box_Conditions.SelectedIndex == 1)
-            {
-                description = descriptions[1];
-            }
-
-            return description;
+        }
+        
+        private static void DisplayResult(CalculationResultData result)
+        {
+            BuildResultText(Properties.Resources.Text_SimulationsRun, result.SimulationsRun);
+            BuildResultText(Properties.Resources.Text_ConditionsMet, result.ConditionsMet);
+            BuildResultText(Properties.Resources.Text_Probability, result.Probability);
         }
 
-        private async void Button_Run_Click(object sender, RoutedEventArgs e)
+        private static string BuildResultText(string text, IConvertible number)
         {
-            await DisplayResult(await RunCalculation(
-                new CalculationData(
-                    Box_Types.SelectedIndex,
-                    Box_Conditions.SelectedIndex,
-                    int.Parse(NumberOfSimulations.Text))));
-        }
-
-        private async Task<CalculationResultData> RunCalculation(CalculationData data)
-        {
-            IType calculation = null;
-
-            switch (data.Type)
-            {
-                case 1:
-                    calculation = new BagOfColoredBalls();
-                    break;
-                case 2:
-                    calculation = new DiceRoll(data.Condition);
-                    break;
-            }
-
-            return await calculation.Calculate(data.Condition, data.Simulations);
-        }
-
-        private async Task DisplayResult(CalculationResultData result)
-        {
-            Text_SimulationsRun.Text = await BuildResultText(Properties.Resources.Text_SimulationsRun, result.SimulationsRun);
-            Text_ConditionsMet.Text = await BuildResultText(Properties.Resources.Text_ConditionsMet, result.ConditionsMet);
-            Text_Probability.Text = await BuildResultText(Properties.Resources.Text_Probability, result.Probability);
-        }
-
-        private Task<string> BuildResultText(string text, IConvertible number)
-        {
-            StringBuilder builder = new StringBuilder();
-            builder.Append(text);
+            var builder = new StringBuilder(text);
             builder.Append(' ');
             builder.Append(number);
 
@@ -168,7 +274,7 @@ namespace ExperimentalProbability.UI
                 builder.Append("%.");
             }
 
-            return Task.FromResult(builder.ToString());
+            return builder.ToString();
         }
     }
 }
