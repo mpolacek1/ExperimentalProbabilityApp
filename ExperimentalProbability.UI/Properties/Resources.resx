@@ -117,62 +117,101 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BagOfColoredBalls_Condition_First" xml:space="preserve">
-    <value>Take three different balls in a row</value>
-  </data>
-  <data name="BagOfColoredBalls_Condition_Second" xml:space="preserve">
-    <value>Take three identical balls in a row</value>
-  </data>
   <data name="Button_Run" xml:space="preserve">
     <value>Run calculation</value>
+  </data>
+  <data name="ColoredBalls_Condition_First" xml:space="preserve">
+    <value>Take three different balls in a row</value>
+  </data>
+  <data name="Color_Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="Color_Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Color_Brown" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="Color_Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Color_Orange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="Color_Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Color_Violet" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="Color_White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="Color_Yellow" xml:space="preserve">
+    <value>Yellow</value>
   </data>
   <data name="Condition_NotAvailable" xml:space="preserve">
     <value>N/A</value>
   </data>
-  <data name="Description_BagOfColoredBalls_Condition_First" xml:space="preserve">
-    <value>This condition is true if all three of the taken balls are a different color.</value>
+  <data name="Default_ColoredBalls_NumberOfColors" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="Description_BagOfColoredBalls_Condition_Second" xml:space="preserve">
-    <value>This condition is true if all three of the taken balls are the same color.</value>
+  <data name="Default_Condition_ColoredBalls_NumberOfTakenItems" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="Description_DiceRoll" xml:space="preserve">
-    <value>This type of calculation works with a six-sided dice.</value>
+  <data name="Default_Condition_Dice_NumberOfTakenItems" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="Description_DiceRoll_Condition_First" xml:space="preserve">
-    <value>This condition is true if the dice is rolled once and the rolled side has the number six on it.</value>
+  <data name="Default_Pool_Size_ColoredBalls" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="Description_DiceRoll_Condition_Second" xml:space="preserve">
-    <value>This condition is true if the dice is rolled twice and both rolled sides have the number six on them.</value>
+  <data name="Default_Pool_Size_Dice" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="Desription_BagOfColoredBalls" xml:space="preserve">
-    <value>This type of calculation works with a bag filled with nine colored balls.</value>
+  <data name="Default_Simulations" xml:space="preserve">
+    <value>1000000</value>
   </data>
-  <data name="DiceRoll_Condition_First" xml:space="preserve">
+  <data name="Dice_Condition_First" xml:space="preserve">
     <value>Roll a six</value>
   </data>
-  <data name="DiceRoll_Condition_Second" xml:space="preserve">
-    <value>Roll two sixes in a row</value>
-  </data>
-  <data name="Header_Description" xml:space="preserve">
+  <data name="Header1_Description_Calculation" xml:space="preserve">
     <value>Calculation description</value>
   </data>
-  <data name="Header_Description_Condition" xml:space="preserve">
-    <value>Description of calculation condition:</value>
-  </data>
-  <data name="Header_Description_Type" xml:space="preserve">
-    <value>Description of calculation type:</value>
-  </data>
-  <data name="Header_Results" xml:space="preserve">
+  <data name="Header1_Results" xml:space="preserve">
     <value>Last calculation results</value>
   </data>
-  <data name="Header_Settings" xml:space="preserve">
+  <data name="Header1_Settings_Calculation" xml:space="preserve">
     <value>Calculation settings</value>
   </data>
-  <data name="Simulations_Default" xml:space="preserve">
-    <value>1000000</value>
+  <data name="Header2_Description_Condition" xml:space="preserve">
+    <value>Description of calculation condition:</value>
+  </data>
+  <data name="Header2_Description_Type" xml:space="preserve">
+    <value>Description of calculation type:</value>
+  </data>
+  <data name="Header2_Settings_Condition" xml:space="preserve">
+    <value>Condition settings</value>
+  </data>
+  <data name="Header2_Settings_Type" xml:space="preserve">
+    <value>Type settings</value>
+  </data>
+  <data name="Header3_Settings_Pool" xml:space="preserve">
+    <value>Pool settings</value>
+  </data>
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>Experimental Probability</value>
   </data>
   <data name="String_Times" xml:space="preserve">
     <value>times.</value>
+  </data>
+  <data name="Text_ColoredBalls_Check_EqualNumberOfColors" xml:space="preserve">
+    <value>Equal number of colors</value>
+  </data>
+  <data name="Text_ColoredBalls_Color" xml:space="preserve">
+    <value>Color number</value>
+  </data>
+  <data name="Text_ColoredBalls_NumberOfColors" xml:space="preserve">
+    <value>Number of colors:</value>
   </data>
   <data name="Text_Condition" xml:space="preserve">
     <value>Condition:</value>
@@ -180,8 +219,32 @@
   <data name="Text_ConditionsMet" xml:space="preserve">
     <value>Condition was met</value>
   </data>
+  <data name="Text_Condition_ColoredBalls_NumberOfTakenItems" xml:space="preserve">
+    <value>Number of taken balls:</value>
+  </data>
+  <data name="Text_Condition_Dice_NumberOfTakenItems" xml:space="preserve">
+    <value>Number of dice rolls:</value>
+  </data>
+  <data name="Text_Dice_Side" xml:space="preserve">
+    <value>Side number</value>
+  </data>
+  <data name="Text_Pool_Size_ColoredBalls" xml:space="preserve">
+    <value>Amount of balls:</value>
+  </data>
+  <data name="Text_Pool_Size_Dice" xml:space="preserve">
+    <value>Amount of sides:</value>
+  </data>
   <data name="Text_Probability" xml:space="preserve">
     <value>Probability of condition is</value>
+  </data>
+  <data name="Text_Selection_ColoredBalls_Color" xml:space="preserve">
+    <value>Choose a color</value>
+  </data>
+  <data name="Text_Selection_Dice_Side" xml:space="preserve">
+    <value>Choose a side</value>
+  </data>
+  <data name="Text_Selection_Type" xml:space="preserve">
+    <value>Choose a type</value>
   </data>
   <data name="Text_Simulations" xml:space="preserve">
     <value>Amount of simulations:</value>
@@ -189,16 +252,10 @@
   <data name="Text_SimulationsRun" xml:space="preserve">
     <value>Simulation ran</value>
   </data>
-  <data name="Text_Type" xml:space="preserve">
-    <value>Type:</value>
+  <data name="Type_ColoredBalls" xml:space="preserve">
+    <value>Pool: Colored balls</value>
   </data>
-  <data name="Type_BagOfColoredBalls" xml:space="preserve">
-    <value>Bag of colored balls</value>
-  </data>
-  <data name="Type_DiceRoll" xml:space="preserve">
-    <value>Dice roll</value>
-  </data>
-  <data name="Type_Empty" xml:space="preserve">
-    <value>None</value>
+  <data name="Type_Dice" xml:space="preserve">
+    <value>Pool: Dice</value>
   </data>
 </root>

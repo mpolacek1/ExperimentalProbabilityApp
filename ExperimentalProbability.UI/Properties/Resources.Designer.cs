@@ -61,29 +61,101 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Take three different balls in a row.
-        /// </summary>
-        internal static string BagOfColoredBalls_Condition_First {
-            get {
-                return ResourceManager.GetString("BagOfColoredBalls_Condition_First", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Take three identical balls in a row.
-        /// </summary>
-        internal static string BagOfColoredBalls_Condition_Second {
-            get {
-                return ResourceManager.GetString("BagOfColoredBalls_Condition_Second", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Run calculation.
         /// </summary>
         internal static string Button_Run {
             get {
                 return ResourceManager.GetString("Button_Run", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Black.
+        /// </summary>
+        internal static string Color_Black {
+            get {
+                return ResourceManager.GetString("Color_Black", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blue.
+        /// </summary>
+        internal static string Color_Blue {
+            get {
+                return ResourceManager.GetString("Color_Blue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brown.
+        /// </summary>
+        internal static string Color_Brown {
+            get {
+                return ResourceManager.GetString("Color_Brown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green.
+        /// </summary>
+        internal static string Color_Green {
+            get {
+                return ResourceManager.GetString("Color_Green", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orange.
+        /// </summary>
+        internal static string Color_Orange {
+            get {
+                return ResourceManager.GetString("Color_Orange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red.
+        /// </summary>
+        internal static string Color_Red {
+            get {
+                return ResourceManager.GetString("Color_Red", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violet.
+        /// </summary>
+        internal static string Color_Violet {
+            get {
+                return ResourceManager.GetString("Color_Violet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to White.
+        /// </summary>
+        internal static string Color_White {
+            get {
+                return ResourceManager.GetString("Color_White", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yellow.
+        /// </summary>
+        internal static string Color_Yellow {
+            get {
+                return ResourceManager.GetString("Color_Yellow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Take three different balls in a row.
+        /// </summary>
+        internal static string ColoredBalls_Condition_First {
+            get {
+                return ResourceManager.GetString("ColoredBalls_Condition_First", resourceCulture);
             }
         }
         
@@ -97,128 +169,146 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This condition is true if all three of the taken balls are a different color..
+        ///   Looks up a localized string similar to 3.
         /// </summary>
-        internal static string Description_BagOfColoredBalls_Condition_First {
+        internal static string Default_ColoredBalls_NumberOfColors {
             get {
-                return ResourceManager.GetString("Description_BagOfColoredBalls_Condition_First", resourceCulture);
+                return ResourceManager.GetString("Default_ColoredBalls_NumberOfColors", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This condition is true if all three of the taken balls are the same color..
+        ///   Looks up a localized string similar to 3.
         /// </summary>
-        internal static string Description_BagOfColoredBalls_Condition_Second {
+        internal static string Default_Condition_ColoredBalls_NumberOfTakenItems {
             get {
-                return ResourceManager.GetString("Description_BagOfColoredBalls_Condition_Second", resourceCulture);
+                return ResourceManager.GetString("Default_Condition_ColoredBalls_NumberOfTakenItems", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This type of calculation works with a six-sided dice..
+        ///   Looks up a localized string similar to 1.
         /// </summary>
-        internal static string Description_DiceRoll {
+        internal static string Default_Condition_Dice_NumberOfTakenItems {
             get {
-                return ResourceManager.GetString("Description_DiceRoll", resourceCulture);
+                return ResourceManager.GetString("Default_Condition_Dice_NumberOfTakenItems", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This condition is true if the dice is rolled once and the rolled side has the number six on it..
+        ///   Looks up a localized string similar to 9.
         /// </summary>
-        internal static string Description_DiceRoll_Condition_First {
+        internal static string Default_Pool_Size_ColoredBalls {
             get {
-                return ResourceManager.GetString("Description_DiceRoll_Condition_First", resourceCulture);
+                return ResourceManager.GetString("Default_Pool_Size_ColoredBalls", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This condition is true if the dice is rolled twice and both rolled sides have the number six on them..
+        ///   Looks up a localized string similar to 6.
         /// </summary>
-        internal static string Description_DiceRoll_Condition_Second {
+        internal static string Default_Pool_Size_Dice {
             get {
-                return ResourceManager.GetString("Description_DiceRoll_Condition_Second", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This type of calculation works with a bag filled with nine colored balls..
-        /// </summary>
-        internal static string Desription_BagOfColoredBalls {
-            get {
-                return ResourceManager.GetString("Desription_BagOfColoredBalls", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Roll a six.
-        /// </summary>
-        internal static string DiceRoll_Condition_First {
-            get {
-                return ResourceManager.GetString("DiceRoll_Condition_First", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Roll two sixes in a row.
-        /// </summary>
-        internal static string DiceRoll_Condition_Second {
-            get {
-                return ResourceManager.GetString("DiceRoll_Condition_Second", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Calculation description.
-        /// </summary>
-        internal static string Header_Description {
-            get {
-                return ResourceManager.GetString("Header_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description of calculation condition:.
-        /// </summary>
-        internal static string Header_Description_Condition {
-            get {
-                return ResourceManager.GetString("Header_Description_Condition", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description of calculation type:.
-        /// </summary>
-        internal static string Header_Description_Type {
-            get {
-                return ResourceManager.GetString("Header_Description_Type", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last calculation results.
-        /// </summary>
-        internal static string Header_Results {
-            get {
-                return ResourceManager.GetString("Header_Results", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Calculation settings.
-        /// </summary>
-        internal static string Header_Settings {
-            get {
-                return ResourceManager.GetString("Header_Settings", resourceCulture);
+                return ResourceManager.GetString("Default_Pool_Size_Dice", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 1000000.
         /// </summary>
-        internal static string Simulations_Default {
+        internal static string Default_Simulations {
             get {
-                return ResourceManager.GetString("Simulations_Default", resourceCulture);
+                return ResourceManager.GetString("Default_Simulations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roll a six.
+        /// </summary>
+        internal static string Dice_Condition_First {
+            get {
+                return ResourceManager.GetString("Dice_Condition_First", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculation description.
+        /// </summary>
+        internal static string Header1_Description_Calculation {
+            get {
+                return ResourceManager.GetString("Header1_Description_Calculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last calculation results.
+        /// </summary>
+        internal static string Header1_Results {
+            get {
+                return ResourceManager.GetString("Header1_Results", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculation settings.
+        /// </summary>
+        internal static string Header1_Settings_Calculation {
+            get {
+                return ResourceManager.GetString("Header1_Settings_Calculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description of calculation condition:.
+        /// </summary>
+        internal static string Header2_Description_Condition {
+            get {
+                return ResourceManager.GetString("Header2_Description_Condition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description of calculation type:.
+        /// </summary>
+        internal static string Header2_Description_Type {
+            get {
+                return ResourceManager.GetString("Header2_Description_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Condition settings.
+        /// </summary>
+        internal static string Header2_Settings_Condition {
+            get {
+                return ResourceManager.GetString("Header2_Settings_Condition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type settings.
+        /// </summary>
+        internal static string Header2_Settings_Type {
+            get {
+                return ResourceManager.GetString("Header2_Settings_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pool settings.
+        /// </summary>
+        internal static string Header3_Settings_Pool {
+            get {
+                return ResourceManager.GetString("Header3_Settings_Pool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Experimental Probability.
+        /// </summary>
+        internal static string MainWindow_Title {
+            get {
+                return ResourceManager.GetString("MainWindow_Title", resourceCulture);
             }
         }
         
@@ -232,11 +322,56 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Equal number of colors.
+        /// </summary>
+        internal static string Text_ColoredBalls_Check_EqualNumberOfColors {
+            get {
+                return ResourceManager.GetString("Text_ColoredBalls_Check_EqualNumberOfColors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color number.
+        /// </summary>
+        internal static string Text_ColoredBalls_Color {
+            get {
+                return ResourceManager.GetString("Text_ColoredBalls_Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of colors:.
+        /// </summary>
+        internal static string Text_ColoredBalls_NumberOfColors {
+            get {
+                return ResourceManager.GetString("Text_ColoredBalls_NumberOfColors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Condition:.
         /// </summary>
         internal static string Text_Condition {
             get {
                 return ResourceManager.GetString("Text_Condition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of taken balls:.
+        /// </summary>
+        internal static string Text_Condition_ColoredBalls_NumberOfTakenItems {
+            get {
+                return ResourceManager.GetString("Text_Condition_ColoredBalls_NumberOfTakenItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of dice rolls:.
+        /// </summary>
+        internal static string Text_Condition_Dice_NumberOfTakenItems {
+            get {
+                return ResourceManager.GetString("Text_Condition_Dice_NumberOfTakenItems", resourceCulture);
             }
         }
         
@@ -250,11 +385,65 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Side number.
+        /// </summary>
+        internal static string Text_Dice_Side {
+            get {
+                return ResourceManager.GetString("Text_Dice_Side", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of balls:.
+        /// </summary>
+        internal static string Text_Pool_Size_ColoredBalls {
+            get {
+                return ResourceManager.GetString("Text_Pool_Size_ColoredBalls", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of sides:.
+        /// </summary>
+        internal static string Text_Pool_Size_Dice {
+            get {
+                return ResourceManager.GetString("Text_Pool_Size_Dice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Probability of condition is.
         /// </summary>
         internal static string Text_Probability {
             get {
                 return ResourceManager.GetString("Text_Probability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a color.
+        /// </summary>
+        internal static string Text_Selection_ColoredBalls_Color {
+            get {
+                return ResourceManager.GetString("Text_Selection_ColoredBalls_Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a side.
+        /// </summary>
+        internal static string Text_Selection_Dice_Side {
+            get {
+                return ResourceManager.GetString("Text_Selection_Dice_Side", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a type.
+        /// </summary>
+        internal static string Text_Selection_Type {
+            get {
+                return ResourceManager.GetString("Text_Selection_Type", resourceCulture);
             }
         }
         
@@ -277,38 +466,20 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type:.
+        ///   Looks up a localized string similar to Pool: Colored balls.
         /// </summary>
-        internal static string Text_Type {
+        internal static string Type_ColoredBalls {
             get {
-                return ResourceManager.GetString("Text_Type", resourceCulture);
+                return ResourceManager.GetString("Type_ColoredBalls", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bag of colored balls.
+        ///   Looks up a localized string similar to Pool: Dice.
         /// </summary>
-        internal static string Type_BagOfColoredBalls {
+        internal static string Type_Dice {
             get {
-                return ResourceManager.GetString("Type_BagOfColoredBalls", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dice roll.
-        /// </summary>
-        internal static string Type_DiceRoll {
-            get {
-                return ResourceManager.GetString("Type_DiceRoll", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to None.
-        /// </summary>
-        internal static string Type_Empty {
-            get {
-                return ResourceManager.GetString("Type_Empty", resourceCulture);
+                return ResourceManager.GetString("Type_Dice", resourceCulture);
             }
         }
     }
