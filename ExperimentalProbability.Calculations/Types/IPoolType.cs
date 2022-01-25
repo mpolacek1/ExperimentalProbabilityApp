@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ExperimentalProbability.Calculations.Types
 {
-    public interface ICalculationType
+    public interface IPoolType
     {
         CalculationResultData Calculate(int condition, int simulations);
 
-        double GetProbability(int conditionsMet, int simulationsRun);
+        double GetResult(int conditionsMet, int simulationsRun);
     }
 }

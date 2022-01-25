@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExperimentalProbability.Calculations.Types
 {
-    public class Pool_Dice : ICalculationType
+    public class Pool_Dice : IPoolType
     {
         private int Repeats { get; set; }
 
@@ -45,7 +45,7 @@ namespace ExperimentalProbability.Calculations.Types
                 }
             }
 
-            return new CalculationResultData(simulationsRun, conditionsMet, GetProbability(conditionsMet, simulationsRun));
+            return new CalculationResultData(simulationsRun, conditionsMet, GetResult(conditionsMet, simulationsRun));
         }
 
         private List<int> RollDice(int repeats)
@@ -84,7 +84,7 @@ namespace ExperimentalProbability.Calculations.Types
                 && sides[1].Equals(6);
         }
 
-        public double GetProbability(int conditionsMet, int simulationsRun)
+        public double GetResult(int conditionsMet, int simulationsRun)
         {
             return Math.Round(Convert.ToSingle(conditionsMet) / Convert.ToSingle(simulationsRun) * 100, 2);
         }

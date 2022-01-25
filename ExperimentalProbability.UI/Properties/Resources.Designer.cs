@@ -160,11 +160,11 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to N/A.
+        ///   Looks up a localized string similar to 1.
         /// </summary>
-        internal static string Condition_NotAvailable {
+        internal static string Default_ColoredBalls_ColorNumber {
             get {
-                return ResourceManager.GetString("Condition_NotAvailable", resourceCulture);
+                return ResourceManager.GetString("Default_ColoredBalls_ColorNumber", resourceCulture);
             }
         }
         
@@ -214,6 +214,33 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose a color.
+        /// </summary>
+        internal static string Default_Selection_ColoredBalls {
+            get {
+                return ResourceManager.GetString("Default_Selection_ColoredBalls", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a side.
+        /// </summary>
+        internal static string Default_Selection_Dice {
+            get {
+                return ResourceManager.GetString("Default_Selection_Dice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a type.
+        /// </summary>
+        internal static string Default_Selection_Type {
+            get {
+                return ResourceManager.GetString("Default_Selection_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1000000.
         /// </summary>
         internal static string Default_Simulations {
@@ -232,47 +259,11 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Calculation description.
-        /// </summary>
-        internal static string Header1_Description_Calculation {
-            get {
-                return ResourceManager.GetString("Header1_Description_Calculation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last calculation results.
-        /// </summary>
-        internal static string Header1_Results {
-            get {
-                return ResourceManager.GetString("Header1_Results", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Calculation settings.
         /// </summary>
         internal static string Header1_Settings_Calculation {
             get {
                 return ResourceManager.GetString("Header1_Settings_Calculation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description of calculation condition:.
-        /// </summary>
-        internal static string Header2_Description_Condition {
-            get {
-                return ResourceManager.GetString("Header2_Description_Condition", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description of calculation type:.
-        /// </summary>
-        internal static string Header2_Description_Type {
-            get {
-                return ResourceManager.GetString("Header2_Description_Type", resourceCulture);
             }
         }
         
@@ -295,20 +286,20 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pool settings.
-        /// </summary>
-        internal static string Header3_Settings_Pool {
-            get {
-                return ResourceManager.GetString("Header3_Settings_Pool", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Experimental Probability.
         /// </summary>
         internal static string MainWindow_Title {
             get {
                 return ResourceManager.GetString("MainWindow_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        internal static string NotAvailable {
+            get {
+                return ResourceManager.GetString("NotAvailable", resourceCulture);
             }
         }
         
@@ -324,18 +315,27 @@ namespace ExperimentalProbability.UI.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Equal number of colors.
         /// </summary>
-        internal static string Text_ColoredBalls_Check_EqualNumberOfColors {
+        internal static string Text_Check_ColoredBalls_EqualNumberOfColors {
             get {
-                return ResourceManager.GetString("Text_ColoredBalls_Check_EqualNumberOfColors", resourceCulture);
+                return ResourceManager.GetString("Text_Check_ColoredBalls_EqualNumberOfColors", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Color number.
+        ///   Looks up a localized string similar to Select colors manually.
         /// </summary>
-        internal static string Text_ColoredBalls_Color {
+        internal static string Text_Check_ColoredBalls_ManualColorSelection {
             get {
-                return ResourceManager.GetString("Text_ColoredBalls_Color", resourceCulture);
+                return ResourceManager.GetString("Text_Check_ColoredBalls_ManualColorSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color n: .
+        /// </summary>
+        internal static string Text_ColoredBalls_ColorNumber {
+            get {
+                return ResourceManager.GetString("Text_ColoredBalls_ColorNumber", resourceCulture);
             }
         }
         
@@ -394,7 +394,7 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Amount of balls:.
+        ///   Looks up a localized string similar to Number of balls:.
         /// </summary>
         internal static string Text_Pool_Size_ColoredBalls {
             get {
@@ -403,7 +403,7 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Amount of sides:.
+        ///   Looks up a localized string similar to Number of sides:.
         /// </summary>
         internal static string Text_Pool_Size_Dice {
             get {
@@ -421,25 +421,7 @@ namespace ExperimentalProbability.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a color.
-        /// </summary>
-        internal static string Text_Selection_ColoredBalls_Color {
-            get {
-                return ResourceManager.GetString("Text_Selection_ColoredBalls_Color", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Choose a side.
-        /// </summary>
-        internal static string Text_Selection_Dice_Side {
-            get {
-                return ResourceManager.GetString("Text_Selection_Dice_Side", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Choose a type.
+        ///   Looks up a localized string similar to Type:.
         /// </summary>
         internal static string Text_Selection_Type {
             get {
