@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties"
+        xmlns:local="clr-namespace:ExperimentalProbability.UI"
         mc:Ignorable="d"
         Background="#181818"
         Width="1280"
@@ -12,7 +14,8 @@
         MinHeight="600"
         FontSize="16"
         Foreground="White"
-        Activated="Window_Activated">
+        Title="{x:Static resx:Resources.MainWindow_Title}"
+        DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}" Activated="Window_Activated">
 
     <DockPanel LastChildFill="False"
                Margin="10">
@@ -23,6 +26,7 @@
             <Button x:Name="Button_Run"
                     DockPanel.Dock="Right"
                     IsEnabled="False"
+                    Content="{x:Static resx:Resources.Button_Run}"
                     Click="Button_Run_Click"/>
             
         </DockPanel>
@@ -33,106 +37,103 @@
                 BorderThickness="0,0,0,3">
             
             <StackPanel Margin="0,0,0,5">
-                
-                <TextBlock x:Name="Header1_Settings_Calculation"
-                           DockPanel.Dock="Top"
+
+                <TextBlock DockPanel.Dock="Top"
                            Margin="0,0,0,5"
                            FontSize="22"
-                           FontWeight="Bold">
-                </TextBlock>
-                
+                           FontWeight="Bold"
+                           Text="{x:Static resx:Resources.Header1_Settings_Calculation}"/>
+
                 <StackPanel DockPanel.Dock="Top"
                             Orientation="Horizontal"
                             Margin="0,0,0,5">
                     
-                    <TextBlock x:Name="Text_Selection_Type"
-                                        Margin="0,0,5,0"/>
-                    
+                    <TextBlock Margin="0,0,5,0"
+                               Text="{x:Static resx:Resources.Text_Selection_Type}"/>
+
                     <ComboBox x:Name="Selection_Type"
-                            Margin="0,0,10,0"
-                            IsEditable="True"
-                            IsReadOnly="True"
-                            SelectionChanged="Selection_Type_SelectionChanged"/>
+                              Margin="0,0,10,0"
+                              IsEditable="True"
+                              IsReadOnly="True"
+                              Text="{x:Static resx:Resources.Default_Selection_Type}"
+                              SelectionChanged="Selection_Type_SelectionChanged"/>
                     
-                    <TextBlock x:Name="Text_Simulations"
-                                   Margin="0,0,5,0"/>
+                    <TextBlock Margin="0,0,5,0"
+                               Text="{x:Static resx:Resources.Text_Simulations}"/>
                     
                     <TextBox x:Name="Simulations"
                              Width="85"
                              TextAlignment="Right"
                              MaxLength="7"
-                             MaxLines="1"/>
+                             MaxLines="1"
+                             Text="{x:Static resx:Resources.Default_Simulations}"/>
                     
                 </StackPanel>
 
-                <StackPanel>
-                    
-                    <TextBlock x:Name="Header2_Settings_Type"
-                            Margin="0,0,0,5"
-                            FontWeight="Bold"
-                               Visibility="Collapsed"/>
+                <StackPanel x:Name="Panel_Settings_Type"
+                            Visibility="Collapsed">
+
+                    <TextBlock Margin="0,0,0,5"
+                               FontWeight="Bold"
+                               Text="{x:Static resx:Resources.Header2_Settings_Type}"/>
 
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,0,0,5">
 
                         <TextBlock x:Name="Text_Pool_Size"
-                                Margin="0,0,5,0"
-                                   Visibility="Collapsed"/>
+                                   Margin="0,0,5,0"/>
 
                         <TextBox x:Name="Pool_Size"
                                 Width="30"
                                  Margin="0,0,10,0"
                                 TextAlignment="Right"
                                 MaxLength="2"
-                                MaxLines="1"
-                                 Visibility="Collapsed"/>
+                                MaxLines="1"/>
 
                         <TextBlock x:Name="Text_ColoredBalls_NumberOfColors"
-                                Margin="0,0,5,0"
+                                   Margin="0,0,5,0"
                                    Visibility="Collapsed"/>
 
                         <TextBox x:Name="ColoredBalls_NumberOfColors"
-                                Width="20"
-                                TextAlignment="Right"
-                                MaxLength="1"
-                                MaxLines="1"
+                                 Width="20"
+                                 TextAlignment="Right"
+                                 MaxLength="1"
+                                 MaxLines="1"
                                  Visibility="Collapsed"
                                  TextChanged="ColoredBalls_NumberOfColors_TextChanged"/>
 
                     </StackPanel>
 
                     <WrapPanel x:Name="Panel_ColoredBalls_Selection_Color"
-                                Orientation="Horizontal"
+                               Orientation="Horizontal"
                                Visibility="Collapsed"/>
 
                 </StackPanel>
 
-                
-
                 <StackPanel x:Name="Panel_Settings_Condition"
                             Visibility="Collapsed">
                     
-                    <TextBlock x:Name="Header2_Settings_Condition"
-                            Margin="0,0,0,5"
-                            FontWeight="Bold"/>
+                    <TextBlock Margin="0,0,0,5"
+                               FontWeight="Bold"
+                               Text="{x:Static resx:Resources.Header2_Settings_Condition}"/>
                     
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,0,0,5">
                         
                         <TextBlock x:Name="Text_Condition_NumberOfTakenItems"
-                                Margin="0,0,5,0"/>
+                                   Margin="0,0,5,0"/>
                         
                         <TextBox x:Name="Condition_NumberOfTakenItems"
-                                Width="20"
-                                TextAlignment="Right"
-                                MaxLength="1"
-                                MaxLines="1"
+                                 Width="20"
+                                 TextAlignment="Right"
+                                 MaxLength="1"
+                                 MaxLines="1"
                                  TextChanged="Condition_NumberOfTakenItems_TextChanged"/>
                         
                     </StackPanel>
                     
                     <WrapPanel x:Name="Panel_Condition_Selection_Outcome"
-                                Orientation="Horizontal"/>
+                               Orientation="Horizontal"/>
                     
                 </StackPanel>
                 

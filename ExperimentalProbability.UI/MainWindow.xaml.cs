@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            this.UpdateWindowControls();
+            Selection_Type.ItemsSource = Types;
         }
 
         private void Selection_Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -47,13 +47,13 @@ namespace ExperimentalProbability.UI
             switch (Selection_Type.SelectedIndex)
             {
                 case 0:
-                    this.UpdateControlsToColoredBalls();
                     this.UpdateColoredBallsControls(Visibility.Visible);
+                    this.UpdateControlsToColoredBalls();
 
                     break;
                 case 1:
-                    this.UpdateControlsToDice();
                     this.UpdateColoredBallsControls(Visibility.Collapsed);
+                    this.UpdateControlsToDice();
 
                     break;
             }

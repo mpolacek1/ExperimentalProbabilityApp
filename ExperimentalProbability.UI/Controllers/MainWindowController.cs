@@ -11,35 +11,11 @@ namespace ExperimentalProbability.UI.Controllers
 {
     public static class MainWindowController
     {
-        public static void UpdateWindowControls(this MainWindow window)
-        {
-            window.Title = Resources.MainWindow_Title;
-            UpdateCalculationSettingsControls(window);
-            window.Button_Run.Content = Resources.Button_Run;
-        }
-
-        private static void UpdateCalculationSettingsControls(MainWindow window)
-        {
-            window.Header1_Settings_Calculation.Text = Resources.Header1_Settings_Calculation;
-            window.Text_Simulations.Text = Resources.Text_Simulations;
-            window.Simulations.Text = Resources.Default_Simulations;
-
-            window.Text_Selection_Type.Text = Resources.Text_Selection_Type;
-            window.Selection_Type.Text = Resources.Default_Selection_Type;
-            window.Selection_Type.ItemsSource = window.Types;
-
-            window.Header2_Settings_Type.Text = Resources.Header2_Settings_Type;
-            window.Text_ColoredBalls_NumberOfColors.Text = Resources.Text_ColoredBalls_NumberOfColors;
-            window.ColoredBalls_NumberOfColors.Text = Resources.Default_ColoredBalls_NumberOfColors;
-
-            window.Header2_Settings_Condition.Text = Resources.Header2_Settings_Condition;
-        }
-
         public static void UpdateControlsBasedOnCurrentType(this MainWindow window, string poolText, string poolSize, string textNumberOfTakenItems, string defaultNumberOfTakenItems)
         {
             UpdateContent(window, poolText, poolSize, textNumberOfTakenItems, defaultNumberOfTakenItems);
             UpdateVisibility(window, Visibility.Visible);
-            
+
             window.Button_Run.IsEnabled = true;
         }
 
@@ -53,12 +29,7 @@ namespace ExperimentalProbability.UI.Controllers
 
         private static void UpdateVisibility(MainWindow window, Visibility visibility)
         {
-            window.Header2_Settings_Type.Visibility = visibility;
-            window.Text_Pool_Size.Visibility = visibility;
-            window.Pool_Size.Visibility = visibility;
-            window.Text_ColoredBalls_NumberOfColors.Visibility = visibility;
-            window.ColoredBalls_NumberOfColors.Visibility = visibility;
-            window.Panel_ColoredBalls_Selection_Color.Visibility = visibility;
+            window.Panel_Settings_Type.Visibility = visibility;
             window.Panel_Settings_Condition.Visibility = visibility;
         }
 

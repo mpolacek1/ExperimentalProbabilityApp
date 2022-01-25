@@ -29,6 +29,9 @@ namespace ExperimentalProbability.UI.Controllers
             window.Text_ColoredBalls_NumberOfColors.Visibility = visibility;
             window.ColoredBalls_NumberOfColors.Visibility = visibility;
             window.Panel_ColoredBalls_Selection_Color.Visibility = visibility;
+
+            window.Text_ColoredBalls_NumberOfColors.Text = Resources.Text_ColoredBalls_NumberOfColors;
+            window.ColoredBalls_NumberOfColors.Text = Resources.Default_ColoredBalls_NumberOfColors;
         }
 
         public static string[] GetColoredBallsSelectionItemsSource(this MainWindow window)
