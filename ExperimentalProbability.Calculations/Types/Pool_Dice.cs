@@ -1,23 +1,42 @@
-﻿using ExperimentalProbability.Calculations.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ExperimentalProbability.Calculations.Models;
 
 namespace ExperimentalProbability.Calculations.Types
 {
     public class Pool_Dice : IPoolType
     {
-        private int Repeats { get; set; }
+        private readonly int numberOfSides = 6;
 
-        private readonly int NumberOfSides = 6;
-
-        private readonly Random Random = new Random();
+        private readonly Random random = new Random();
 
         public Pool_Dice(int condition)
         {
             Repeats = GetRepeats(condition);
+        }
+
+        private int Repeats { get; set; }
+
+        public CalculationResultData Calculate(int condition, int simulationsRun)
+        {
+            int conditionsMet = 0;
+
+            for (int i = 0; i < simulationsRun; i++)
+            {
+                var sides = RollDice(Repeats);
+
+                if (CheckChosenCondition(condition, sides))
+                {
+                    conditionsMet++;
+                }
+            }
+
+            return new CalculationResultData(simulationsRun, conditionsMet, GetResult(conditionsMet, simulationsRun));
+        }
+
+        public double GetResult(int conditionsMet, int simulationsRun)
+        {
+            return Math.Round(Convert.ToSingle(conditionsMet) / Convert.ToSingle(simulationsRun) * 100, 2);
         }
 
         private int GetRepeats(int condition)
@@ -31,30 +50,13 @@ namespace ExperimentalProbability.Calculations.Types
             }
         }
 
-        public CalculationResultData Calculate(int condition, int simulationsRun)
-        {
-            int conditionsMet = 0;
-
-            for (int i = 0; i < simulationsRun; i++)
-            {
-                List<int> sides = RollDice(Repeats);
-
-                if (CheckChosenCondition(condition, sides))
-                {
-                    conditionsMet++;
-                }
-            }
-
-            return new CalculationResultData(simulationsRun, conditionsMet, GetResult(conditionsMet, simulationsRun));
-        }
-
         private List<int> RollDice(int repeats)
         {
             var sides = new List<int>(repeats);
 
             for (int i = 0; i < repeats; i++)
             {
-                sides.Add(Random.Next(1, NumberOfSides + 1));
+                sides.Add(random.Next(1, numberOfSides + 1));
             }
 
             return sides;
@@ -64,7 +66,7 @@ namespace ExperimentalProbability.Calculations.Types
         {
             switch (condition)
             {
-                default :
+                default:
                     return false;
                 case 0:
                     return CheckFirstCondition(sides);
@@ -82,11 +84,6 @@ namespace ExperimentalProbability.Calculations.Types
         {
             return sides[0].Equals(6)
                 && sides[1].Equals(6);
-        }
-
-        public double GetResult(int conditionsMet, int simulationsRun)
-        {
-            return Math.Round(Convert.ToSingle(conditionsMet) / Convert.ToSingle(simulationsRun) * 100, 2);
         }
     }
 }

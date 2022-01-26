@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using ExperimentalProbability.UI.Properties;
-using ExperimentalProbability.Calculations.Models;
-using ExperimentalProbability.Calculations.Types;
-using System.Windows;
 
 namespace ExperimentalProbability.UI.Controllers
 {
@@ -18,8 +11,7 @@ namespace ExperimentalProbability.UI.Controllers
                 Resources.Text_Pool_Size_Dice,
                 Resources.Default_Pool_Size_Dice,
                 Resources.Text_Condition_Dice_NumberOfTakenItems,
-                Resources.Default_Condition_Dice_NumberOfTakenItems
-            );
+                Resources.Default_Condition_Dice_NumberOfTakenItems);
         }
 
         public static string[] GetDiceSelectionItemsSource(this MainWindow window)

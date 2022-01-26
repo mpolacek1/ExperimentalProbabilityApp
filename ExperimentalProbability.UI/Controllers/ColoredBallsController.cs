@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExperimentalProbability.UI.Properties;
-using ExperimentalProbability.Calculations.Models;
-using ExperimentalProbability.Calculations.Types;
-using System.Windows.Controls;
+﻿using System.Collections.Generic;
 using System.Windows;
-using ExperimentalProbability.UI.CustomControls;
+using System.Windows.Controls;
+using ExperimentalProbability.UI.Properties;
 
 namespace ExperimentalProbability.UI.Controllers
 {
@@ -20,8 +13,7 @@ namespace ExperimentalProbability.UI.Controllers
                 Resources.Text_Pool_Size_ColoredBalls,
                 Resources.Default_Pool_Size_ColoredBalls,
                 Resources.Text_Condition_ColoredBalls_NumberOfTakenItems,
-                Resources.Default_Condition_ColoredBalls_NumberOfTakenItems
-            );
+                Resources.Default_Condition_ColoredBalls_NumberOfTakenItems);
         }
 
         public static void UpdateColoredBallsControls(this MainWindow window, Visibility visibility)
@@ -38,8 +30,7 @@ namespace ExperimentalProbability.UI.Controllers
         {
             return GetCurrentSelectedColors(
                 window.Panel_ColoredBalls_Selection_Color.Children,
-                new List<string>(int.Parse(window.ColoredBalls_NumberOfColors.Text))
-            ).ToArray();
+                new List<string>(int.Parse(window.ColoredBalls_NumberOfColors.Text))).ToArray();
         }
 
         public static void UpdateColorSelectionItemsSources(this MainWindow window)
@@ -48,17 +39,15 @@ namespace ExperimentalProbability.UI.Controllers
 
             var selectedColors = GetCurrentSelectedColors(
                 colorPanels,
-                new List<string>(int.Parse(window.ColoredBalls_NumberOfColors.Text))
-            );
+                new List<string>(int.Parse(window.ColoredBalls_NumberOfColors.Text)));
 
             for (int i = 0; i < colorPanels.Count; i++)
             {
-                var allColors = new string[window.Colors.Length];
-                window.Colors.CopyTo(allColors, 0);
-
+                // var allColors = new string[window.Colors.Length];
+                // window.Colors.CopyTo(allColors, 0);
                 var selector = (ComboBox)((Panel)colorPanels[i]).Children[0];
 
-                selector.ItemsSource = UpdateSelectorItemsSource(selector.SelectedItem, selectedColors, allColors.ToList());
+                selector.ItemsSource = UpdateSelectorItemsSource(selector.SelectedItem, selectedColors, new List<string>());
             }
         }
 
@@ -66,7 +55,7 @@ namespace ExperimentalProbability.UI.Controllers
         {
             for (int i = 0; i < itemPanels.Count; i++)
             {
-                var selectedItem = ((ComboBox)((Panel)itemPanels[i]).Children[0]).SelectedItem;
+                object selectedItem = ((ComboBox)((Panel)itemPanels[i]).Children[0]).SelectedItem;
 
                 if (selectedItem != null)
                 {

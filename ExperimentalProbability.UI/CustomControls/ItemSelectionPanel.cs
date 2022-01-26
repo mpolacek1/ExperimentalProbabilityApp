@@ -10,36 +10,30 @@ namespace ExperimentalProbability.UI.CustomControls
 {
     public class ItemSelectionPanel : DockPanel
     {
-        public ItemSelectionPanel(MainWindow window, string text, string[] itemsSource)
+        public ItemSelectionPanel(string text, string[] itemsSource)
         {
             DefaultElementSettings();
-            Children.Add(BuildItemSelector(window, text, itemsSource));
+            Children.Add(BuildItemSelector(text, itemsSource));
         }
 
         public ItemSelectionPanel(MainWindow window)
         {
             DefaultElementSettings();
             Children.Add(BuildColorSelector(window));
-            Children.Add(BuildColorText(window));
-            Children.Add(BuildNumberOfColors(window));
+            Children.Add(BuildColorText());
+            Children.Add(BuildNumberOfColors());
         }
 
-        private void DefaultElementSettings()
-        {
-            LastChildFill = false;
-            Margin = new Thickness(0, 0, 5, 0);
-        }
-
-        private ComboBox BuildItemSelector(MainWindow window, string text, string[] itemsSource)
+        private static ComboBox BuildItemSelector(string text, string[] itemsSource)
         {
             var selector = GetItemSelector(text, itemsSource);
 
             return selector;
         }
 
-        private ComboBox BuildColorSelector(MainWindow window)
+        private static ComboBox BuildColorSelector(MainWindow window)
         {
-            var selector = GetItemSelector(Properties.Resources.Default_Selection_ColoredBalls, window.Colors);
+            var selector = GetItemSelector(Properties.Resources.Default_Selection_ColoredBalls, new string[0]);
 
             selector.SelectionChanged += new SelectionChangedEventHandler(window.Selection_ColoredBalls_Color_SelectionChanged);
 
@@ -48,7 +42,7 @@ namespace ExperimentalProbability.UI.CustomControls
             return selector;
         }
 
-        private ComboBox GetItemSelector(string text, string[] itemsSource)
+        private static ComboBox GetItemSelector(string text, string[] itemsSource)
         {
             return new ComboBox()
             {
@@ -60,7 +54,7 @@ namespace ExperimentalProbability.UI.CustomControls
             };
         }
 
-        private static TextBlock BuildColorText(MainWindow window)
+        private static TextBlock BuildColorText()
         {
             return new TextBlock()
             {
@@ -69,7 +63,7 @@ namespace ExperimentalProbability.UI.CustomControls
             };
         }
 
-        private static TextBox BuildNumberOfColors(MainWindow window)
+        private static TextBox BuildNumberOfColors()
         {
             var textBox = new TextBox()
             {
@@ -83,6 +77,12 @@ namespace ExperimentalProbability.UI.CustomControls
             SetDock(textBox, Dock.Right);
 
             return textBox;
+        }
+
+        private void DefaultElementSettings()
+        {
+            LastChildFill = false;
+            Margin = new Thickness(0, 0, 5, 0);
         }
     }
 }
