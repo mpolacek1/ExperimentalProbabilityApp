@@ -11,4 +11,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <PropertyGroup>
+	<CodeAnalysisRuleSet>..\.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+
+
 </Project>
