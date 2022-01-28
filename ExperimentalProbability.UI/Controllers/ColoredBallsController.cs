@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using ExperimentalProbability.UI.Properties;
@@ -30,7 +31,7 @@ namespace ExperimentalProbability.UI.Controllers
         {
             return GetCurrentSelectedColors(
                 window.Panel_ColoredBalls_Selection_Color.Children,
-                new List<string>(int.Parse(window.ColoredBalls_NumberOfColors.Text))).ToArray();
+                new List<string>(window.ColoredBalls_NumberOfColors.Value.Value)).ToArray();
         }
 
         public static void UpdateColorSelectionItemsSources(this MainWindow window)
@@ -39,15 +40,17 @@ namespace ExperimentalProbability.UI.Controllers
 
             var selectedColors = GetCurrentSelectedColors(
                 colorPanels,
-                new List<string>(int.Parse(window.ColoredBalls_NumberOfColors.Text)));
+                new List<string>(window.ColoredBalls_NumberOfColors.Value.Value));
 
             for (int i = 0; i < colorPanels.Count; i++)
             {
-                // var allColors = new string[window.Colors.Length];
-                // window.Colors.CopyTo(allColors, 0);
+                var allColors = window.Colors;
                 var selector = (ComboBox)((Panel)colorPanels[i]).Children[0];
 
-                selector.ItemsSource = UpdateSelectorItemsSource(selector.SelectedItem, selectedColors, new List<string>());
+                selector.ItemsSource = UpdateSelectorItemsSource(
+                    selector.SelectedItem,
+                    selectedColors,
+                    allColors.ToList());
             }
         }
 

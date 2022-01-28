@@ -132,6 +132,9 @@
   <data name="Color_Brown" xml:space="preserve">
     <value>Brown</value>
   </data>
+  <data name="Color_Gray" xml:space="preserve">
+    <value>Gray</value>
+  </data>
   <data name="Color_Green" xml:space="preserve">
     <value>Green</value>
   </data>
@@ -177,7 +180,7 @@
   <data name="Default_Selection_Type" xml:space="preserve">
     <value>Choose a type</value>
   </data>
-  <data name="Default_Simulations" xml:space="preserve">
+  <data name="Default_Simulations_Value" xml:space="preserve">
     <value>1000000</value>
   </data>
   <data name="Dice_Condition_First" xml:space="preserve">

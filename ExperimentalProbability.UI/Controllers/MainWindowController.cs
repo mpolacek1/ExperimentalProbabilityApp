@@ -3,7 +3,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using ExperimentalProbability.Calculations.Models;
-using ExperimentalProbability.UI.CustomControls;
+using ExperimentalProbability.UI.CustomUIElements;
 using ExperimentalProbability.UI.Properties;
 
 namespace ExperimentalProbability.UI.Controllers
@@ -18,17 +18,11 @@ namespace ExperimentalProbability.UI.Controllers
             window.Button_Run.IsEnabled = true;
         }
 
-        public static void GenerateItemsSelection(this MainWindow window, UIElementCollection itemPanelChildren, string itemAmount, string text = null, string[] itemsSource = null)
+        public static void GenerateItemsSelection(this MainWindow window, UIElementCollection itemPanelChildren, int numberOfItems, string text = null, string[] itemsSource = null)
         {
-            itemPanelChildren.Clear();
-
-            if (int.TryParse(itemAmount, out int numberOfItems)
-                && numberOfItems > 0)
+            for (int i = 0; i < numberOfItems; i++)
             {
-                for (int i = 0; i < numberOfItems; i++)
-                {
-                    itemPanelChildren.Add(GetItemSelectionPanel(window, text, itemsSource));
-                }
+                itemPanelChildren.Add(GetItemSelectionPanel(window, text, itemsSource));
             }
         }
 
@@ -48,12 +42,7 @@ namespace ExperimentalProbability.UI.Controllers
 
         private static Panel GetItemSelectionPanel(MainWindow window, string text, string[] itemsSource)
         {
-            if (itemsSource != null)
-            {
-                return new ItemSelectionPanel(text, itemsSource);
-            }
-
-            return new ItemSelectionPanel(window);
+            return itemsSource == null ? new ItemSelectionPanel(window) : new ItemSelectionPanel(text, itemsSource);
         }
 
         private static void DisplayResult(MainWindow window, CalculationResultData result)

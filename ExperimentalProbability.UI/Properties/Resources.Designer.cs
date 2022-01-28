@@ -19,7 +19,7 @@ namespace ExperimentalProbability.UI.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -93,6 +93,15 @@ namespace ExperimentalProbability.UI.Properties {
         public static string Color_Brown {
             get {
                 return ResourceManager.GetString("Color_Brown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gray.
+        /// </summary>
+        public static string Color_Gray {
+            get {
+                return ResourceManager.GetString("Color_Gray", resourceCulture);
             }
         }
         
@@ -243,9 +252,9 @@ namespace ExperimentalProbability.UI.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 1000000.
         /// </summary>
-        public static string Default_Simulations {
+        public static string Default_Simulations_Value {
             get {
-                return ResourceManager.GetString("Default_Simulations", resourceCulture);
+                return ResourceManager.GetString("Default_Simulations_Value", resourceCulture);
             }
         }
         

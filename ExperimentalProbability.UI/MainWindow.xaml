@@ -5,76 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties"
-        xmlns:local="clr-namespace:ExperimentalProbability.UI"
         mc:Ignorable="d"
-        Background="#181818"
-        Width="1280"
-        Height="720"
-        MinWidth="800"
-        MinHeight="600"
-        FontSize="16"
-        Foreground="White"
-        Title="{x:Static resx:Resources.MainWindow_Title}"
-        DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}" Activated="Window_Activated">
+        Style="{StaticResource MainWindowDefault}">
 
     <DockPanel LastChildFill="False"
                Margin="10">
-        
+
         <DockPanel DockPanel.Dock="Bottom"
                    LastChildFill="False">
-            
+
             <Button x:Name="Button_Run"
                     DockPanel.Dock="Right"
                     IsEnabled="False"
                     Content="{x:Static resx:Resources.Button_Run}"
                     Click="Button_Run_Click"/>
-            
+
         </DockPanel>
 
         <Border DockPanel.Dock="Top"
-                BorderBrush="DarkCyan"
-                Margin="0,0,0,10"
-                BorderThickness="0,0,0,3">
-            
+                Style="{StaticResource Border1}"
+                Margin="0,0,0,10">
+
             <StackPanel Margin="0,0,0,5">
 
                 <TextBlock DockPanel.Dock="Top"
+                           Style="{StaticResource Header1}"
                            Margin="0,0,0,5"
-                           FontSize="22"
-                           FontWeight="Bold"
                            Text="{x:Static resx:Resources.Header1_Settings_Calculation}"/>
 
                 <StackPanel DockPanel.Dock="Top"
                             Orientation="Horizontal"
                             Margin="0,0,0,5">
-                    
+
                     <TextBlock Margin="0,0,5,0"
                                Text="{x:Static resx:Resources.Text_Selection_Type}"/>
 
                     <ComboBox x:Name="Selection_Type"
+                              Style="{StaticResource ComboBoxDefault}"
                               Margin="0,0,10,0"
-                              IsEditable="True"
-                              IsReadOnly="True"
                               Text="{x:Static resx:Resources.Default_Selection_Type}"
-                              SelectionChanged="Selection_Type_SelectionChanged"/>
-                    
+                              ItemsSource="{Binding Types}"
+                              SelectionChanged="Selection_Type_SelectionChanged" Background="{x:Null}"/>
+
                     <TextBlock Margin="0,0,5,0"
                                Text="{x:Static resx:Resources.Text_Simulations}"/>
-                    
-                    <TextBox x:Name="Simulations"
-                             Width="85"
-                             TextAlignment="Right"
-                             MaxLength="7"
-                             MaxLines="1"
-                             Text="{x:Static resx:Resources.Default_Simulations}"/>
-                    
+
+                    <xctk:IntegerUpDown x:Name="Simulations"
+                                        Style="{StaticResource IntegerUpDownSimulations}"/>
+
                 </StackPanel>
 
                 <StackPanel x:Name="Panel_Settings_Type"
                             Visibility="Collapsed">
 
                     <TextBlock Margin="0,0,0,5"
-                               FontWeight="Bold"
+                               Style="{StaticResource Header2}"
                                Text="{x:Static resx:Resources.Header2_Settings_Type}"/>
 
                     <StackPanel Orientation="Horizontal"
@@ -83,24 +68,19 @@
                         <TextBlock x:Name="Text_Pool_Size"
                                    Margin="0,0,5,0"/>
 
-                        <TextBox x:Name="Pool_Size"
-                                Width="30"
-                                 Margin="0,0,10,0"
-                                TextAlignment="Right"
-                                MaxLength="2"
-                                MaxLines="1"/>
+                        <xctk:IntegerUpDown x:Name="Pool_Size"
+                                            Style="{StaticResource IntegerUpDownDefault}"
+                                            Margin="0,0,10,0"/>
 
                         <TextBlock x:Name="Text_ColoredBalls_NumberOfColors"
-                                   Margin="0,0,5,0"
-                                   Visibility="Collapsed"/>
+                                   Margin="0,0,5,0"/>
 
-                        <TextBox x:Name="ColoredBalls_NumberOfColors"
-                                 Width="20"
-                                 TextAlignment="Right"
-                                 MaxLength="1"
-                                 MaxLines="1"
-                                 Visibility="Collapsed"
-                                 TextChanged="ColoredBalls_NumberOfColors_TextChanged"/>
+                        <xctk:IntegerUpDown x:Name="ColoredBalls_NumberOfColors"
+                                            Style="{StaticResource IntegerUpDownDefault}"
+                                            Maximum="10"
+                                            MaxLength="2"
+                                            Minimum="1"
+                                            ValueChanged="ColoredBalls_NumberOfColors_ValueChanged"/>
 
                     </StackPanel>
 
@@ -112,35 +92,32 @@
 
                 <StackPanel x:Name="Panel_Settings_Condition"
                             Visibility="Collapsed">
-                    
+
                     <TextBlock Margin="0,0,0,5"
-                               FontWeight="Bold"
+                               Style="{StaticResource Header2}"
                                Text="{x:Static resx:Resources.Header2_Settings_Condition}"/>
-                    
+
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,0,0,5">
-                        
+
                         <TextBlock x:Name="Text_Condition_NumberOfTakenItems"
                                    Margin="0,0,5,0"/>
-                        
-                        <TextBox x:Name="Condition_NumberOfTakenItems"
-                                 Width="20"
-                                 TextAlignment="Right"
-                                 MaxLength="1"
-                                 MaxLines="1"
-                                 TextChanged="Condition_NumberOfTakenItems_TextChanged"/>
-                        
+
+                        <xctk:IntegerUpDown x:Name="Condition_NumberOfTakenItems"
+                                            Style="{StaticResource IntegerUpDownDefault}"
+                                            ValueChanged="Condition_NumberOfTakenItems_ValueChanged"/>
+
                     </StackPanel>
-                    
+
                     <WrapPanel x:Name="Panel_Condition_Selection_Outcome"
                                Orientation="Horizontal"/>
-                    
+
                 </StackPanel>
-                
+
             </StackPanel>
-            
+
         </Border>
-        
+
     </DockPanel>
-    
+
 </Window>

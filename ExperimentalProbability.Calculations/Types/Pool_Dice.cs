@@ -6,9 +6,9 @@ namespace ExperimentalProbability.Calculations.Types
 {
     public class Pool_Dice : IPoolType
     {
-        private readonly int numberOfSides = 6;
+        private readonly int _numberOfSides = 6;
 
-        private readonly Random random = new Random();
+        private readonly Random _random = new Random();
 
         public Pool_Dice(int condition)
         {
@@ -56,7 +56,7 @@ namespace ExperimentalProbability.Calculations.Types
 
             for (int i = 0; i < repeats; i++)
             {
-                sides.Add(random.Next(1, numberOfSides + 1));
+                sides.Add(_random.Next(1, _numberOfSides + 1));
             }
 
             return sides;
