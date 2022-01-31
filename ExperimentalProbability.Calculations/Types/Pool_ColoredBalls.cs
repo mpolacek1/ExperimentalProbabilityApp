@@ -7,11 +7,18 @@ namespace ExperimentalProbability.Calculations.Types
 {
     public class Pool_ColoredBalls : IPoolType
     {
-        public CalculationResultData Calculate(int condition, int simulationsRun)
+        public Pool_ColoredBalls(CalculationData data)
         {
-            int conditionsMet = 0;
+            Data = data;
+        }
 
-            for (int i = 0; i < simulationsRun; i++)
+        private CalculationData Data { get; set; }
+
+        private CalculationResultData ResultData { get; set; } = new CalculationResultData();
+
+        public CalculationResultData Calculate()
+        {
+            for (int i = 0; i < Data.SimulationsToRun; i++)
             {
                 var takenBalls = new List<ColoredBall>(3);
                 string[] tempBag = new string[9];
@@ -25,13 +32,13 @@ namespace ExperimentalProbability.Calculations.Types
                     bag.RemoveAt(takenBalls[j].Index);
                 }
 
-                if (CheckChosenCondition(condition, takenBalls))
+                /*if (CheckChosenCondition(condition, takenBalls))
                 {
                     conditionsMet++;
-                }
+                }*/
             }
 
-            return new CalculationResultData(simulationsRun, conditionsMet, GetResult(conditionsMet, simulationsRun));
+            return new CalculationResultData();
         }
 
         public bool CheckChosenCondition(int condition, List<ColoredBall> data)
@@ -49,11 +56,6 @@ namespace ExperimentalProbability.Calculations.Types
             }
 
             return result;
-        }
-
-        public double GetResult(int conditionsMet, int simulationsRun)
-        {
-            return Math.Round(Convert.ToSingle(conditionsMet) / Convert.ToSingle(simulationsRun) * 100, 2);
         }
 
         private ColoredBall GetBallFromBag(List<string> bag)

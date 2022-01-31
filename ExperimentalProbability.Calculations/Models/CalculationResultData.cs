@@ -1,18 +1,18 @@
-﻿namespace ExperimentalProbability.Calculations.Models
+﻿using System;
+
+namespace ExperimentalProbability.Calculations.Models
 {
     public class CalculationResultData
     {
-        public CalculationResultData(int simulationsRun, int conditionsMet, double probability)
+        public int SimulationsRun { get; set; } = 0;
+
+        public int ConditionsMet { get; set; } = 0;
+
+        public double Probability { get => GetProbability(); }
+
+        public double GetProbability()
         {
-            SimulationsRun = simulationsRun;
-            ConditionsMet = conditionsMet;
-            Probability = probability;
+            return Math.Round(Convert.ToSingle(ConditionsMet) / Convert.ToSingle(SimulationsRun) * 100, 2);
         }
-
-        public int SimulationsRun { get; set; }
-
-        public int ConditionsMet { get; set; }
-
-        public double Probability { get; set; }
     }
 }

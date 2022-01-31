@@ -70,16 +70,14 @@
 
                         <xctk:IntegerUpDown x:Name="Pool_Size"
                                             Style="{StaticResource IntegerUpDownDefault}"
-                                            Margin="0,0,10,0"/>
+                                            Margin="0,0,10,0"
+                                            ValueChanged="Pool_Size_ValueChanged"/>
 
                         <TextBlock x:Name="Text_ColoredBalls_NumberOfColors"
                                    Margin="0,0,5,0"/>
 
                         <xctk:IntegerUpDown x:Name="ColoredBalls_NumberOfColors"
-                                            Style="{StaticResource IntegerUpDownDefault}"
-                                            Maximum="10"
-                                            MaxLength="2"
-                                            Minimum="1"
+                                            Style="{StaticResource IntegerUpDownNumberOfItems}"
                                             ValueChanged="ColoredBalls_NumberOfColors_ValueChanged"/>
 
                     </StackPanel>
@@ -104,7 +102,7 @@
                                    Margin="0,0,5,0"/>
 
                         <xctk:IntegerUpDown x:Name="Condition_NumberOfTakenItems"
-                                            Style="{StaticResource IntegerUpDownDefault}"
+                                            Style="{StaticResource IntegerUpDownNumberOfItems}"
                                             ValueChanged="Condition_NumberOfTakenItems_ValueChanged"/>
 
                     </StackPanel>

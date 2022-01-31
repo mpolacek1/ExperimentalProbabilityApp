@@ -6,48 +6,28 @@ namespace ExperimentalProbability.Calculations.Types
 {
     public class Pool_Dice : IPoolType
     {
-        private readonly int _numberOfSides = 6;
-
-        private readonly Random _random = new Random();
-
-        public Pool_Dice(int condition)
+        public Pool_Dice(CalculationData data)
         {
-            Repeats = GetRepeats(condition);
+            Data = data;
         }
 
-        private int Repeats { get; set; }
+        private CalculationData Data { get; set; }
 
-        public CalculationResultData Calculate(int condition, int simulationsRun)
+        private CalculationResultData ResultData { get; set; } = new CalculationResultData();
+
+        public CalculationResultData Calculate()
         {
-            int conditionsMet = 0;
-
-            for (int i = 0; i < simulationsRun; i++)
+            for (int i = 0; i < Data.SimulationsToRun; i++)
             {
-                var sides = RollDice(Repeats);
+                /*var sides = RollDice(Repeats);
 
                 if (CheckChosenCondition(condition, sides))
                 {
                     conditionsMet++;
-                }
+                }*/
             }
 
-            return new CalculationResultData(simulationsRun, conditionsMet, GetResult(conditionsMet, simulationsRun));
-        }
-
-        public double GetResult(int conditionsMet, int simulationsRun)
-        {
-            return Math.Round(Convert.ToSingle(conditionsMet) / Convert.ToSingle(simulationsRun) * 100, 2);
-        }
-
-        private int GetRepeats(int condition)
-        {
-            switch (condition)
-            {
-                default:
-                    return 1;
-                case 1:
-                    return 2;
-            }
+            return new CalculationResultData();
         }
 
         private List<int> RollDice(int repeats)
@@ -56,7 +36,7 @@ namespace ExperimentalProbability.Calculations.Types
 
             for (int i = 0; i < repeats; i++)
             {
-                sides.Add(_random.Next(1, _numberOfSides + 1));
+                sides.Add(new Random().Next(1, 6 + 1));
             }
 
             return sides;

@@ -2,7 +2,10 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using ExperimentalProbability.Calculations.Models;
+using ExperimentalProbability.Calculations.Types;
 using ExperimentalProbability.UI.Properties;
+using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI.Controllers
 {
@@ -12,7 +15,7 @@ namespace ExperimentalProbability.UI.Controllers
         {
             window.UpdateControlsBasedOnCurrentType(
                 Resources.Text_Pool_Size_ColoredBalls,
-                Resources.Default_Pool_Size_ColoredBalls,
+                (Style)Application.Current.Resources["IntegerUpDownColoredBallsPoolSize"],
                 Resources.Text_Condition_ColoredBalls_NumberOfTakenItems,
                 Resources.Default_Condition_ColoredBalls_NumberOfTakenItems);
         }
@@ -27,20 +30,9 @@ namespace ExperimentalProbability.UI.Controllers
             window.ColoredBalls_NumberOfColors.Text = Resources.Default_ColoredBalls_NumberOfColors;
         }
 
-        public static string[] GetColoredBallsSelectionItemsSource(this MainWindow window)
-        {
-            return GetCurrentSelectedColors(
-                window.Panel_ColoredBalls_Selection_Color.Children,
-                new List<string>(window.ColoredBalls_NumberOfColors.Value.Value)).ToArray();
-        }
-
         public static void UpdateColorSelectionItemsSources(this MainWindow window)
         {
             var colorPanels = window.Panel_ColoredBalls_Selection_Color.Children;
-
-            var selectedColors = GetCurrentSelectedColors(
-                colorPanels,
-                new List<string>(window.ColoredBalls_NumberOfColors.Value.Value));
 
             for (int i = 0; i < colorPanels.Count; i++)
             {
@@ -49,24 +41,15 @@ namespace ExperimentalProbability.UI.Controllers
 
                 selector.ItemsSource = UpdateSelectorItemsSource(
                     selector.SelectedItem,
-                    selectedColors,
+                    colorPanels.GetCurrentSelectedItemsFromPanels(window.ColoredBalls_NumberOfColors.Value.Value),
                     allColors.ToList());
             }
         }
 
-        private static List<string> GetCurrentSelectedColors(UIElementCollection itemPanels, List<string> selectedItems)
+        public static void RunColoredBallsCalculationAndDisplayResult(this MainWindow window)
         {
-            for (int i = 0; i < itemPanels.Count; i++)
-            {
-                object selectedItem = ((ComboBox)((Panel)itemPanels[i]).Children[0]).SelectedItem;
-
-                if (selectedItem != null)
-                {
-                    selectedItems.Add(selectedItem.ToString());
-                }
-            }
-
-            return selectedItems;
+            var resultData = new Pool_ColoredBalls(GetCalculationData(window)).Calculate();
+            return;
         }
 
         private static List<string> UpdateSelectorItemsSource(object selectedItem, List<string> selectedItems, List<string> itemsSource)
@@ -81,6 +64,52 @@ namespace ExperimentalProbability.UI.Controllers
             }
 
             return itemsSource;
+        }
+
+        private static CalculationData GetCalculationData(MainWindow window)
+        {
+            return new CalculationData(GetTypeSettings(window), GetConditionSettings(window), window.Simulations.Value.Value);
+        }
+
+        private static TypeSettings GetTypeSettings(MainWindow window)
+        {
+            return new TypeSettings(
+                window.Pool_Size.Value.Value,
+                GetPool(window));
+        }
+
+        private static Dictionary<string, int> GetPool(MainWindow window)
+        {
+            var numberOfColors = window.ColoredBalls_NumberOfColors.Value.Value;
+            var pool = new Dictionary<string, int>(numberOfColors);
+
+            var colorPanels = window.Panel_ColoredBalls_Selection_Color.Children;
+            var selectedColors = colorPanels.GetCurrentSelectedItemsFromPanels(numberOfColors);
+            var numberOfEachColor = GetNumberOfEachColor(colorPanels);
+
+            for (int i = 0; i < numberOfColors; i++)
+            {
+                pool.Add(selectedColors[i], numberOfEachColor[i]);
+            }
+
+            return pool;
+        }
+
+        private static List<int> GetNumberOfEachColor(UIElementCollection colorPanels)
+        {
+            var numberOfEachColor = new List<int>(colorPanels.Count);
+
+            for (int i = 0; i < colorPanels.Count; i++)
+            {
+                numberOfEachColor.Add(((IntegerUpDown)((Panel)colorPanels[i]).Children[2]).Value.Value);
+            }
+
+            return numberOfEachColor;
+        }
+
+        private static List<string> GetConditionSettings(MainWindow window)
+        {
+            return window.Panel_Condition_Selection_Outcome.Children.GetCurrentSelectedItemsFromPanels(window.Condition_NumberOfTakenItems.Value.Value);
         }
     }
 }

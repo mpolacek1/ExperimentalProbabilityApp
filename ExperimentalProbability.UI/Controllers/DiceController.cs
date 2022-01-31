@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows;
 using ExperimentalProbability.UI.Properties;
 
 namespace ExperimentalProbability.UI.Controllers
@@ -9,27 +10,26 @@ namespace ExperimentalProbability.UI.Controllers
         {
             window.UpdateControlsBasedOnCurrentType(
                 Resources.Text_Pool_Size_Dice,
-                Resources.Default_Pool_Size_Dice,
+                (Style)Application.Current.Resources["IntegerUpDownDicePoolSize"],
                 Resources.Text_Condition_Dice_NumberOfTakenItems,
                 Resources.Default_Condition_Dice_NumberOfTakenItems);
         }
 
-        public static string[] GetDiceSelectionItemsSource(this MainWindow window)
+        public static List<string> GetDiceSelectionItemsSource(this MainWindow window)
         {
-            if (int.TryParse(window.Pool_Size.Text, out int numberOfSides)
-                && numberOfSides > 0)
+            int numberOfSides = window.Pool_Size.Value.Value;
+            var itemsSource = new List<string>(numberOfSides);
+
+            for (int i = 1; i <= numberOfSides; i++)
             {
-                var itemsSource = new List<string>(numberOfSides);
-
-                for (int i = 1; i <= numberOfSides; i++)
-                {
-                    itemsSource.Add(i.ToString());
-                }
-
-                return itemsSource.ToArray();
+                itemsSource.Add(i.ToString());
             }
 
-            return new string[0];
+            return itemsSource;
+        }
+
+        public static void RunDiceCalculationAndDisplayResult(this MainWindow window)
+        {
         }
     }
 }

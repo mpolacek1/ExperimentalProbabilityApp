@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using ExperimentalProbability.UI.Controllers;
-using ExperimentalProbability.UI.Validation;
 using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI
@@ -19,7 +18,7 @@ namespace ExperimentalProbability.UI
             Properties.Resources.Type_Dice,
         };
 
-        public string[] Colors { get; } = new string[9]
+        public string[] Colors { get; } = new string[10]
         {
             Properties.Resources.Color_Black,
             Properties.Resources.Color_White,
@@ -27,6 +26,7 @@ namespace ExperimentalProbability.UI
             Properties.Resources.Color_Green,
             Properties.Resources.Color_Blue,
             Properties.Resources.Color_Brown,
+            Properties.Resources.Color_Gray,
             Properties.Resources.Color_Orange,
             Properties.Resources.Color_Violet,
             Properties.Resources.Color_Yellow,
@@ -35,10 +35,13 @@ namespace ExperimentalProbability.UI
         public void Selection_ColoredBalls_Color_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             this.UpdateColorSelectionItemsSources();
+            this.UpdateOutcomeSelectorsItemsSource();
         }
 
         private void Selection_Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Panel_Condition_Selection_Outcome.Children.Clear();
+
             switch (Selection_Type.SelectedIndex)
             {
                 case 0:
@@ -56,46 +59,59 @@ namespace ExperimentalProbability.UI
             }
         }
 
+        private void Pool_Size_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if (Selection_Type.SelectedItem.Equals(Properties.Resources.Type_Dice))
+            {
+                var itemPanels = Panel_Condition_Selection_Outcome.Children;
+
+                for (int i = 0; i < itemPanels.Count; i++)
+                {
+                    ((ComboBox)((Panel)itemPanels[i]).Children[0]).ItemsSource = this.GetDiceSelectionItemsSource();
+                }
+            }
+        }
+
         private void ColoredBalls_NumberOfColors_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            Panel_ColoredBalls_Selection_Color.Children.Clear();
+            var colorPanels = Panel_ColoredBalls_Selection_Color.Children;
+            var numberOfColors = ((IntegerUpDown)sender).Value.Value;
 
-            if (((IntegerUpDown)sender).Validate())
-            {
-                this.GenerateItemsSelection(Panel_ColoredBalls_Selection_Color.Children, ((IntegerUpDown)sender).Value.Value);
-            }
+            colorPanels.ClearNotNeededItemPanels(numberOfColors);
+
+            this.GenerateItemsSelection(colorPanels, numberOfColors);
+
+            this.UpdateColorSelectionItemsSources();
+            this.UpdateOutcomeSelectorsItemsSource();
         }
 
         private void Condition_NumberOfTakenItems_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            var itemPanelChildren = Panel_Condition_Selection_Outcome.Children;
-            itemPanelChildren.Clear();
+            var itemPanels = Panel_Condition_Selection_Outcome.Children;
+            var numberOfItems = ((IntegerUpDown)sender).Value.Value;
 
-            if (((IntegerUpDown)sender).Validate())
+            itemPanels.ClearNotNeededItemPanels(numberOfItems);
+
+            switch (Selection_Type.SelectedIndex)
             {
-                var numberOfItems = ((IntegerUpDown)sender).Value.Value;
+                case 0:
+                    this.GenerateItemsSelection(
+                        itemPanels,
+                        numberOfItems,
+                        Properties.Resources.Default_Selection_ColoredBalls,
+                        Panel_ColoredBalls_Selection_Color.Children.GetCurrentSelectedItemsFromPanels(numberOfItems));
 
-                switch (Selection_Type.SelectedIndex)
-                {
-                    case 0:
-                        this.GenerateItemsSelection(
-                            itemPanelChildren,
-                            numberOfItems,
-                            Properties.Resources.Default_Selection_ColoredBalls,
-                            this.GetColoredBallsSelectionItemsSource());
+                    break;
+                case 1:
+                    this.GenerateItemsSelection(
+                        itemPanels,
+                        numberOfItems,
+                        Properties.Resources.Default_Selection_Dice,
+                        this.GetDiceSelectionItemsSource());
 
-                        break;
-                    case 1:
-                        this.GenerateItemsSelection(
-                            itemPanelChildren,
-                            numberOfItems,
-                            Properties.Resources.Default_Selection_Dice,
-                            this.GetDiceSelectionItemsSource());
-
-                        break;
-                    default:
-                        break;
-                }
+                    break;
+                default:
+                    break;
             }
         }
 

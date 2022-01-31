@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using Xceed.Wpf.Toolkit;
 
@@ -6,7 +7,7 @@ namespace ExperimentalProbability.UI.CustomUIElements
 {
     public class ItemSelectionPanel : DockPanel
     {
-        public ItemSelectionPanel(string text, string[] itemsSource)
+        public ItemSelectionPanel(string text, List<string> itemsSource)
         {
             DefaultElementSettings();
             Children.Add(GetItemSelector(text, itemsSource));
@@ -20,7 +21,7 @@ namespace ExperimentalProbability.UI.CustomUIElements
             Children.Add(GetColorNumberOf());
         }
 
-        private static ComboBox GetItemSelector(string text, string[] itemsSource)
+        private static ComboBox GetItemSelector(string text, List<string> itemsSource)
         {
             var selector = new ComboBox()
             {

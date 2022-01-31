@@ -1,18 +1,20 @@
-﻿namespace ExperimentalProbability.Calculations.Models
+﻿using System.Collections.Generic;
+
+namespace ExperimentalProbability.Calculations.Models
 {
     public class CalculationData
     {
-        public CalculationData(int type, int condition, int simulations)
+        public CalculationData(TypeSettings typeSettings, List<string> conditionSettings, int simulationsToRun)
         {
-            Type = type;
-            Condition = condition;
-            Simulations = simulations;
+            TypeSettings = typeSettings;
+            ConditionSettings = conditionSettings;
+            SimulationsToRun = simulationsToRun;
         }
 
-        public int Type { get; set; }
+        public TypeSettings TypeSettings { get; set; }
 
-        public int Condition { get; set; }
+        public object ConditionSettings { get; set; }
 
-        public int Simulations { get; set; }
+        public int SimulationsToRun { get; set; }
     }
 }
