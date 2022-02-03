@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.Types.ColoredBalss {
+namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI.Properties.Types.ColoredBalss {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.Types.ColoredBalss.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.Types.ColoredBalls.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
