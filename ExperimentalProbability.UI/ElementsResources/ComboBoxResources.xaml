@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="ComboBox_Default" TargetType="ComboBox">
+        <Setter Property="IsEditable" Value="True"/>
+        <Setter Property="IsReadOnly" Value="True"/>
+    </Style>
+
+    <Style x:Key="ComboBox_ItemSelection" TargetType="ComboBox" BasedOn="{StaticResource ComboBoxDefault}">
+        <Setter Property="Margin" Value="0,0,0,5"/>
+    </Style>
+
+</ResourceDictionary>
