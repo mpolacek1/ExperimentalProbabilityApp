@@ -3,8 +3,8 @@
                     xmlns:local="clr-namespace:ExperimentalProbability.UI"
                     xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties">
 
-    <Style TargetType="local:MainWindow">
-        <Setter Property="Background" Value="#181818"/>
+    <Style x:Key="Style_Window_MainWindow_Default" TargetType="Window">
+        <Setter Property="Background" Value="Black"/>
         <Setter Property="MinWidth" Value="800"/>
         <Setter Property="MinHeight" Value="600"/>
         <Setter Property="FontFamily" Value="Yu Gothic"/>

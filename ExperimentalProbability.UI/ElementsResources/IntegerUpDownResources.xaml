@@ -2,12 +2,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
 
-    <Style x:Key="IntegerUpDown_Default" TargetType="xctk:IntegerUpDown">
+    <Style x:Key="Style_IntegerUpDown_Default" TargetType="xctk:IntegerUpDown">
         <Setter Property="AllowSpin" Value="True"/>
         <Setter Property="ClipValueToMinMax" Value="True"/>
     </Style>
 
-    <Style x:Key="IntegerUpDown_SimulationsToRun" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource IntegerUpDownDefault}">
+    <Style x:Key="Style_IntegerUpDown_SimulationsToRun" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource Style_IntegerUpDownDefault}">
         <Setter Property="Increment" Value="1000"/>
         <Setter Property="Maximum" Value="100000000"/>
         <Setter Property="MaxLength" Value="9"/>
@@ -15,14 +15,14 @@
         <Setter Property="Value" Value="1000000"/>
     </Style>
 
-    <Style x:Key="IntegerUpDown_NumberOfBalls" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource IntegerUpDownDefault}">
+    <Style x:Key="Style_IntegerUpDown_NumberOfBalls" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource Style_IntegerUpDownDefault}">
         <Setter Property="Maximum" Value="100"/>
         <Setter Property="MaxLength" Value="3"/>
         <Setter Property="Minimum" Value="9"/>
         <Setter Property="Value" Value="9"/>
     </Style>
 
-    <Style x:Key="IntegerUpDown_NumberOfSides" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource IntegerUpDownDefault}">
+    <Style x:Key="Style_IntegerUpDown_NumberOfSides" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource Style_IntegerUpDownDefault}">
         <Setter Property="Maximum" Value="20"/>
         <Setter Property="MaxLength" Value="2"/>
         <Setter Property="Minimum" Value="6"/>
