@@ -117,31 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Button_RunCalculation_Content" xml:space="preserve">
-    <value>Run calculation</value>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorBlack" xml:space="preserve">
+    <value>Black</value>
   </data>
-  <data name="NotAvailable" xml:space="preserve">
-    <value>N/A</value>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorBlue" xml:space="preserve">
+    <value>Blue</value>
   </data>
-  <data name="Settings_ComboBox_TypeSelection_Text" xml:space="preserve">
-    <value>Choose a type</value>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorBrown" xml:space="preserve">
+    <value>Brown</value>
   </data>
-  <data name="Settings_IntegerUpDown_SimulationsToRun_Text" xml:space="preserve">
-    <value>1000000</value>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorCyan" xml:space="preserve">
+    <value>Cyan</value>
   </data>
-  <data name="Settings_TextBlock_Header1_Text" xml:space="preserve">
-    <value>Calculation settings</value>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorGold" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorGray" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorGreen" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorMagenta" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorOrange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorPink" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorRed" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorTurquoise" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorViolet" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorWhite" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Item_ColorYellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="Settings_ComboBox_ColorSelection_Text" xml:space="preserve">
+    <value>Choose a color</value>
+  </data>
+  <data name="Settings_IntegerUpDown_ColorNumber_Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Settings_IntegerUpDown_NumberOfBalls_Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Settings_IntegerUpDown_NumberOfColors_Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Settings_IntegerUpDown_NumberOfTakenBalls_Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Settings_TextBlock_ColorNumber_Text" xml:space="preserve">
+    <value>Color n:</value>
   </data>
   <data name="Settings_TextBlock_Header2_Text" xml:space="preserve">
-    <value>Condition settings</value>
+    <value>Colored balls settings</value>
   </data>
-  <data name="Settings_TextBlock_SimulationsToRun_Text" xml:space="preserve">
-    <value>Number of simulations:</value>
+  <data name="Settings_TextBlock_NumberOfBalls_Text" xml:space="preserve">
+    <value>Number of balls:</value>
   </data>
-  <data name="Settings_TextBlock_TypeSelection_Text" xml:space="preserve">
-    <value>Type:</value>
+  <data name="Settings_TextBlock_NumberOfColors_Text" xml:space="preserve">
+    <value>Number of colors:</value>
   </data>
-  <data name="Window_MainWindow_Title" xml:space="preserve">
-    <value>Experimental Probability</value>
+  <data name="Settings_TextBlock_NumberOfTakenBalls_Text" xml:space="preserve">
+    <value>Number of taken balls:</value>
+  </data>
+  <data name="TypeName" xml:space="preserve">
+    <value>Pool: ColoredBalls</value>
   </data>
 </root>

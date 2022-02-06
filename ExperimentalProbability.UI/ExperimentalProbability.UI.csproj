@@ -26,35 +26,35 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\LocalizableResources\WindowResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>WindowResources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Properties\Types\ColoredBalls\Resources.Designer.cs">
+    <Compile Update="Properties\LocalizableResources\ColoredBallsResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>ColoredBallsResources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Properties\Types\Dice\Resources.Designer.cs">
+    <Compile Update="Properties\LocalizableResources\DiceResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>DiceResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\LocalizableResources\WindowResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>WindowResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\Types\ColoredBalls\Resources.resx">
+    <EmbeddedResource Update="Properties\LocalizableResources\ColoredBallsResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>ColoredBallsResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\Types\Dice\Resources.resx">
+    <EmbeddedResource Update="Properties\LocalizableResources\DiceResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>DiceResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

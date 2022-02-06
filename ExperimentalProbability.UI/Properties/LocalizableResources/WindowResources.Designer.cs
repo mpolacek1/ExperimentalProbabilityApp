@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.Types.Dice {
+namespace ExperimentalProbability.UI.Properties.LocalizableResources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ExperimentalProbability.UI.Properties.Types.Dice {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    public class WindowResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal WindowResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI.Properties.Types.Dice {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.Types.Dice.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.LocalizableResources.WindowResources", typeof(WindowResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,65 +61,74 @@ namespace ExperimentalProbability.UI.Properties.Types.Dice {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a side.
+        ///   Looks up a localized string similar to Run calculation.
         /// </summary>
-        public static string Settings_ComboBox_SideSelection_Text {
+        public static string Button_RunCalculation_Content {
             get {
-                return ResourceManager.GetString("Settings_ComboBox_SideSelection_Text", resourceCulture);
+                return ResourceManager.GetString("Button_RunCalculation_Content", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.
+        ///   Looks up a localized string similar to N/A.
         /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfDiceRolls_Text {
+        public static string NotAvailable {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfDiceRolls_Text", resourceCulture);
+                return ResourceManager.GetString("NotAvailable", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 6.
+        ///   Looks up a localized string similar to Choose a type.
         /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfSides_Text {
+        public static string Settings_ComboBox_TypeSelection_Text {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfSides_Text", resourceCulture);
+                return ResourceManager.GetString("Settings_ComboBox_TypeSelection_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dice settings.
+        ///   Looks up a localized string similar to 1000000.
         /// </summary>
-        public static string Settings_TextBlock_Header2_Text {
+        public static string Settings_IntegerUpDown_SimulationsToRun_Text {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_Header2_Text", resourceCulture);
+                return ResourceManager.GetString("Settings_IntegerUpDown_SimulationsToRun_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Number of dice rolls:.
+        ///   Looks up a localized string similar to Calculation settings.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfDiceRolls_Text {
+        public static string Settings_TextBlock_Header1_Text {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfDiceRolls_Text", resourceCulture);
+                return ResourceManager.GetString("Settings_TextBlock_Header1_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Number of sides:.
+        ///   Looks up a localized string similar to Number of simulations:.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfSides_Text {
+        public static string Settings_TextBlock_SimulationsToRun_Text {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfSides_Text", resourceCulture);
+                return ResourceManager.GetString("Settings_TextBlock_SimulationsToRun_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pool: Dice.
+        ///   Looks up a localized string similar to Type:.
         /// </summary>
-        public static string TypeName {
+        public static string Settings_TextBlock_TypeSelection_Text {
             get {
-                return ResourceManager.GetString("TypeName", resourceCulture);
+                return ResourceManager.GetString("Settings_TextBlock_TypeSelection_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Experimental Probability.
+        /// </summary>
+        public static string Window_MainWindow_Title {
+            get {
+                return ResourceManager.GetString("Window_MainWindow_Title", resourceCulture);
             }
         }
     }

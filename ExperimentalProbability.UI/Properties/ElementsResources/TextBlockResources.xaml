@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+
+    <Style x:Key="Style_TextBlock_Header_Default" TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    <Style x:Key="Style_TextBlock_Header1_Default" TargetType="TextBlock" BasedOn="{StaticResource Style_TextBlock_Header_Default}">
+        <Setter Property="FontSize" Value="22"/>
+    </Style>
+    <Style x:Key="Style_TextBlock_Settings_Header1" TargetType="TextBlock" BasedOn="{StaticResource Style_TextBlock_Header1_Default}">
+        <Setter Property="Text" Value="{x:Static resx:WindowResources.Settings_TextBlock_Header1_Text}"/>
+    </Style>
+    <Style x:Key="Style_TextBlock_Header2_Default" TargetType="TextBlock" BasedOn="{StaticResource Style_TextBlock_Header_Default}">
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <Style x:Key="Style_TextBlock_DescriptionOfUpDown_Default" TargetType="TextBlock">
+        <Setter Property="Margin" Value="0,0,5,0"/>
+    </Style>
+    <Style x:Key="Style_TextBlock_TypeSelection" TargetType="TextBlock" BasedOn="{StaticResource Style_TextBlock_DescriptionOfUpDown_Default}">
+        <Setter Property="Text" Value="{x:Static resx:WindowResources.Settings_TextBlock_TypeSelection_Text}"/>
+    </Style>
+    <Style x:Key="Style_TextBlock_SimulationsToRun" TargetType="TextBlock" BasedOn="{StaticResource Style_TextBlock_DescriptionOfUpDown_Default}">
+        <Setter Property="Text" Value="{x:Static resx:WindowResources.Settings_TextBlock_SimulationsToRun_Text}"/>
+    </Style>
+    
+</ResourceDictionary>

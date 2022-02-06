@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+
+    <Style x:Key="Style_Button_RunCalculation" TargetType="Button">
+        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Content" Value="{x:Static resx:WindowResources.Button_RunCalculation_Content}"/>
+    </Style>
+    
+</ResourceDictionary>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
+namespace ExperimentalProbability.UI.Properties.LocalizableResources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    public class ColoredBallsResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal ColoredBallsResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.Types.ColoredBalls.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.LocalizableResources.ColoredBallsResources", typeof(ColoredBallsResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -88,6 +88,24 @@ namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cyan.
+        /// </summary>
+        public static string Settings_ComboBox_ColorSelection_Item_ColorCyan {
+            get {
+                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorCyan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gold.
+        /// </summary>
+        public static string Settings_ComboBox_ColorSelection_Item_ColorGold {
+            get {
+                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorGold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gray.
         /// </summary>
         public static string Settings_ComboBox_ColorSelection_Item_ColorGray {
@@ -106,6 +124,15 @@ namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Magenta.
+        /// </summary>
+        public static string Settings_ComboBox_ColorSelection_Item_ColorMagenta {
+            get {
+                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorMagenta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Orange.
         /// </summary>
         public static string Settings_ComboBox_ColorSelection_Item_ColorOrange {
@@ -115,11 +142,29 @@ namespace ExperimentalProbability.UI.Properties.Types.ColoredBalls {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pink.
+        /// </summary>
+        public static string Settings_ComboBox_ColorSelection_Item_ColorPink {
+            get {
+                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorPink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Red.
         /// </summary>
         public static string Settings_ComboBox_ColorSelection_Item_ColorRed {
             get {
                 return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorRed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turquoise.
+        /// </summary>
+        public static string Settings_ComboBox_ColorSelection_Item_ColorTurquoise {
+            get {
+                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorTurquoise", resourceCulture);
             }
         }
         

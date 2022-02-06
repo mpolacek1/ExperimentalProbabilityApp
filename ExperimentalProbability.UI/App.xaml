@@ -6,11 +6,12 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ElementsResources\BorderResources.xaml"/>
-                <ResourceDictionary Source="ElementsResources\ComboBoxResources.xaml"/>
-                <ResourceDictionary Source="ElementsResources\IntegerUpDownResources.xaml"/>
-                <ResourceDictionary Source="ElementsResources\TextBlockResources.xaml"/>
-                <ResourceDictionary Source="ElementsResources\WindowResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\BorderResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\ButtonResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\ComboBoxResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\IntegerUpDownResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\TextBlockResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\WindowResources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
