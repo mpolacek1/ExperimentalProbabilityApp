@@ -1,19 +1,17 @@
-﻿using System.Collections.Generic;
-
-namespace ExperimentalProbability.Calculations.Models
+﻿namespace ExperimentalProbability.Calculation.Models
 {
     public class CalculationData
     {
-        public CalculationData(TypeSettings typeSettings, List<string> conditionSettings, int simulationsToRun)
+        public CalculationData(BasicData typeData, BasicData conditionData, int simulationsToRun)
         {
-            TypeSettings = typeSettings;
-            ConditionSettings = conditionSettings;
+            TypeData = typeData;
+            ConditionData = conditionData;
             SimulationsToRun = simulationsToRun;
         }
 
-        public TypeSettings TypeSettings { get; set; }
+        public BasicData TypeData { get; set; }
 
-        public object ConditionSettings { get; set; }
+        public BasicData ConditionData { get; set; }
 
         public int SimulationsToRun { get; set; }
     }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExperimentalProbability.Calculations.Models
+namespace ExperimentalProbability.Calculation.Models
 {
     public class CalculationResultData
     {
