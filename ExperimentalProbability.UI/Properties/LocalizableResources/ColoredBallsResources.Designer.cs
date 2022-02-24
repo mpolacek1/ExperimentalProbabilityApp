@@ -61,236 +61,164 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Black.
+        ///   Looks up a localized string similar to Available colors.
         /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorBlack {
+        public static string ColorPicker_AvailableColorsHeader {
             get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorBlack", resourceCulture);
+                return ResourceManager.GetString("ColorPicker_AvailableColorsHeader", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blue.
+        ///   Looks up a localized string similar to No colors available.
         /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorBlue {
+        public static string ColorPicker_NoAvailableColorsHeader {
             get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorBlue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Brown.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorBrown {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorBrown", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cyan.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorCyan {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorCyan", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Gold.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorGold {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorGold", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Gray.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorGray {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorGray", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Green.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorGreen {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorGreen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Magenta.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorMagenta {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorMagenta", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Orange.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorOrange {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorOrange", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pink.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorPink {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorPink", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Red.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorRed {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorRed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Turquoise.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorTurquoise {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorTurquoise", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Violet.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorViolet {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorViolet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to White.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorWhite {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorWhite", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Yellow.
-        /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Item_ColorYellow {
-            get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Item_ColorYellow", resourceCulture);
+                return ResourceManager.GetString("ColorPicker_NoAvailableColorsHeader", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Choose a color.
         /// </summary>
-        public static string Settings_ComboBox_ColorSelection_Text {
+        public static string ComboBox_ColorSelection_Text {
             get {
-                return ResourceManager.GetString("Settings_ComboBox_ColorSelection_Text", resourceCulture);
+                return ResourceManager.GetString("ComboBox_ColorSelection_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
-        public static string Settings_IntegerUpDown_ColorNumber_Text {
+        public static string IntegerUpDown_ColorNumber_Text {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_ColorNumber_Text", resourceCulture);
+                return ResourceManager.GetString("IntegerUpDown_ColorNumber_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 9.
         /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfBalls_Text {
+        public static string IntegerUpDown_NumberOfBalls_Text {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfBalls_Text", resourceCulture);
+                return ResourceManager.GetString("IntegerUpDown_NumberOfBalls_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 3.
         /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfColors_Text {
+        public static string IntegerUpDown_NumberOfColors_Text {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfColors_Text", resourceCulture);
+                return ResourceManager.GetString("IntegerUpDown_NumberOfColors_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 3.
         /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfTakenBalls_Text {
+        public static string IntegerUpDown_NumberOfTakenBalls_Text {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfTakenBalls_Text", resourceCulture);
+                return ResourceManager.GetString("IntegerUpDown_NumberOfTakenBalls_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Color n:.
+        ///   Looks up a localized string similar to Color count:.
         /// </summary>
-        public static string Settings_TextBlock_ColorNumber_Text {
+        public static string Label_ColorCount_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_ColorNumber_Text", resourceCulture);
+                return ResourceManager.GetString("Label_ColorCount_Content", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Colored balls settings.
+        ///   Looks up a localized string similar to Choose a color:.
         /// </summary>
-        public static string Settings_TextBlock_Header2_Text {
+        public static string Label_ColorPicker_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_Header2_Text", resourceCulture);
+                return ResourceManager.GetString("Label_ColorPicker_Content", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Number of balls:.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfBalls_Text {
+        public static string Label_NumberOfBalls_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfBalls_Text", resourceCulture);
+                return ResourceManager.GetString("Label_NumberOfBalls_Content", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Number of colors:.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfColors_Text {
+        public static string Label_NumberOfColors_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfColors_Text", resourceCulture);
+                return ResourceManager.GetString("Label_NumberOfColors_Content", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Number of taken balls:.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfTakenBalls_Text {
+        public static string Label_NumberOfTakenBalls_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfTakenBalls_Text", resourceCulture);
+                return ResourceManager.GetString("Label_NumberOfTakenBalls_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of these balls are.
+        /// </summary>
+        public static string String_BeforeColorNamePlural {
+            get {
+                return ResourceManager.GetString("String_BeforeColorNamePlural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of these balls is.
+        /// </summary>
+        public static string String_BeforeColorNameSingular {
+            get {
+                return ResourceManager.GetString("String_BeforeColorNameSingular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ball taken is.
+        /// </summary>
+        public static string String_CalculationAction {
+            get {
+                return ResourceManager.GetString("String_CalculationAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to balls,.
+        /// </summary>
+        public static string String_PoolItem {
+            get {
+                return ResourceManager.GetString("String_PoolItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bag of colored balls, that can have from nine to a hundred balls..
+        /// </summary>
+        public static string String_TypeInfo {
+            get {
+                return ResourceManager.GetString("String_TypeInfo", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Pool: ColoredBalls.
         /// </summary>
-        public static string TypeName {
+        public static string String_TypeName {
             get {
-                return ResourceManager.GetString("TypeName", resourceCulture);
+                return ResourceManager.GetString("String_TypeName", resourceCulture);
             }
         }
     }

@@ -1,122 +1,106 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
-using ExperimentalProbability.UI.Controllers;
+using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.UI.Extensions;
+using ExperimentalProbability.UI.Models;
+using ExperimentalProbability.UI.Properties.LocalizableResources;
+using ExperimentalProbability.UI.Utilities;
 using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI
 {
     public partial class MainWindow : Window
     {
+        private readonly BackgroundWorker _worker;
+
         public MainWindow()
         {
             InitializeComponent();
+            _worker = new BackgroundWorker();
+            _worker.DoWork += Worker_DoWork;
+            _worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
         }
+
+        public CalculationType CurrentType { get; set; }
+
+        public List<ColorItem> DefaultColors => GetDefaultColors();
 
         public string[] Types { get; } = new string[2]
         {
-            Properties.Resources.Type_ColoredBalls,
-            Properties.Resources.Type_Dice,
+            ColoredBallsResources.String_TypeName,
+            DiceResources.String_TypeName,
         };
 
-        public string[] Colors { get; } = new string[10]
+        private static List<ColorItem> GetDefaultColors()
         {
-            Properties.Resources.Color_Black,
-            Properties.Resources.Color_White,
-            Properties.Resources.Color_Red,
-            Properties.Resources.Color_Green,
-            Properties.Resources.Color_Blue,
-            Properties.Resources.Color_Brown,
-            Properties.Resources.Color_Gray,
-            Properties.Resources.Color_Orange,
-            Properties.Resources.Color_Violet,
-            Properties.Resources.Color_Yellow,
-        };
+            var defaultColors = new ColorPicker().AvailableColors;
+            var newColors = new List<ColorItem>();
 
-        public void Selection_ColoredBalls_Color_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.UpdateColorSelectionItemsSources();
-            this.UpdateOutcomeSelectorsItemsSource();
-        }
-
-        private void Selection_Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Panel_Condition_Selection_Outcome.Children.Clear();
-
-            switch (Selection_Type.SelectedIndex)
+            for (int i = 0; i < defaultColors.Count; i++)
             {
-                case 0:
-                    this.UpdateColoredBallsControls(Visibility.Visible);
-                    this.UpdateControlsToColoredBalls();
-
-                    break;
-                case 1:
-                    this.UpdateColoredBallsControls(Visibility.Collapsed);
-                    this.UpdateControlsToDice();
-
-                    break;
-                default:
-                    break;
+                newColors.Add(new ColorItem(defaultColors[i].Color.Value, ColorNameTranslater.ColorNames[defaultColors[i].Name]));
             }
+
+            return newColors;
         }
 
-        private void Pool_Size_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void ComboBox_TypeSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (Selection_Type.SelectedItem.Equals(Properties.Resources.Type_Dice))
-            {
-                var itemPanels = Panel_Condition_Selection_Outcome.Children;
+            Panel_Settings.ChangeVisibility(Visibility.Visible);
+            View_Tutorial.ChangeVisibility(Visibility.Collapsed);
+            Panel_Descriptions.ChangeVisibility(Visibility.Visible);
+            Button_RunCalculation.IsEnabled = true;
 
-                for (int i = 0; i < itemPanels.Count; i++)
+            var selector = (ComboBox)sender;
+
+            CurrentType = new CalculationType(this, selector.SelectedIndex);
+
+            CurrentType.UpdateSelectableData();
+            CurrentType.UpdateDescription();
+            UpdateVisibilityOfTypeViews(selector);
+        }
+
+        private void UpdateVisibilityOfTypeViews(ComboBox selector)
+        {
+            for (int i = 0; i < selector.Items.Count; i++)
+            {
+                if (i == selector.SelectedIndex)
                 {
-                    ((ComboBox)((Panel)itemPanels[i]).Children[0]).ItemsSource = this.GetDiceSelectionItemsSource();
+                    ChangeVisibilityOfTypeViews(i, Visibility.Visible);
+                }
+                else
+                {
+                    ChangeVisibilityOfTypeViews(i, Visibility.Collapsed);
                 }
             }
         }
 
-        private void ColoredBalls_NumberOfColors_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void ChangeVisibilityOfTypeViews(int index, Visibility visibility)
         {
-            var colorPanels = Panel_ColoredBalls_Selection_Color.Children;
-            var numberOfColors = ((IntegerUpDown)sender).Value.Value;
-
-            colorPanels.ClearNotNeededItemPanels(numberOfColors);
-
-            this.GenerateItemsSelection(colorPanels, numberOfColors);
-
-            this.UpdateColorSelectionItemsSources();
-            this.UpdateOutcomeSelectorsItemsSource();
+            Panel_TypeSettings.ChangeVisibilityOfChild(index, visibility);
+            Panel_TypeConditions.ChangeVisibilityOfChild(index, visibility);
+            Panel_TypeDescriptions.ChangeVisibilityOfChild(index, visibility);
         }
 
-        private void Condition_NumberOfTakenItems_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void Button_RunCalculation_Click(object sender, RoutedEventArgs e)
         {
-            var itemPanels = Panel_Condition_Selection_Outcome.Children;
-            var numberOfItems = ((IntegerUpDown)sender).Value.Value;
+            CurrentType.SetCalculationData();
+            _worker.RunWorkerAsync();
+        }
 
-            itemPanels.ClearNotNeededItemPanels(numberOfItems);
+        private void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = CurrentType.RunCalculation();
+        }
 
-            switch (Selection_Type.SelectedIndex)
+        private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error == null)
             {
-                case 0:
-                    this.GenerateItemsSelection(
-                        itemPanels,
-                        numberOfItems,
-                        Properties.Resources.Default_Selection_ColoredBalls,
-                        Panel_ColoredBalls_Selection_Color.Children.GetCurrentSelectedItemsFromPanels(numberOfItems));
-
-                    break;
-                case 1:
-                    this.GenerateItemsSelection(
-                        itemPanels,
-                        numberOfItems,
-                        Properties.Resources.Default_Selection_Dice,
-                        this.GetDiceSelectionItemsSource());
-
-                    break;
-                default:
-                    break;
+                View_Results.DisplayResult((CalculationResultData)e.Result);
             }
-        }
-
-        private void Button_Run_Click(object sender, RoutedEventArgs e)
-        {
         }
     }
 }

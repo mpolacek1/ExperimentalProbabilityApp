@@ -61,65 +61,137 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose a dice type: .
+        /// </summary>
+        public static string ComboBox_DiceSelection_Text {
+            get {
+                return ResourceManager.GetString("ComboBox_DiceSelection_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose a side.
         /// </summary>
-        public static string Settings_ComboBox_SideSelection_Text {
+        public static string ComboBox_SideSelection_Text {
             get {
-                return ResourceManager.GetString("Settings_ComboBox_SideSelection_Text", resourceCulture);
+                return ResourceManager.GetString("ComboBox_SideSelection_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.
+        ///   Looks up a localized string similar to Dice type: .
         /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfDiceRolls_Text {
+        public static string Label_DiceSelection_Content {
             get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfDiceRolls_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 6.
-        /// </summary>
-        public static string Settings_IntegerUpDown_NumberOfSides_Text {
-            get {
-                return ResourceManager.GetString("Settings_IntegerUpDown_NumberOfSides_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dice settings.
-        /// </summary>
-        public static string Settings_TextBlock_Header2_Text {
-            get {
-                return ResourceManager.GetString("Settings_TextBlock_Header2_Text", resourceCulture);
+                return ResourceManager.GetString("Label_DiceSelection_Content", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Number of dice rolls:.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfDiceRolls_Text {
+        public static string Label_NumberOfDiceRolls_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfDiceRolls_Text", resourceCulture);
+                return ResourceManager.GetString("Label_NumberOfDiceRolls_Content", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Number of sides:.
         /// </summary>
-        public static string Settings_TextBlock_NumberOfSides_Text {
+        public static string Label_NumberOfSides_Content {
             get {
-                return ResourceManager.GetString("Settings_TextBlock_NumberOfSides_Text", resourceCulture);
+                return ResourceManager.GetString("Label_NumberOfSides_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to side rolled is.
+        /// </summary>
+        public static string String_CalculationAction {
+            get {
+                return ResourceManager.GetString("String_CalculationAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Six sided die.
+        /// </summary>
+        public static string String_DiceType_Cube {
+            get {
+                return ResourceManager.GetString("String_DiceType_Cube", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Twelve sided die.
+        /// </summary>
+        public static string String_DiceType_Dodecahedron {
+            get {
+                return ResourceManager.GetString("String_DiceType_Dodecahedron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Twenty sided die.
+        /// </summary>
+        public static string String_DiceType_Icosahedron {
+            get {
+                return ResourceManager.GetString("String_DiceType_Icosahedron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eight sided die.
+        /// </summary>
+        public static string String_DiceType_Octahedron {
+            get {
+                return ResourceManager.GetString("String_DiceType_Octahedron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ten sided die.
+        /// </summary>
+        public static string String_DiceType_PentagonalTrapezohedron {
+            get {
+                return ResourceManager.GetString("String_DiceType_PentagonalTrapezohedron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four sided die.
+        /// </summary>
+        public static string String_DiceType_Tetrahedron {
+            get {
+                return ResourceManager.GetString("String_DiceType_Tetrahedron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sided die..
+        /// </summary>
+        public static string String_PoolItem {
+            get {
+                return ResourceManager.GetString("String_PoolItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to die, that can have four, six, eight, ten, twelve or twenty sides..
+        /// </summary>
+        public static string String_TypeInfo {
+            get {
+                return ResourceManager.GetString("String_TypeInfo", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Pool: Dice.
         /// </summary>
-        public static string TypeName {
+        public static string String_TypeName {
             get {
-                return ResourceManager.GetString("TypeName", resourceCulture);
+                return ResourceManager.GetString("String_TypeName", resourceCulture);
             }
         }
     }

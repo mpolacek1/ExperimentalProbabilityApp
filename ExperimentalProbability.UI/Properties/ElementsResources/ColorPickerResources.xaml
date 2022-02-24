@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+
+    <Style TargetType="xctk:ColorPicker">
+        <Style.Setters>
+            <Setter Property="DisplayColorAndName" Value="True"/>
+            <Setter Property="AvailableColorsHeader" Value="{x:Static resx:ColoredBallsResources.ColorPicker_AvailableColorsHeader}"/>
+            <Setter Property="ShowTabHeaders" Value="False"/>
+            <Setter Property="ShowStandardColors" Value="False"/>
+            <Setter Property="ShowRecentColors" Value="False"/>
+        </Style.Setters>
+    </Style>
+    
+</ResourceDictionary>

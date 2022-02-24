@@ -1,0 +1,152 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ExperimentalProbability.UI"
+                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+
+    <Style x:Key="Style_Label_Default" TargetType="Label">
+        <Style.Setters>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="0,0,5,0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TypeSelection" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TypeSelection_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_SimulationsToRun" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_SimulationsToRun_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableHeaderDefault" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableRowHeaderDefault" TargetType="Label" BasedOn="{StaticResource Style_Label_TableHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Padding" Value="0,5,5,5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableRowHeader_SimulationsRan" TargetType="Label" BasedOn="{StaticResource Style_Label_TableRowHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableRowHeaderSimulationsRan_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableRowHeader_ConditionsMet" TargetType="Label" BasedOn="{StaticResource Style_Label_TableRowHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableRowHeaderConditionsMet_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableRowHeader_Probability" TargetType="Label" BasedOn="{StaticResource Style_Label_TableRowHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableRowHeaderProbability_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderDefault" TargetType="Label" BasedOn="{StaticResource Style_Label_TableHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Grid.Row" Value="0"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderFirst" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderFirst_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderSecond" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderSecond_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderThird" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderThird_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderFourth" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderFourth_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderFifth" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderFifth_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderSixth" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderSixth_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderSeventh" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderSeventh_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderEighth" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderEighth_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderNinth" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderNinth_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_TableColumnHeaderTenth" TargetType="Label" BasedOn="{StaticResource Style_Label_TableColumnHeaderDefault}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_TableColumnHeaderTenth_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_ExperimentalProbability" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Label_ExperimentalProbability_Content}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style.Setters>
+    </Style>
+    
+    <Style x:Key="Style_Label_NumberOfBalls" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:ColoredBallsResources.Label_NumberOfBalls_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_NumberOfColors" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:ColoredBallsResources.Label_NumberOfColors_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_ColorPicker" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:ColoredBallsResources.Label_ColorPicker_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_ColorCount" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:ColoredBallsResources.Label_ColorCount_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_NumberOfTakenBalls" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:ColoredBallsResources.Label_NumberOfTakenBalls_Content}"/>
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="Style_Label_DiceSelection" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:DiceResources.Label_DiceSelection_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_NumberOfDiceRolls" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:DiceResources.Label_NumberOfDiceRolls_Content}"/>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>

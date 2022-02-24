@@ -3,11 +3,14 @@
                     xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
 
     <Style x:Key="Style_Window_MainWindow_Default" TargetType="Window">
-        <Setter Property="Background" Value="Black"/>
-        <Setter Property="FontFamily" Value="Yu Gothic"/>
-        <Setter Property="FontSize" Value="16"/>
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Title" Value="{x:Static resx:WindowResources.Window_MainWindow_Title}"/>
+        <Style.Setters>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="FontFamily" Value="Yu Gothic"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="ShowInTaskbar" Value="True"/>
+            <Setter Property="Title" Value="{x:Static resx:GeneralResources.Window_MainWindow_Title}"/>
+        </Style.Setters>
     </Style>
     
 </ResourceDictionary>

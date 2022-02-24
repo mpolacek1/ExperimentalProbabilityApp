@@ -117,25 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Settings_ComboBox_SideSelection_Text" xml:space="preserve">
+  <data name="ComboBox_DiceSelection_Text" xml:space="preserve">
+    <value>Choose a dice type: </value>
+  </data>
+  <data name="ComboBox_SideSelection_Text" xml:space="preserve">
     <value>Choose a side</value>
   </data>
-  <data name="Settings_IntegerUpDown_NumberOfDiceRolls_Text" xml:space="preserve">
-    <value>1</value>
+  <data name="Label_DiceSelection_Content" xml:space="preserve">
+    <value>Dice type: </value>
   </data>
-  <data name="Settings_IntegerUpDown_NumberOfSides_Text" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Settings_TextBlock_Header2_Text" xml:space="preserve">
-    <value>Dice settings</value>
-  </data>
-  <data name="Settings_TextBlock_NumberOfDiceRolls_Text" xml:space="preserve">
+  <data name="Label_NumberOfDiceRolls_Content" xml:space="preserve">
     <value>Number of dice rolls:</value>
   </data>
-  <data name="Settings_TextBlock_NumberOfSides_Text" xml:space="preserve">
+  <data name="Label_NumberOfSides_Content" xml:space="preserve">
     <value>Number of sides:</value>
   </data>
-  <data name="TypeName" xml:space="preserve">
+  <data name="String_CalculationAction" xml:space="preserve">
+    <value>side rolled is</value>
+  </data>
+  <data name="String_DiceType_Cube" xml:space="preserve">
+    <value>Six sided die</value>
+  </data>
+  <data name="String_DiceType_Dodecahedron" xml:space="preserve">
+    <value>Twelve sided die</value>
+  </data>
+  <data name="String_DiceType_Icosahedron" xml:space="preserve">
+    <value>Twenty sided die</value>
+  </data>
+  <data name="String_DiceType_Octahedron" xml:space="preserve">
+    <value>Eight sided die</value>
+  </data>
+  <data name="String_DiceType_PentagonalTrapezohedron" xml:space="preserve">
+    <value>Ten sided die</value>
+  </data>
+  <data name="String_DiceType_Tetrahedron" xml:space="preserve">
+    <value>Four sided die</value>
+  </data>
+  <data name="String_PoolItem" xml:space="preserve">
+    <value>sided die.</value>
+  </data>
+  <data name="String_TypeInfo" xml:space="preserve">
+    <value>die, that can have four, six, eight, ten, twelve or twenty sides.</value>
+  </data>
+  <data name="String_TypeName" xml:space="preserve">
     <value>Pool: Dice</value>
   </data>
 </root>

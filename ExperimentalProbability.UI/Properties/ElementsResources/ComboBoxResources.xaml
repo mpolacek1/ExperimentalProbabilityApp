@@ -3,14 +3,26 @@
                     xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
 
     <Style x:Key="Style_ComboBox_Default" TargetType="ComboBox">
-        <Setter Property="IsEditable" Value="True"/>
-        <Setter Property="IsReadOnly" Value="True"/>
+        <Style.Setters>
+            <Setter Property="IsEditable" Value="True"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+        </Style.Setters>
     </Style>
     <Style x:Key="Style_ComboBox_TypeSelection" TargetType="ComboBox" BasedOn="{StaticResource Style_ComboBox_Default}">
-        <Setter Property="Text" Value="{x:Static resx:WindowResources.Settings_ComboBox_TypeSelection_Text}"/>
+        <Style.Setters>
+            <Setter Property="Text" Value="{x:Static resx:GeneralResources.ComboBox_TypeSelection_Text}"/>
+        </Style.Setters>
     </Style>
-    <Style x:Key="Style_ComboBox_ItemSelection" TargetType="ComboBox" BasedOn="{StaticResource Style_ComboBoxDefault}">
-        <Setter Property="Margin" Value="0,0,0,0"/>
+
+    <Style x:Key="Style_ComboBox_DiceSelection" TargetType="ComboBox" BasedOn="{StaticResource Style_ComboBox_Default}">
+        <Style.Setters>
+            <Setter Property="Text" Value="{x:Static resx:DiceResources.ComboBox_DiceSelection_Text}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_ComboBox_SideSelection" TargetType="ComboBox" BasedOn="{StaticResource Style_ComboBox_Default}">
+        <Style.Setters>
+            <Setter Property="Text" Value="{x:Static resx:DiceResources.ComboBox_SideSelection_Text}"/>
+        </Style.Setters>
     </Style>
 
 </ResourceDictionary>

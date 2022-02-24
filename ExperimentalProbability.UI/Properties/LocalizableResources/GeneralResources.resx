@@ -120,23 +120,125 @@
   <data name="Button_RunCalculation_Content" xml:space="preserve">
     <value>Run calculation</value>
   </data>
-  <data name="NotAvailable" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="Settings_ComboBox_TypeSelection_Text" xml:space="preserve">
+  <data name="ComboBox_TypeSelection_Text" xml:space="preserve">
     <value>Choose a type</value>
   </data>
-  <data name="Settings_IntegerUpDown_SimulationsToRun_Text" xml:space="preserve">
+  <data name="IntegerUpDown_SimulationsToRun_Text" xml:space="preserve">
     <value>1000000</value>
   </data>
-  <data name="Settings_TextBlock_Header1_Text" xml:space="preserve">
-    <value>Calculation settings</value>
+  <data name="Label_ExperimentalProbability_Content" xml:space="preserve">
+    <value>Experimental probability: </value>
   </data>
-  <data name="Settings_TextBlock_SimulationsToRun_Text" xml:space="preserve">
+  <data name="Label_SimulationsToRun_Content" xml:space="preserve">
     <value>Number of simulations:</value>
   </data>
-  <data name="Settings_TextBlock_TypeSelection_Text" xml:space="preserve">
+  <data name="Label_TableColumnHeaderEighth_Content" xml:space="preserve">
+    <value>Eighth result</value>
+  </data>
+  <data name="Label_TableColumnHeaderFifth_Content" xml:space="preserve">
+    <value>Fifth result</value>
+  </data>
+  <data name="Label_TableColumnHeaderFirst_Content" xml:space="preserve">
+    <value>First result</value>
+  </data>
+  <data name="Label_TableColumnHeaderFourth_Content" xml:space="preserve">
+    <value>Fourth result</value>
+  </data>
+  <data name="Label_TableColumnHeaderNinth_Content" xml:space="preserve">
+    <value>Ninth result</value>
+  </data>
+  <data name="Label_TableColumnHeaderSecond_Content" xml:space="preserve">
+    <value>Second result</value>
+  </data>
+  <data name="Label_TableColumnHeaderSeventh_Content" xml:space="preserve">
+    <value>Seventh result</value>
+  </data>
+  <data name="Label_TableColumnHeaderSixth_Content" xml:space="preserve">
+    <value>Sixth result</value>
+  </data>
+  <data name="Label_TableColumnHeaderTenth_Content" xml:space="preserve">
+    <value>Tenth result</value>
+  </data>
+  <data name="Label_TableColumnHeaderThird_Content" xml:space="preserve">
+    <value>Third result</value>
+  </data>
+  <data name="Label_TableRowHeaderConditionsMet_Content" xml:space="preserve">
+    <value>Condition met</value>
+  </data>
+  <data name="Label_TableRowHeaderProbability_Content" xml:space="preserve">
+    <value>Probability</value>
+  </data>
+  <data name="Label_TableRowHeaderSimulationsRan_Content" xml:space="preserve">
+    <value>Simulations ran</value>
+  </data>
+  <data name="Label_TypeSelection_Content" xml:space="preserve">
     <value>Type:</value>
+  </data>
+  <data name="String_ConditionInfo" xml:space="preserve">
+    <value>The condition you are looking for is that</value>
+  </data>
+  <data name="String_IndefiniteMember_A" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="String_IndefiniteMember_An" xml:space="preserve">
+    <value>an</value>
+  </data>
+  <data name="String_NotAvailable" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="String_PoolInfo" xml:space="preserve">
+    <value>Currently the pool is made out of</value>
+  </data>
+  <data name="String_TypeInfo" xml:space="preserve">
+    <value>This calculation works with a pool, that consists of a</value>
+  </data>
+  <data name="TextBlock_ConditionDescription_Text" xml:space="preserve">
+    <value>The condition you are looking for is that</value>
+  </data>
+  <data name="TextBlock_ConditionHeader2_Text" xml:space="preserve">
+    <value>Condition settings</value>
+  </data>
+  <data name="TextBlock_DescriptionHeader1_Text" xml:space="preserve">
+    <value>Calculation description</value>
+  </data>
+  <data name="TextBlock_DescriptionHeader2_Text" xml:space="preserve">
+    <value>Pool visualization</value>
+  </data>
+  <data name="TextBlock_FifthStep_Text" xml:space="preserve">
+    <value>5. After the calculation completes, you can repeat these steps indefinitely or close the application.</value>
+  </data>
+  <data name="TextBlock_FirstStep_Text" xml:space="preserve">
+    <value>1. Choose the type of calculation you want to work with.</value>
+  </data>
+  <data name="TextBlock_FourthFirstStep_Text" xml:space="preserve">
+    <value>4.1. If any errors pop up follow the given instructions.</value>
+  </data>
+  <data name="TextBlock_FourthSecondStep_Text" xml:space="preserve">
+    <value>4.2. If no errors pop up wait for all results.</value>
+  </data>
+  <data name="TextBlock_FourthStep_Text" xml:space="preserve">
+    <value>4. Run the calculation and see what happens.</value>
+  </data>
+  <data name="TextBlock_PoolDescription_Text" xml:space="preserve">
+    <value>Currently the pool is made out of a</value>
+  </data>
+  <data name="TextBlock_ResultsHeader1_Text" xml:space="preserve">
+    <value>Last calculation results</value>
+  </data>
+  <data name="TextBlock_SecondStep_Text" xml:space="preserve">
+    <value>2. Set the calculation type settings to your liking.</value>
+  </data>
+  <data name="TextBlock_SettingsHeader1_Text" xml:space="preserve">
+    <value>Calculation settings</value>
+  </data>
+  <data name="TextBlock_ThirdStep_Text" xml:space="preserve">
+    <value>3. Set the calculation condition settings to your liking.</value>
+  </data>
+  <data name="TextBlock_TutorialHeader1_Text" xml:space="preserve">
+    <value>Brief tutorial</value>
+  </data>
+  <data name="TextBlock_TypeHeader2_Text" xml:space="preserve">
+    <value>Type settings</value>
   </data>
   <data name="Window_MainWindow_Title" xml:space="preserve">
     <value>Experimental Probability</value>

@@ -8,8 +8,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Properties\ElementsResources\BorderResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\ButtonResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\ColorPickerResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\ComboBoxResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\EllipseResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\IntegerUpDownResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\LabelResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\ScrollViewerResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\TextBlockResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\WindowResources.xaml"/>
             </ResourceDictionary.MergedDictionaries>

@@ -19,42 +19,62 @@
 
   <PropertyGroup>
 	<CodeAnalysisRuleSet>..\.ruleset</CodeAnalysisRuleSet>
+	<AssemblyName>ExperimentalProbability.UI</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExperimentalProbability.Calculations\ExperimentalProbability.Calculations.csproj" />
+    <ProjectReference Include="..\ExperimentalProbability.Calculations\ExperimentalProbability.Calculation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\LocalizableResources\WindowResources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WindowResources.resx</DependentUpon>
-    </Compile>
     <Compile Update="Properties\LocalizableResources\ColoredBallsResources.Designer.cs">
+      <DependentUpon>ColoredBallsResources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>ColoredBallsResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\LocalizableResources\ColorNamesResources.Designer.cs">
+      <DependentUpon>ColorNamesResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Properties\LocalizableResources\DiceResources.Designer.cs">
+      <DependentUpon>DiceResources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>DiceResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\LocalizableResources\GeneralResources.Designer.cs">
+      <DependentUpon>GeneralResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\LocalizableResources\NumberStringsResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NumberStringsResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\LocalizableResources\WindowResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WindowResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Properties\LocalizableResources\ColoredBallsResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ColoredBallsResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\LocalizableResources\ColorNamesResources.resx">
+      <LastGenOutput>ColorNamesResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\LocalizableResources\DiceResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DiceResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\LocalizableResources\GeneralResources.resx">
+      <SubType>Designer</SubType>
+      <LastGenOutput>GeneralResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\LocalizableResources\NumberStringsResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NumberStringsResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

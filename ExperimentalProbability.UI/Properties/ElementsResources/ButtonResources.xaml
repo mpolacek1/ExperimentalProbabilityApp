@@ -3,9 +3,12 @@
                     xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
 
     <Style x:Key="Style_Button_RunCalculation" TargetType="Button">
-        <Setter Property="IsEnabled" Value="False"/>
-        <Setter Property="Padding" Value="3"/>
-        <Setter Property="Content" Value="{x:Static resx:WindowResources.Button_RunCalculation_Content}"/>
+        <Style.Setters>
+            <Setter Property="IsEnabled" Value="False"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Content" Value="{x:Static resx:GeneralResources.Button_RunCalculation_Content}"/>
+        </Style.Setters>
     </Style>
     
 </ResourceDictionary>

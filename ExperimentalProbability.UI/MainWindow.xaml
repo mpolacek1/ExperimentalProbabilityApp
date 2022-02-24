@@ -3,119 +3,81 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExperimentalProbability.UI"
+        xmlns:v="clr-namespace:ExperimentalProbability.UI.CustomElements.Views"
+        xmlns:vtc="clr-namespace:ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls"
+        xmlns:vtd="clr-namespace:ExperimentalProbability.UI.CustomElements.Views.Types.Dice"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties"
         mc:Ignorable="d"
-        Style="{StaticResource MainWindowDefault}">
+        Style="{StaticResource Style_Window_MainWindow_Default}"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
-    <DockPanel LastChildFill="False"
-               Margin="10">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-        <DockPanel DockPanel.Dock="Bottom"
-                   LastChildFill="False">
-
-            <Button x:Name="Button_Run"
-                    DockPanel.Dock="Right"
-                    IsEnabled="False"
-                    Content="{x:Static resx:Resources.Button_Run}"
-                    Click="Button_Run_Click"/>
-
-        </DockPanel>
-
-        <Border DockPanel.Dock="Top"
-                Style="{StaticResource Border1}"
-                Margin="0,0,0,10">
-
-            <StackPanel Margin="0,0,0,5">
-
-                <TextBlock DockPanel.Dock="Top"
-                           Style="{StaticResource Header1}"
-                           Margin="0,0,0,5"
-                           Text="{x:Static resx:Resources.Header1_Settings_Calculation}"/>
-
-                <StackPanel DockPanel.Dock="Top"
-                            Orientation="Horizontal"
-                            Margin="0,0,0,5">
-
-                    <TextBlock Margin="0,0,5,0"
-                               Text="{x:Static resx:Resources.Text_Selection_Type}"/>
-
-                    <ComboBox x:Name="Selection_Type"
-                              Style="{StaticResource ComboBoxDefault}"
-                              Margin="0,0,10,0"
-                              Text="{x:Static resx:Resources.Default_Selection_Type}"
-                              ItemsSource="{Binding Types}"
-                              SelectionChanged="Selection_Type_SelectionChanged" Background="{x:Null}"/>
-
-                    <TextBlock Margin="0,0,5,0"
-                               Text="{x:Static resx:Resources.Text_Simulations}"/>
-
-                    <xctk:IntegerUpDown x:Name="Simulations"
-                                        Style="{StaticResource IntegerUpDownSimulations}"/>
-
+        <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource Style_Border_Heavy_Bottom}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource Style_TextBlock_Settings_Header1}"/>
+                <WrapPanel>
+                    <WrapPanel Margin="0,0,5,5">
+                        <Label Target="{Binding ComboBox_TypeSelection}" Style="{StaticResource Style_Label_TypeSelection}"/>
+                        <ComboBox x:Name="ComboBox_TypeSelection" Style="{StaticResource Style_ComboBox_TypeSelection}" ItemsSource="{Binding Types}" SelectionChanged="ComboBox_TypeSelection_SelectionChanged"/>
+                    </WrapPanel>
+                    <WrapPanel Margin="0,0,5,5">
+                        <Label Target="{Binding IntegerUpDown_SimulationsToRun}" Style="{StaticResource Style_Label_SimulationsToRun}"/>
+                        <xctk:IntegerUpDown x:Name="IntegerUpDown_SimulationsToRun" Style="{StaticResource Style_IntegerUpDown_SimulationsToRun}"/>
+                    </WrapPanel>
+                </WrapPanel>
+                <StackPanel x:Name="Panel_Settings" Visibility="Collapsed">
+                    <Border Style="{StaticResource Style_Border_Medium_Top}">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource Style_TextBlock_Settings_TypeHeader2}"/>
+                            <StackPanel x:Name="Panel_TypeSettings">
+                                <vtc:TypeSettingsView/>
+                                <vtd:TypeSettingsView/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border Style="{StaticResource Style_Border_Medium_Top}">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource Style_TextBlock_Settings_ConditionHeader2}"/>
+                            <StackPanel x:Name="Panel_TypeConditions">
+                                <vtc:ConditionSettingsView/>
+                                <vtd:ConditionSettingsView/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
-
-                <StackPanel x:Name="Panel_Settings_Type"
-                            Visibility="Collapsed">
-
-                    <TextBlock Margin="0,0,0,5"
-                               Style="{StaticResource Header2}"
-                               Text="{x:Static resx:Resources.Header2_Settings_Type}"/>
-
-                    <StackPanel Orientation="Horizontal"
-                                Margin="0,0,0,5">
-
-                        <TextBlock x:Name="Text_Pool_Size"
-                                   Margin="0,0,5,0"/>
-
-                        <xctk:IntegerUpDown x:Name="Pool_Size"
-                                            Style="{StaticResource IntegerUpDownDefault}"
-                                            Margin="0,0,10,0"
-                                            ValueChanged="Pool_Size_ValueChanged"/>
-
-                        <TextBlock x:Name="Text_ColoredBalls_NumberOfColors"
-                                   Margin="0,0,5,0"/>
-
-                        <xctk:IntegerUpDown x:Name="ColoredBalls_NumberOfColors"
-                                            Style="{StaticResource IntegerUpDownNumberOfItems}"
-                                            ValueChanged="ColoredBalls_NumberOfColors_ValueChanged"/>
-
-                    </StackPanel>
-
-                    <WrapPanel x:Name="Panel_ColoredBalls_Selection_Color"
-                               Orientation="Horizontal"
-                               Visibility="Collapsed"/>
-
-                </StackPanel>
-
-                <StackPanel x:Name="Panel_Settings_Condition"
-                            Visibility="Collapsed">
-
-                    <TextBlock Margin="0,0,0,5"
-                               Style="{StaticResource Header2}"
-                               Text="{x:Static resx:Resources.Header2_Settings_Condition}"/>
-
-                    <StackPanel Orientation="Horizontal"
-                                Margin="0,0,0,5">
-
-                        <TextBlock x:Name="Text_Condition_NumberOfTakenItems"
-                                   Margin="0,0,5,0"/>
-
-                        <xctk:IntegerUpDown x:Name="Condition_NumberOfTakenItems"
-                                            Style="{StaticResource IntegerUpDownNumberOfItems}"
-                                            ValueChanged="Condition_NumberOfTakenItems_ValueChanged"/>
-
-                    </StackPanel>
-
-                    <WrapPanel x:Name="Panel_Condition_Selection_Outcome"
-                               Orientation="Horizontal"/>
-
-                </StackPanel>
-
             </StackPanel>
-
         </Border>
-
-    </DockPanel>
+        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource Style_Border_Heavy_Bottom}">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                <StackPanel>
+                    <v:TutorialView x:Name="View_Tutorial"/>
+                    <StackPanel x:Name="Panel_Descriptions" Visibility="Collapsed">
+                        <TextBlock Style="{StaticResource Style_TextBlock_Description_Header1}"/>
+                        <StackPanel x:Name="Panel_TypeDescriptions">
+                            <vtc:DescriptionView/>
+                            <vtd:DescriptionView/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <v:ResultsView Grid.Column="0" Grid.Row="2" x:Name="View_Results"/>
+        <Border Grid.Column="0" Grid.Row="3" Style="{StaticResource Style_Border_Heavy_Top}" Padding="5">
+            <DockPanel LastChildFill="False">
+                <Button x:Name="Button_RunCalculation" DockPanel.Dock="Right" Style="{StaticResource Style_Button_RunCalculation}" Click="Button_RunCalculation_Click"/>
+            </DockPanel>
+        </Border>
+    </Grid>
 
 </Window>
