@@ -232,6 +232,15 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string MessageBox_Caption {
+            get {
+                return ResourceManager.GetString("MessageBox_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The condition you are looking for is that.
         /// </summary>
         public static string String_ConditionInfo {

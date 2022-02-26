@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Properties\ElementsResources\EllipseResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\IntegerUpDownResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\LabelResources.xaml"/>
+                <ResourceDictionary Source="Properties\ElementsResources\MessageBoxResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\ScrollViewerResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\TextBlockResources.xaml"/>
                 <ResourceDictionary Source="Properties\ElementsResources\WindowResources.xaml"/>
