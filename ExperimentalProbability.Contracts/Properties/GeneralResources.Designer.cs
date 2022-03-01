@@ -484,16 +484,6 @@ namespace ExperimentalProbability.Contracts.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] Window_Icon {
-            get {
-                object obj = ResourceManager.GetObject("Window_Icon", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Experimental Probability.
         /// </summary>
         public static string Window_MainWindow_Title {

@@ -258,10 +258,6 @@
   <data name="TextBlock_TypeHeader2_Text" xml:space="preserve">
     <value>Type settings</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Window_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Window_MainWindow_Title" xml:space="preserve">
     <value>Experimental Probability</value>
   </data>
