@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+                    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties;assembly=ExperimentalProbability.Contracts">
 
     <Style x:Key="Style_ComboBox_Default" TargetType="ComboBox">
         <Style.Setters>
@@ -16,12 +16,7 @@
 
     <Style x:Key="Style_ComboBox_DiceSelection" TargetType="ComboBox" BasedOn="{StaticResource Style_ComboBox_Default}">
         <Style.Setters>
-            <Setter Property="Text" Value="{x:Static resx:DiceResources.ComboBox_DiceSelection_Text}"/>
-        </Style.Setters>
-    </Style>
-    <Style x:Key="Style_ComboBox_SideSelection" TargetType="ComboBox" BasedOn="{StaticResource Style_ComboBox_Default}">
-        <Style.Setters>
-            <Setter Property="Text" Value="{x:Static resx:DiceResources.ComboBox_SideSelection_Text}"/>
+            <Setter Property="Text" Value="{x:Static resx:DiceResources.Label_SideSelection_Content}"/>
         </Style.Setters>
     </Style>
 

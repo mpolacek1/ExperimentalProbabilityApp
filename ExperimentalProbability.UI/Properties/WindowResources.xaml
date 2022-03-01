@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+                    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties;assembly=ExperimentalProbability.Contracts">
 
     <Style x:Key="Style_Window_MainWindow_Default" TargetType="Window">
         <Style.Setters>

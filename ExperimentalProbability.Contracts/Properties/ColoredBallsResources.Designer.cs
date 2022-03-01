@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.LocalizableResources {
+namespace ExperimentalProbability.Contracts.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.LocalizableResources.ColoredBallsResources", typeof(ColoredBallsResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.ColoredBallsResources", typeof(ColoredBallsResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -117,20 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Button_CancelCalculation_Content" xml:space="preserve">
+    <value>Cancel calculation</value>
+  </data>
   <data name="Button_RunCalculation_Content" xml:space="preserve">
     <value>Run calculation</value>
   </data>
   <data name="ComboBox_TypeSelection_Text" xml:space="preserve">
     <value>Choose a type</value>
   </data>
-  <data name="IntegerUpDown_SimulationsToRun_Text" xml:space="preserve">
-    <value>1000000</value>
+  <data name="ElementName_SimulationsToRun" xml:space="preserve">
+    <value>Simulations To Run</value>
+  </data>
+  <data name="Error_Number_Beginning" xml:space="preserve">
+    <value>The value given in</value>
+  </data>
+  <data name="Error_Number_Max" xml:space="preserve">
+    <value>has exceeded the maximal value of</value>
+  </data>
+  <data name="Error_Number_Min" xml:space="preserve">
+    <value>has not exceeded the minimal value of</value>
   </data>
   <data name="Label_ExperimentalProbability_Content" xml:space="preserve">
     <value>Experimental probability: </value>
   </data>
   <data name="Label_SimulationsToRun_Content" xml:space="preserve">
-    <value>Number of simulations:</value>
+    <value>Number of simulations to run:</value>
   </data>
   <data name="Label_TableColumnHeaderEighth_Content" xml:space="preserve">
     <value>Eighth result</value>
@@ -174,8 +186,14 @@
   <data name="Label_TypeSelection_Content" xml:space="preserve">
     <value>Type:</value>
   </data>
-  <data name="MessageBox_Caption" xml:space="preserve">
+  <data name="MessageBox_Caption_Error" xml:space="preserve">
     <value>Error</value>
+  </data>
+  <data name="MessageBox_Caption_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="MessageBox_Message_CalculationCanceled" xml:space="preserve">
+    <value>The running calculation was canceled.</value>
   </data>
   <data name="String_ConditionInfo" xml:space="preserve">
     <value>The condition you are looking for is that</value>
@@ -194,9 +212,6 @@
   </data>
   <data name="String_TypeInfo" xml:space="preserve">
     <value>This calculation works with a pool, that consists of a</value>
-  </data>
-  <data name="TextBlock_ConditionDescription_Text" xml:space="preserve">
-    <value>The condition you are looking for is that</value>
   </data>
   <data name="TextBlock_ConditionHeader2_Text" xml:space="preserve">
     <value>Condition settings</value>
@@ -242,6 +257,10 @@
   </data>
   <data name="TextBlock_TypeHeader2_Text" xml:space="preserve">
     <value>Type settings</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Window_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Window_MainWindow_Title" xml:space="preserve">
     <value>Experimental Probability</value>

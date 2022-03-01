@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:ExperimentalProbability.UI"
-                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+                    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties;assembly=ExperimentalProbability.Contracts">
 
     <Style x:Key="Style_Label_Default" TargetType="Label">
         <Style.Setters>
@@ -146,6 +146,11 @@
     <Style x:Key="Style_Label_NumberOfDiceRolls" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
         <Style.Setters>
             <Setter Property="Content" Value="{x:Static resx:DiceResources.Label_NumberOfDiceRolls_Content}"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Style_Label_SideSelection" TargetType="Label" BasedOn="{StaticResource Style_Label_Default}">
+        <Style.Setters>
+            <Setter Property="Content" Value="{x:Static resx:DiceResources.Label_SideSelection_Content}"/>
         </Style.Setters>
     </Style>
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.LocalizableResources {
+namespace ExperimentalProbability.Contracts.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.LocalizableResources.GeneralResources", typeof(GeneralResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.GeneralResources", typeof(GeneralResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel calculation.
+        /// </summary>
+        public static string Button_CancelCalculation_Content {
+            get {
+                return ResourceManager.GetString("Button_CancelCalculation_Content", resourceCulture);
             }
         }
         
@@ -79,11 +88,38 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1000000.
+        ///   Looks up a localized string similar to Simulations To Run.
         /// </summary>
-        public static string IntegerUpDown_SimulationsToRun_Text {
+        public static string ElementName_SimulationsToRun {
             get {
-                return ResourceManager.GetString("IntegerUpDown_SimulationsToRun_Text", resourceCulture);
+                return ResourceManager.GetString("ElementName_SimulationsToRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The value given in.
+        /// </summary>
+        public static string Error_Number_Beginning {
+            get {
+                return ResourceManager.GetString("Error_Number_Beginning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to has exceeded the maximal value of.
+        /// </summary>
+        public static string Error_Number_Max {
+            get {
+                return ResourceManager.GetString("Error_Number_Max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to has not exceeded the minimal value of.
+        /// </summary>
+        public static string Error_Number_Min {
+            get {
+                return ResourceManager.GetString("Error_Number_Min", resourceCulture);
             }
         }
         
@@ -97,7 +133,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Number of simulations:.
+        ///   Looks up a localized string similar to Number of simulations to run:.
         /// </summary>
         public static string Label_SimulationsToRun_Content {
             get {
@@ -234,9 +270,27 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        public static string MessageBox_Caption {
+        public static string MessageBox_Caption_Error {
             get {
-                return ResourceManager.GetString("MessageBox_Caption", resourceCulture);
+                return ResourceManager.GetString("MessageBox_Caption_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string MessageBox_Caption_Information {
+            get {
+                return ResourceManager.GetString("MessageBox_Caption_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The running calculation was canceled..
+        /// </summary>
+        public static string MessageBox_Message_CalculationCanceled {
+            get {
+                return ResourceManager.GetString("MessageBox_Message_CalculationCanceled", resourceCulture);
             }
         }
         
@@ -291,15 +345,6 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         public static string String_TypeInfo {
             get {
                 return ResourceManager.GetString("String_TypeInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The condition you are looking for is that.
-        /// </summary>
-        public static string TextBlock_ConditionDescription_Text {
-            get {
-                return ResourceManager.GetString("TextBlock_ConditionDescription_Text", resourceCulture);
             }
         }
         
@@ -435,6 +480,16 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         public static string TextBlock_TypeHeader2_Text {
             get {
                 return ResourceManager.GetString("TextBlock_TypeHeader2_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Window_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Window_Icon", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

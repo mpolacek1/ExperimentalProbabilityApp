@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.LocalizableResources {
+namespace ExperimentalProbability.Contracts.Properties {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class NumberStringsResources {
+    public class NumberStringsResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,11 +36,10 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.LocalizableResources.NumberStringsResources" +
-                            "", typeof(NumberStringsResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.NumberStringsResources", typeof(NumberStringsResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -52,7 +51,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -64,7 +63,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eight.
         /// </summary>
-        internal static string Eight {
+        public static string Eight {
             get {
                 return ResourceManager.GetString("Eight", resourceCulture);
             }
@@ -73,7 +72,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighteen.
         /// </summary>
-        internal static string Eighteen {
+        public static string Eighteen {
             get {
                 return ResourceManager.GetString("Eighteen", resourceCulture);
             }
@@ -82,7 +81,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the eighth.
         /// </summary>
-        internal static string Eighth {
+        public static string Eighth {
             get {
                 return ResourceManager.GetString("Eighth", resourceCulture);
             }
@@ -91,7 +90,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty.
         /// </summary>
-        internal static string Eighty {
+        public static string Eighty {
             get {
                 return ResourceManager.GetString("Eighty", resourceCulture);
             }
@@ -100,7 +99,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty eight.
         /// </summary>
-        internal static string Eighty_eight {
+        public static string Eighty_eight {
             get {
                 return ResourceManager.GetString("Eighty-eight", resourceCulture);
             }
@@ -109,7 +108,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty five.
         /// </summary>
-        internal static string Eighty_five {
+        public static string Eighty_five {
             get {
                 return ResourceManager.GetString("Eighty-five", resourceCulture);
             }
@@ -118,7 +117,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty four.
         /// </summary>
-        internal static string Eighty_four {
+        public static string Eighty_four {
             get {
                 return ResourceManager.GetString("Eighty-four", resourceCulture);
             }
@@ -127,7 +126,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty nine.
         /// </summary>
-        internal static string Eighty_nine {
+        public static string Eighty_nine {
             get {
                 return ResourceManager.GetString("Eighty-nine", resourceCulture);
             }
@@ -136,7 +135,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty one.
         /// </summary>
-        internal static string Eighty_one {
+        public static string Eighty_one {
             get {
                 return ResourceManager.GetString("Eighty-one", resourceCulture);
             }
@@ -145,7 +144,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty seven.
         /// </summary>
-        internal static string Eighty_seven {
+        public static string Eighty_seven {
             get {
                 return ResourceManager.GetString("Eighty-seven", resourceCulture);
             }
@@ -154,7 +153,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty six.
         /// </summary>
-        internal static string Eighty_six {
+        public static string Eighty_six {
             get {
                 return ResourceManager.GetString("Eighty-six", resourceCulture);
             }
@@ -163,7 +162,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty three.
         /// </summary>
-        internal static string Eighty_three {
+        public static string Eighty_three {
             get {
                 return ResourceManager.GetString("Eighty-three", resourceCulture);
             }
@@ -172,7 +171,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eighty two.
         /// </summary>
-        internal static string Eighty_two {
+        public static string Eighty_two {
             get {
                 return ResourceManager.GetString("Eighty-two", resourceCulture);
             }
@@ -181,7 +180,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to eleven.
         /// </summary>
-        internal static string Eleven {
+        public static string Eleven {
             get {
                 return ResourceManager.GetString("Eleven", resourceCulture);
             }
@@ -190,7 +189,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifteen.
         /// </summary>
-        internal static string Fifteen {
+        public static string Fifteen {
             get {
                 return ResourceManager.GetString("Fifteen", resourceCulture);
             }
@@ -199,7 +198,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the fifth.
         /// </summary>
-        internal static string Fifth {
+        public static string Fifth {
             get {
                 return ResourceManager.GetString("Fifth", resourceCulture);
             }
@@ -208,7 +207,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty.
         /// </summary>
-        internal static string Fifty {
+        public static string Fifty {
             get {
                 return ResourceManager.GetString("Fifty", resourceCulture);
             }
@@ -217,7 +216,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty eight.
         /// </summary>
-        internal static string Fifty_eight {
+        public static string Fifty_eight {
             get {
                 return ResourceManager.GetString("Fifty-eight", resourceCulture);
             }
@@ -226,7 +225,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty five.
         /// </summary>
-        internal static string Fifty_five {
+        public static string Fifty_five {
             get {
                 return ResourceManager.GetString("Fifty-five", resourceCulture);
             }
@@ -235,7 +234,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty four.
         /// </summary>
-        internal static string Fifty_four {
+        public static string Fifty_four {
             get {
                 return ResourceManager.GetString("Fifty-four", resourceCulture);
             }
@@ -244,7 +243,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty nine.
         /// </summary>
-        internal static string Fifty_nine {
+        public static string Fifty_nine {
             get {
                 return ResourceManager.GetString("Fifty-nine", resourceCulture);
             }
@@ -253,7 +252,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty one.
         /// </summary>
-        internal static string Fifty_one {
+        public static string Fifty_one {
             get {
                 return ResourceManager.GetString("Fifty-one", resourceCulture);
             }
@@ -262,7 +261,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty seven.
         /// </summary>
-        internal static string Fifty_seven {
+        public static string Fifty_seven {
             get {
                 return ResourceManager.GetString("Fifty-seven", resourceCulture);
             }
@@ -271,7 +270,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty six.
         /// </summary>
-        internal static string Fifty_six {
+        public static string Fifty_six {
             get {
                 return ResourceManager.GetString("Fifty-six", resourceCulture);
             }
@@ -280,7 +279,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty three.
         /// </summary>
-        internal static string Fifty_three {
+        public static string Fifty_three {
             get {
                 return ResourceManager.GetString("Fifty-three", resourceCulture);
             }
@@ -289,7 +288,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fifty two.
         /// </summary>
-        internal static string Fifty_two {
+        public static string Fifty_two {
             get {
                 return ResourceManager.GetString("Fifty-two", resourceCulture);
             }
@@ -298,7 +297,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the first.
         /// </summary>
-        internal static string First {
+        public static string First {
             get {
                 return ResourceManager.GetString("First", resourceCulture);
             }
@@ -307,7 +306,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to five.
         /// </summary>
-        internal static string Five {
+        public static string Five {
             get {
                 return ResourceManager.GetString("Five", resourceCulture);
             }
@@ -316,7 +315,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to four.
         /// </summary>
-        internal static string Four {
+        public static string Four {
             get {
                 return ResourceManager.GetString("Four", resourceCulture);
             }
@@ -325,7 +324,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourteen.
         /// </summary>
-        internal static string Fourteen {
+        public static string Fourteen {
             get {
                 return ResourceManager.GetString("Fourteen", resourceCulture);
             }
@@ -334,7 +333,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the fourth.
         /// </summary>
-        internal static string Fourth {
+        public static string Fourth {
             get {
                 return ResourceManager.GetString("Fourth", resourceCulture);
             }
@@ -343,7 +342,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty.
         /// </summary>
-        internal static string Fourty {
+        public static string Fourty {
             get {
                 return ResourceManager.GetString("Fourty", resourceCulture);
             }
@@ -352,7 +351,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty eight.
         /// </summary>
-        internal static string Fourty_eight {
+        public static string Fourty_eight {
             get {
                 return ResourceManager.GetString("Fourty-eight", resourceCulture);
             }
@@ -361,7 +360,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty five.
         /// </summary>
-        internal static string Fourty_five {
+        public static string Fourty_five {
             get {
                 return ResourceManager.GetString("Fourty-five", resourceCulture);
             }
@@ -370,7 +369,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty four.
         /// </summary>
-        internal static string Fourty_four {
+        public static string Fourty_four {
             get {
                 return ResourceManager.GetString("Fourty-four", resourceCulture);
             }
@@ -379,7 +378,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty nine.
         /// </summary>
-        internal static string Fourty_nine {
+        public static string Fourty_nine {
             get {
                 return ResourceManager.GetString("Fourty-nine", resourceCulture);
             }
@@ -388,7 +387,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty one.
         /// </summary>
-        internal static string Fourty_one {
+        public static string Fourty_one {
             get {
                 return ResourceManager.GetString("Fourty-one", resourceCulture);
             }
@@ -397,7 +396,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty seven.
         /// </summary>
-        internal static string Fourty_seven {
+        public static string Fourty_seven {
             get {
                 return ResourceManager.GetString("Fourty-seven", resourceCulture);
             }
@@ -406,7 +405,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty six.
         /// </summary>
-        internal static string Fourty_six {
+        public static string Fourty_six {
             get {
                 return ResourceManager.GetString("Fourty-six", resourceCulture);
             }
@@ -415,7 +414,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty three.
         /// </summary>
-        internal static string Fourty_three {
+        public static string Fourty_three {
             get {
                 return ResourceManager.GetString("Fourty-three", resourceCulture);
             }
@@ -424,7 +423,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to fourty two.
         /// </summary>
-        internal static string Fourty_two {
+        public static string Fourty_two {
             get {
                 return ResourceManager.GetString("Fourty-two", resourceCulture);
             }
@@ -433,7 +432,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to hundred.
         /// </summary>
-        internal static string Hundred {
+        public static string Hundred {
             get {
                 return ResourceManager.GetString("Hundred", resourceCulture);
             }
@@ -442,7 +441,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to nine.
         /// </summary>
-        internal static string Nine {
+        public static string Nine {
             get {
                 return ResourceManager.GetString("Nine", resourceCulture);
             }
@@ -451,7 +450,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to nineteen.
         /// </summary>
-        internal static string Nineteen {
+        public static string Nineteen {
             get {
                 return ResourceManager.GetString("Nineteen", resourceCulture);
             }
@@ -460,7 +459,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety.
         /// </summary>
-        internal static string Ninety {
+        public static string Ninety {
             get {
                 return ResourceManager.GetString("Ninety", resourceCulture);
             }
@@ -469,7 +468,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety eight.
         /// </summary>
-        internal static string Ninety_eight {
+        public static string Ninety_eight {
             get {
                 return ResourceManager.GetString("Ninety-eight", resourceCulture);
             }
@@ -478,7 +477,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety five.
         /// </summary>
-        internal static string Ninety_five {
+        public static string Ninety_five {
             get {
                 return ResourceManager.GetString("Ninety-five", resourceCulture);
             }
@@ -487,7 +486,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety four.
         /// </summary>
-        internal static string Ninety_four {
+        public static string Ninety_four {
             get {
                 return ResourceManager.GetString("Ninety-four", resourceCulture);
             }
@@ -496,7 +495,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety nine.
         /// </summary>
-        internal static string Ninety_nine {
+        public static string Ninety_nine {
             get {
                 return ResourceManager.GetString("Ninety-nine", resourceCulture);
             }
@@ -505,7 +504,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety one.
         /// </summary>
-        internal static string Ninety_one {
+        public static string Ninety_one {
             get {
                 return ResourceManager.GetString("Ninety-one", resourceCulture);
             }
@@ -514,7 +513,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety seven.
         /// </summary>
-        internal static string Ninety_seven {
+        public static string Ninety_seven {
             get {
                 return ResourceManager.GetString("Ninety-seven", resourceCulture);
             }
@@ -523,7 +522,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety six.
         /// </summary>
-        internal static string Ninety_six {
+        public static string Ninety_six {
             get {
                 return ResourceManager.GetString("Ninety-six", resourceCulture);
             }
@@ -532,7 +531,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety three.
         /// </summary>
-        internal static string Ninety_three {
+        public static string Ninety_three {
             get {
                 return ResourceManager.GetString("Ninety-three", resourceCulture);
             }
@@ -541,7 +540,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ninety two.
         /// </summary>
-        internal static string Ninety_two {
+        public static string Ninety_two {
             get {
                 return ResourceManager.GetString("Ninety-two", resourceCulture);
             }
@@ -550,7 +549,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the ninth.
         /// </summary>
-        internal static string Ninth {
+        public static string Ninth {
             get {
                 return ResourceManager.GetString("Ninth", resourceCulture);
             }
@@ -559,7 +558,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to one.
         /// </summary>
-        internal static string One {
+        public static string One {
             get {
                 return ResourceManager.GetString("One", resourceCulture);
             }
@@ -568,7 +567,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the second.
         /// </summary>
-        internal static string Second {
+        public static string Second {
             get {
                 return ResourceManager.GetString("Second", resourceCulture);
             }
@@ -577,7 +576,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seven.
         /// </summary>
-        internal static string Seven {
+        public static string Seven {
             get {
                 return ResourceManager.GetString("Seven", resourceCulture);
             }
@@ -586,7 +585,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventeen.
         /// </summary>
-        internal static string Seventeen {
+        public static string Seventeen {
             get {
                 return ResourceManager.GetString("Seventeen", resourceCulture);
             }
@@ -595,7 +594,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the seventh.
         /// </summary>
-        internal static string Seventh {
+        public static string Seventh {
             get {
                 return ResourceManager.GetString("Seventh", resourceCulture);
             }
@@ -604,7 +603,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy.
         /// </summary>
-        internal static string Seventy {
+        public static string Seventy {
             get {
                 return ResourceManager.GetString("Seventy", resourceCulture);
             }
@@ -613,7 +612,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy eight.
         /// </summary>
-        internal static string Seventy_eight {
+        public static string Seventy_eight {
             get {
                 return ResourceManager.GetString("Seventy-eight", resourceCulture);
             }
@@ -622,7 +621,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy five.
         /// </summary>
-        internal static string Seventy_five {
+        public static string Seventy_five {
             get {
                 return ResourceManager.GetString("Seventy-five", resourceCulture);
             }
@@ -631,7 +630,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy four.
         /// </summary>
-        internal static string Seventy_four {
+        public static string Seventy_four {
             get {
                 return ResourceManager.GetString("Seventy-four", resourceCulture);
             }
@@ -640,7 +639,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy nine.
         /// </summary>
-        internal static string Seventy_nine {
+        public static string Seventy_nine {
             get {
                 return ResourceManager.GetString("Seventy-nine", resourceCulture);
             }
@@ -649,7 +648,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy one.
         /// </summary>
-        internal static string Seventy_one {
+        public static string Seventy_one {
             get {
                 return ResourceManager.GetString("Seventy-one", resourceCulture);
             }
@@ -658,7 +657,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy seven.
         /// </summary>
-        internal static string Seventy_seven {
+        public static string Seventy_seven {
             get {
                 return ResourceManager.GetString("Seventy-seven", resourceCulture);
             }
@@ -667,7 +666,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy six.
         /// </summary>
-        internal static string Seventy_six {
+        public static string Seventy_six {
             get {
                 return ResourceManager.GetString("Seventy-six", resourceCulture);
             }
@@ -676,7 +675,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy three.
         /// </summary>
-        internal static string Seventy_three {
+        public static string Seventy_three {
             get {
                 return ResourceManager.GetString("Seventy-three", resourceCulture);
             }
@@ -685,7 +684,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to seventy two.
         /// </summary>
-        internal static string Seventy_two {
+        public static string Seventy_two {
             get {
                 return ResourceManager.GetString("Seventy-two", resourceCulture);
             }
@@ -694,7 +693,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to six.
         /// </summary>
-        internal static string Six {
+        public static string Six {
             get {
                 return ResourceManager.GetString("Six", resourceCulture);
             }
@@ -703,7 +702,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixteen.
         /// </summary>
-        internal static string Sixteen {
+        public static string Sixteen {
             get {
                 return ResourceManager.GetString("Sixteen", resourceCulture);
             }
@@ -712,7 +711,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the sixth.
         /// </summary>
-        internal static string Sixth {
+        public static string Sixth {
             get {
                 return ResourceManager.GetString("Sixth", resourceCulture);
             }
@@ -721,7 +720,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty.
         /// </summary>
-        internal static string Sixty {
+        public static string Sixty {
             get {
                 return ResourceManager.GetString("Sixty", resourceCulture);
             }
@@ -730,7 +729,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty eight.
         /// </summary>
-        internal static string Sixty_eight {
+        public static string Sixty_eight {
             get {
                 return ResourceManager.GetString("Sixty-eight", resourceCulture);
             }
@@ -739,7 +738,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty five.
         /// </summary>
-        internal static string Sixty_five {
+        public static string Sixty_five {
             get {
                 return ResourceManager.GetString("Sixty-five", resourceCulture);
             }
@@ -748,7 +747,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty four.
         /// </summary>
-        internal static string Sixty_four {
+        public static string Sixty_four {
             get {
                 return ResourceManager.GetString("Sixty-four", resourceCulture);
             }
@@ -757,7 +756,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty nine.
         /// </summary>
-        internal static string Sixty_nine {
+        public static string Sixty_nine {
             get {
                 return ResourceManager.GetString("Sixty-nine", resourceCulture);
             }
@@ -766,7 +765,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty one.
         /// </summary>
-        internal static string Sixty_one {
+        public static string Sixty_one {
             get {
                 return ResourceManager.GetString("Sixty-one", resourceCulture);
             }
@@ -775,7 +774,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty seven.
         /// </summary>
-        internal static string Sixty_seven {
+        public static string Sixty_seven {
             get {
                 return ResourceManager.GetString("Sixty-seven", resourceCulture);
             }
@@ -784,7 +783,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty six.
         /// </summary>
-        internal static string Sixty_six {
+        public static string Sixty_six {
             get {
                 return ResourceManager.GetString("Sixty-six", resourceCulture);
             }
@@ -793,7 +792,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty three.
         /// </summary>
-        internal static string Sixty_three {
+        public static string Sixty_three {
             get {
                 return ResourceManager.GetString("Sixty-three", resourceCulture);
             }
@@ -802,7 +801,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to sixty two.
         /// </summary>
-        internal static string Sixty_two {
+        public static string Sixty_two {
             get {
                 return ResourceManager.GetString("Sixty-two", resourceCulture);
             }
@@ -811,7 +810,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to ten.
         /// </summary>
-        internal static string Ten {
+        public static string Ten {
             get {
                 return ResourceManager.GetString("Ten", resourceCulture);
             }
@@ -820,7 +819,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to tenth.
         /// </summary>
-        internal static string Tenth {
+        public static string Tenth {
             get {
                 return ResourceManager.GetString("Tenth", resourceCulture);
             }
@@ -829,7 +828,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to the third.
         /// </summary>
-        internal static string Third {
+        public static string Third {
             get {
                 return ResourceManager.GetString("Third", resourceCulture);
             }
@@ -838,7 +837,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirteen.
         /// </summary>
-        internal static string Thirteen {
+        public static string Thirteen {
             get {
                 return ResourceManager.GetString("Thirteen", resourceCulture);
             }
@@ -847,7 +846,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty.
         /// </summary>
-        internal static string Thirty {
+        public static string Thirty {
             get {
                 return ResourceManager.GetString("Thirty", resourceCulture);
             }
@@ -856,7 +855,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty eight.
         /// </summary>
-        internal static string Thirty_eight {
+        public static string Thirty_eight {
             get {
                 return ResourceManager.GetString("Thirty-eight", resourceCulture);
             }
@@ -865,7 +864,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty five.
         /// </summary>
-        internal static string Thirty_five {
+        public static string Thirty_five {
             get {
                 return ResourceManager.GetString("Thirty-five", resourceCulture);
             }
@@ -874,7 +873,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty four.
         /// </summary>
-        internal static string Thirty_four {
+        public static string Thirty_four {
             get {
                 return ResourceManager.GetString("Thirty-four", resourceCulture);
             }
@@ -883,7 +882,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty nine.
         /// </summary>
-        internal static string Thirty_nine {
+        public static string Thirty_nine {
             get {
                 return ResourceManager.GetString("Thirty-nine", resourceCulture);
             }
@@ -892,7 +891,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty one.
         /// </summary>
-        internal static string Thirty_one {
+        public static string Thirty_one {
             get {
                 return ResourceManager.GetString("Thirty-one", resourceCulture);
             }
@@ -901,7 +900,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty seven.
         /// </summary>
-        internal static string Thirty_seven {
+        public static string Thirty_seven {
             get {
                 return ResourceManager.GetString("Thirty-seven", resourceCulture);
             }
@@ -910,7 +909,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty six.
         /// </summary>
-        internal static string Thirty_six {
+        public static string Thirty_six {
             get {
                 return ResourceManager.GetString("Thirty-six", resourceCulture);
             }
@@ -919,7 +918,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty three.
         /// </summary>
-        internal static string Thirty_three {
+        public static string Thirty_three {
             get {
                 return ResourceManager.GetString("Thirty-three", resourceCulture);
             }
@@ -928,7 +927,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to thirty two.
         /// </summary>
-        internal static string Thirty_two {
+        public static string Thirty_two {
             get {
                 return ResourceManager.GetString("Thirty-two", resourceCulture);
             }
@@ -937,7 +936,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to three.
         /// </summary>
-        internal static string Three {
+        public static string Three {
             get {
                 return ResourceManager.GetString("Three", resourceCulture);
             }
@@ -946,7 +945,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twelve.
         /// </summary>
-        internal static string Twelve {
+        public static string Twelve {
             get {
                 return ResourceManager.GetString("Twelve", resourceCulture);
             }
@@ -955,7 +954,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty.
         /// </summary>
-        internal static string Twenty {
+        public static string Twenty {
             get {
                 return ResourceManager.GetString("Twenty", resourceCulture);
             }
@@ -964,7 +963,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty eight.
         /// </summary>
-        internal static string Twenty_eight {
+        public static string Twenty_eight {
             get {
                 return ResourceManager.GetString("Twenty-eight", resourceCulture);
             }
@@ -973,7 +972,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty five.
         /// </summary>
-        internal static string Twenty_five {
+        public static string Twenty_five {
             get {
                 return ResourceManager.GetString("Twenty-five", resourceCulture);
             }
@@ -982,7 +981,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty four.
         /// </summary>
-        internal static string Twenty_four {
+        public static string Twenty_four {
             get {
                 return ResourceManager.GetString("Twenty-four", resourceCulture);
             }
@@ -991,7 +990,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty nine.
         /// </summary>
-        internal static string Twenty_nine {
+        public static string Twenty_nine {
             get {
                 return ResourceManager.GetString("Twenty-nine", resourceCulture);
             }
@@ -1000,7 +999,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty one.
         /// </summary>
-        internal static string Twenty_one {
+        public static string Twenty_one {
             get {
                 return ResourceManager.GetString("Twenty-one", resourceCulture);
             }
@@ -1009,7 +1008,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty seven.
         /// </summary>
-        internal static string Twenty_seven {
+        public static string Twenty_seven {
             get {
                 return ResourceManager.GetString("Twenty-seven", resourceCulture);
             }
@@ -1018,7 +1017,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty six.
         /// </summary>
-        internal static string Twenty_six {
+        public static string Twenty_six {
             get {
                 return ResourceManager.GetString("Twenty-six", resourceCulture);
             }
@@ -1027,7 +1026,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty three.
         /// </summary>
-        internal static string Twenty_three {
+        public static string Twenty_three {
             get {
                 return ResourceManager.GetString("Twenty-three", resourceCulture);
             }
@@ -1036,7 +1035,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to twenty two.
         /// </summary>
-        internal static string Twenty_two {
+        public static string Twenty_two {
             get {
                 return ResourceManager.GetString("Twenty-two", resourceCulture);
             }
@@ -1045,7 +1044,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to two.
         /// </summary>
-        internal static string Two {
+        public static string Two {
             get {
                 return ResourceManager.GetString("Two", resourceCulture);
             }
@@ -1054,7 +1053,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         /// <summary>
         ///   Looks up a localized string similar to zero.
         /// </summary>
-        internal static string Zero {
+        public static string Zero {
             get {
                 return ResourceManager.GetString("Zero", resourceCulture);
             }

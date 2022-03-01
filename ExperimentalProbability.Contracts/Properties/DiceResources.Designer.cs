@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.UI.Properties.LocalizableResources {
+namespace ExperimentalProbability.Contracts.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.UI.Properties.LocalizableResources.DiceResources", typeof(DiceResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.DiceResources", typeof(DiceResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a dice type: .
+        ///   Looks up a localized string similar to Choose a dice.
         /// </summary>
         public static string ComboBox_DiceSelection_Text {
             get {
@@ -70,11 +70,38 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a side.
+        ///   Looks up a localized string similar to Dice Roll.
         /// </summary>
-        public static string ComboBox_SideSelection_Text {
+        public static string ElementName_DiceRoll {
             get {
-                return ResourceManager.GetString("ComboBox_SideSelection_Text", resourceCulture);
+                return ResourceManager.GetString("ElementName_DiceRoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dice Rolls.
+        /// </summary>
+        public static string ElementName_DiceRolls {
+            get {
+                return ResourceManager.GetString("ElementName_DiceRolls", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dice Rolls Results.
+        /// </summary>
+        public static string ElementName_DiceRollsResults {
+            get {
+                return ResourceManager.GetString("ElementName_DiceRollsResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dice Type.
+        /// </summary>
+        public static string ElementName_DiceType {
+            get {
+                return ResourceManager.GetString("ElementName_DiceType", resourceCulture);
             }
         }
         
@@ -102,6 +129,15 @@ namespace ExperimentalProbability.UI.Properties.LocalizableResources {
         public static string Label_NumberOfSides_Content {
             get {
                 return ResourceManager.GetString("Label_NumberOfSides_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a side:.
+        /// </summary>
+        public static string Label_SideSelection_Content {
+            get {
+                return ResourceManager.GetString("Label_SideSelection_Content", resourceCulture);
             }
         }
         

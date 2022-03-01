@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExperimentalProbability.Contracts\ExperimentalProbability.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

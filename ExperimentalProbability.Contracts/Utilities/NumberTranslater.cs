@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using LocalResx = ExperimentalProbability.UI.Properties.LocalizableResources.NumberStringsResources;
+using LocalResx = ExperimentalProbability.Contracts.Properties.NumberStringsResources;
 
-namespace ExperimentalProbability.UI.Utilities
+namespace ExperimentalProbability.Contracts.Utilities
 {
     public static class NumberTranslater
     {

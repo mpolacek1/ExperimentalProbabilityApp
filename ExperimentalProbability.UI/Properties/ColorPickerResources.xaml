@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-                    xmlns:resx="clr-namespace:ExperimentalProbability.UI.Properties.LocalizableResources">
+                    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties;assembly=ExperimentalProbability.Contracts">
 
     <Style TargetType="xctk:ColorPicker">
         <Style.Setters>

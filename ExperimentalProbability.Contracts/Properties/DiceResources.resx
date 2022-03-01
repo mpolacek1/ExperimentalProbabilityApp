@@ -118,10 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ComboBox_DiceSelection_Text" xml:space="preserve">
-    <value>Choose a dice type: </value>
+    <value>Choose a dice</value>
   </data>
-  <data name="ComboBox_SideSelection_Text" xml:space="preserve">
-    <value>Choose a side</value>
+  <data name="ElementName_DiceRoll" xml:space="preserve">
+    <value>Dice Roll</value>
+  </data>
+  <data name="ElementName_DiceRolls" xml:space="preserve">
+    <value>Dice Rolls</value>
+  </data>
+  <data name="ElementName_DiceRollsResults" xml:space="preserve">
+    <value>Dice Rolls Results</value>
+  </data>
+  <data name="ElementName_DiceType" xml:space="preserve">
+    <value>Dice Type</value>
   </data>
   <data name="Label_DiceSelection_Content" xml:space="preserve">
     <value>Dice type: </value>
@@ -131,6 +140,9 @@
   </data>
   <data name="Label_NumberOfSides_Content" xml:space="preserve">
     <value>Number of sides:</value>
+  </data>
+  <data name="Label_SideSelection_Content" xml:space="preserve">
+    <value>Choose a side:</value>
   </data>
   <data name="String_CalculationAction" xml:space="preserve">
     <value>side rolled is</value>
