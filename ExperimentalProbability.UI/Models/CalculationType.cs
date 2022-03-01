@@ -1,9 +1,10 @@
-﻿using ExperimentalProbability.Calculation.Models;
-using ExperimentalProbability.Calculations.Interfaces;
-using ExperimentalProbability.Calculations.Types;
+﻿using System.ComponentModel;
+using System.Windows;
+using ExperimentalProbability.Calculation.Calculations;
+using ExperimentalProbability.Calculation.Interfaces;
+using ExperimentalProbability.Calculation.Models;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
-using System.Windows;
 using ColoredBallsCondition = ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls.ConditionSettingsView;
 using ColoredBallsDescription = ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls.DescriptionView;
 using ColoredBallsSettings = ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls.TypeSettingsView;
@@ -20,6 +21,11 @@ namespace ExperimentalProbability.UI.Models
             Settings = (ITypeSettings)window.Panel_TypeSettings.Children[index];
             Condition = (ITypeCondition)window.Panel_TypeConditions.Children[index];
             Description = (ITypeDescription)window.Panel_TypeDescriptions.Children[index];
+
+            Worker = new BackgroundWorker();
+            Worker.DoWork += window.Worker_DoWork;
+            Worker.RunWorkerCompleted += window.Worker_RunWorkerCompleted;
+            Worker.WorkerSupportsCancellation = true;
         }
 
         public ITypeSettings Settings { get; private set; }
@@ -27,6 +33,8 @@ namespace ExperimentalProbability.UI.Models
         public ITypeCondition Condition { get; private set; }
 
         public ITypeDescription Description { get; private set; }
+
+        public BackgroundWorker Worker { get; private set; }
 
         private ICalculationType Calculation { get; set; }
 
@@ -50,29 +58,29 @@ namespace ExperimentalProbability.UI.Models
                 Application.Current.GetMainWindow().IntegerUpDown_SimulationsToRun.GetValue());
         }
 
-        public CalculationResultData RunCalculation()
+        public CalculationResultData RunCalculation(DoWorkEventArgs e)
         {
             if (IsCalculationOfTypeColoredBalls())
             {
-                Calculation = new ColoredBallsCalculation(Data);
+                Calculation = new ColoredBallsCalculation(Data, Worker);
             }
 
             if (IsCalculationOfTypeDice())
             {
-                Calculation = new DiceCalculation(Data);
+                Calculation = new DiceCalculation(Data, Worker);
             }
 
-            return Calculation.Calculate();
+            return Calculation.Calculate(e);
         }
 
-        private bool IsCalculationOfTypeColoredBalls()
+        public bool IsCalculationOfTypeColoredBalls()
         {
             return Settings.GetType() == typeof(ColoredBallsSettings)
                 && Condition.GetType() == typeof(ColoredBallsCondition)
                 && Description.GetType() == typeof(ColoredBallsDescription);
         }
 
-        private bool IsCalculationOfTypeDice()
+        public bool IsCalculationOfTypeDice()
         {
             return Settings.GetType() == typeof(DiceSettings)
                 && Condition.GetType() == typeof(DiceCondition)

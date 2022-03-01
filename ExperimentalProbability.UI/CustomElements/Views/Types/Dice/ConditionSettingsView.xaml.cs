@@ -1,15 +1,14 @@
-﻿using ExperimentalProbability.Calculation.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
+using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Properties;
+using ExperimentalProbability.Contracts.Utilities;
 using ExperimentalProbability.UI.CustomElements.Panels;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
-using ExperimentalProbability.UI.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Windows;
-using System.Windows.Controls;
 using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI.CustomElements.Views.Types.Dice
@@ -60,11 +59,7 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.Dice
 
         public BasicData GetCalculationData()
         {
-            return new BasicData()
-            {
-                NumberOf = NumberOfDiceRolls.GetValue(),
-                Items = GetSelectedSides(),
-            };
+            return new BasicData(NumberOfDiceRolls.GetValue(), GetSelectedSides());
         }
 
         public List<string> GetSelectableSides()
@@ -85,7 +80,7 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.Dice
 
             for (int i = 0; i < Panel_SideSelection.Children.Count; i++)
             {
-                selectors.Add(GetSelectionPanel(i).Children[0]);
+                selectors.Add(GetSelectionPanel(i).Children[1]);
             }
 
             return selectors;

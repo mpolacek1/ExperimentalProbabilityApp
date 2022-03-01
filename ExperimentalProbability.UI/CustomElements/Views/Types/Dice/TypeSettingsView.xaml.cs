@@ -4,12 +4,12 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Properties;
+using ExperimentalProbability.Contracts.Utilities;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
-using ExperimentalProbability.UI.Utilities;
-using LocalResx = ExperimentalProbability.UI.Properties.LocalizableResources.DiceResources;
+using LocalResx = ExperimentalProbability.Contracts.Properties.DiceResources;
 
 namespace ExperimentalProbability.UI.CustomElements.Views.Types.Dice
 {
@@ -44,10 +44,7 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.Dice
 
         public BasicData GetCalculationData()
         {
-            return new BasicData()
-            {
-                NumberOf = GetSidesCount(),
-            };
+            return new BasicData(GetSidesCount(), null);
         }
 
         private string GetFinalDescCount(int count, char separator = ' ')

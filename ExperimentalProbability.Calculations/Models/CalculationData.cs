@@ -1,4 +1,6 @@
-﻿namespace ExperimentalProbability.Calculation.Models
+﻿using System.ComponentModel;
+
+namespace ExperimentalProbability.Calculation.Models
 {
     public class CalculationData
     {

@@ -8,11 +8,11 @@ namespace ExperimentalProbability.Calculation.Models
 
         public int ConditionsMet { get; set; } = 0;
 
-        public double Probability { get => GetProbability(); }
+        public double Probability => GetProbability();
 
         public double GetProbability()
         {
-            return Math.Round(Convert.ToSingle(ConditionsMet) / Convert.ToSingle(SimulationsRun) * 100, 2);
+            return Math.Round(Convert.ToDouble(ConditionsMet) / Convert.ToDouble(SimulationsRun), 4);
         }
     }
 }

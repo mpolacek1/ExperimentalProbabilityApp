@@ -1,17 +1,10 @@
 ﻿using ExperimentalProbability.Calculation.Models;
+using System.ComponentModel;
 
-namespace ExperimentalProbability.Calculations.Interfaces
+namespace ExperimentalProbability.Calculation.Interfaces
 {
     public interface ICalculationType
     {
-        CalculationResultData Calculate();
-
-        bool ValidateData(CalculationData data);
-
-        bool ValidateTypeData(BasicData data);
-
-        bool ValidateConditionData(BasicData data);
-
-        bool ValidateInteger(int value, int minVale, int maxValue);
+        CalculationResultData Calculate(DoWorkEventArgs e);
     }
 }

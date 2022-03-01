@@ -2,7 +2,7 @@
 using ExperimentalProbability.UI.Models;
 using ExperimentalProbability.UI.Utilities;
 using System.Windows.Controls;
-using LocalResx = ExperimentalProbability.UI.Properties.LocalizableResources.DiceResources;
+using LocalResx = ExperimentalProbability.Contracts.Properties.DiceResources;
 
 namespace ExperimentalProbability.UI.CustomElements.Views.Types.Dice
 {

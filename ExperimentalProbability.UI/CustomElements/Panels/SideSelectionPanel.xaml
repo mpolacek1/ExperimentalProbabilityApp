@@ -5,8 +5,10 @@
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
            xmlns:local="clr-namespace:ExperimentalProbability.UI.CustomElements.Panels"
            mc:Ignorable="d"
+           DataContext="{Binding RelativeSource={RelativeSource Self}}"
            Margin="0,5,10,0">
 
-    <ComboBox Style="{StaticResource Style_ComboBox_SideSelection}" SelectionChanged="ComboBox_SelectionChanged"/>
+    <Label Target="{Binding SideSelector}" Style="{StaticResource Style_Label_SideSelection}"/>
+    <ComboBox x:Name="SideSelector" SelectionChanged="ComboBox_SelectionChanged"/>
 
 </WrapPanel>

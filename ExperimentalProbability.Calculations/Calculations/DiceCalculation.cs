@@ -1,72 +1,75 @@
-﻿using ExperimentalProbability.Calculations.Interfaces;
+﻿using ExperimentalProbability.Calculation.Interfaces;
 using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Calculation.Validation;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
-namespace ExperimentalProbability.Calculations.Types
+namespace ExperimentalProbability.Calculation.Calculations
 {
     public class DiceCalculation : ICalculationType
     {
-        private const int _maxSims = 100000000;
+        private const int _minRollResult = 1;
 
-        private const int _minSims = 1000;
+        private readonly BaseCalculationValidator _validator;
 
-        private const int _maxSides = 20;
+        private readonly CalculationData _data;
 
-        private const int _minSides = 4;
+        private readonly BackgroundWorker _worker;
 
-        private const int _maxItems = 10;
+        private readonly Random _random;
 
-        private const int _minItems = 1;
-
-        public DiceCalculation(CalculationData data)
+        public DiceCalculation(CalculationData data, BackgroundWorker worker)
         {
-            Data = data;
+            _validator = new DiceValidator();
+            _data = data;
+            _worker = worker;
+            _random = new Random();
+            ResultData = new CalculationResultData();
         }
 
-        private CalculationData Data { get; set; }
+        private CalculationResultData ResultData { get; set; }
 
-        private CalculationResultData ResultData { get; set; } = new CalculationResultData();
-
-        public CalculationResultData Calculate()
+        public CalculationResultData Calculate(DoWorkEventArgs e)
         {
-            if (!ValidateData(Data))
+            _validator.Validate(_data);
+
+            for (int i = 0; i < _data.SimulationsToRun; i++)
             {
-                var item = 0;
+                if (_worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return null;
+                }
+
+                if (CheckCondition(GetRolls()))
+                {
+                    ResultData.ConditionsMet++;
+                }
+
+                ResultData.SimulationsRun++;
             }
 
             return ResultData;
         }
 
-        public bool ValidateData(CalculationData data)
+        private List<int> GetRolls()
         {
-            return ValidateTypeData(data.TypeData)
-                && ValidateConditionData(data.ConditionData)
-                && ValidateInteger(data.SimulationsToRun, _minSims, _maxSims);
-        }
+            var rolls = new List<int>(_data.ConditionData.NumberOf);
 
-        public bool ValidateTypeData(BasicData data)
-        {
-            return ValidateInteger(data.NumberOf, _minSides, _maxSides)
-                && data.Items == null;
-        }
-
-        public bool ValidateConditionData(BasicData data)
-        {
-            return ValidateInteger(data.NumberOf, _minItems, _maxItems)
-                && ValidateInteger(((List<int>)data.Items).Count, _minItems, data.NumberOf)
-                && ValidateConditionItems((List<int>)data.Items);
-        }
-
-        public bool ValidateInteger(int value, int minValue, int maxValue)
-        {
-            return value >= minValue && value <= maxValue;
-        }
-
-        private bool ValidateConditionItems(List<int> collection)
-        {
-            for (int i = 0; i < collection.Count; i++)
+            for (int i = 0; i < _data.ConditionData.NumberOf; i++)
             {
-                if (!ValidateInteger(collection[i], _minItems, Data.TypeData.NumberOf))
+                rolls.Add(_random.Next(_minRollResult, _data.TypeData.NumberOf + 1));
+            }
+
+            return rolls;
+        }
+
+        private bool CheckCondition(List<int> rolls)
+        {
+            for (int i = 0; i < rolls.Count; i++)
+            {
+                if (rolls[i] != ((List<int>)_data.ConditionData.Items)[i])
                 {
                     return false;
                 }

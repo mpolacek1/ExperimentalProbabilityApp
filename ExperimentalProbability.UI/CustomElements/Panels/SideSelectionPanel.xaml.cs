@@ -13,11 +13,20 @@ namespace ExperimentalProbability.UI.CustomElements.Panels
 
         public int GetSelectedSide()
         {
-            return ((ComboBox)Children[0]).SelectedIndex + 1;
+            return ((ComboBox)Children[1]).SelectedIndex + 1;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (((ComboBox)sender).SelectedIndex == -1)
+            {
+                this.ChangeVisibilityOfChild(0, Visibility.Visible);
+            }
+            else
+            {
+                this.ChangeVisibilityOfChild(0, Visibility.Collapsed);
+            }
+
             Application.Current.UpdateDescription();
         }
     }
