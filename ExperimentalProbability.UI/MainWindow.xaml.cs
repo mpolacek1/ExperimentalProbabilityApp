@@ -1,26 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Properties;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Models;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
 using ExperimentalProbability.UI.Utilities;
 using Xceed.Wpf.Toolkit;
+using Message = Xceed.Wpf.Toolkit.MessageBox;
 
 namespace ExperimentalProbability.UI
 {
     public partial class MainWindow : Window
     {
-        private readonly BackgroundWorker _worker;
-
         public MainWindow()
         {
             InitializeComponent();
-            _worker = new BackgroundWorker();
-            _worker.DoWork += Worker_DoWork;
-            _worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
         }
 
         public CalculationType CurrentType { get; set; }
@@ -33,6 +30,39 @@ namespace ExperimentalProbability.UI
             DiceResources.String_TypeName,
         };
 
+        public void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = CurrentType.RunCalculation(e);
+        }
+
+        public void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            Button_RunCalculation.Content = GeneralResources.Button_RunCalculation_Content;
+
+            if (e.Cancelled)
+            {
+                Message.Show(
+                    GeneralResources.MessageBox_Message_CalculationCanceled,
+                    GeneralResources.MessageBox_Caption_Information,
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information,
+                    (Style)Application.Current.FindResource("Style_MessageBox_Info"));
+            }
+            else if (e.Error != null)
+            {
+                Message.Show(
+                    e.Error.Message,
+                    GeneralResources.MessageBox_Caption_Error,
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error,
+                    (Style)Application.Current.FindResource("Style_MessageBox_Error"));
+            }
+            else
+            {
+                View_Results.DisplayResult((CalculationResultData)e.Result);
+            }
+        }
+
         private static List<ColorItem> GetDefaultColors()
         {
             var defaultColors = new ColorPicker().AvailableColors;
@@ -44,22 +74,6 @@ namespace ExperimentalProbability.UI
             }
 
             return newColors;
-        }
-
-        private void ComboBox_TypeSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Panel_Settings.ChangeVisibility(Visibility.Visible);
-            View_Tutorial.ChangeVisibility(Visibility.Collapsed);
-            Panel_Descriptions.ChangeVisibility(Visibility.Visible);
-            Button_RunCalculation.IsEnabled = true;
-
-            var selector = (ComboBox)sender;
-
-            CurrentType = new CalculationType(this, selector.SelectedIndex);
-
-            CurrentType.UpdateSelectableData();
-            CurrentType.UpdateDescription();
-            UpdateVisibilityOfTypeViews(selector);
         }
 
         private void UpdateVisibilityOfTypeViews(ComboBox selector)
@@ -84,22 +98,34 @@ namespace ExperimentalProbability.UI
             Panel_TypeDescriptions.ChangeVisibilityOfChild(index, visibility);
         }
 
+        private void ComboBox_TypeSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Panel_Settings.ChangeVisibility(Visibility.Visible);
+            View_Tutorial.ChangeVisibility(Visibility.Collapsed);
+            Panel_Descriptions.ChangeVisibility(Visibility.Visible);
+            Button_RunCalculation.IsEnabled = true;
+
+            var selector = (ComboBox)sender;
+
+            CurrentType = new CalculationType(this, selector.SelectedIndex);
+
+            CurrentType.UpdateSelectableData();
+            CurrentType.UpdateDescription();
+            UpdateVisibilityOfTypeViews(selector);
+        }
+
         private void Button_RunCalculation_Click(object sender, RoutedEventArgs e)
         {
             CurrentType.SetCalculationData();
-            _worker.RunWorkerAsync();
-        }
+            Button_RunCalculation.Content = GeneralResources.Button_CancelCalculation_Content;
 
-        private void Worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            e.Result = CurrentType.RunCalculation();
-        }
-
-        private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
+            try
             {
-                View_Results.DisplayResult((CalculationResultData)e.Result);
+                CurrentType.Worker.RunWorkerAsync();
+            }
+            catch (InvalidOperationException)
+            {
+                CurrentType.Worker.CancelAsync();
             }
         }
     }
