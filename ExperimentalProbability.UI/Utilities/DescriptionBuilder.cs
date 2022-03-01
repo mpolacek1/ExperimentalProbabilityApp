@@ -1,5 +1,5 @@
 ﻿using ExperimentalProbability.UI.Models;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
+using ExperimentalProbability.Contracts.Properties;
 using System.Text;
 
 namespace ExperimentalProbability.UI.Utilities

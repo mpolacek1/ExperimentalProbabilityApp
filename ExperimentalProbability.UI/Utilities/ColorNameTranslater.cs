@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Colors = ExperimentalProbability.UI.Properties.LocalizableResources.ColorNamesResources;
+using Colors = ExperimentalProbability.Contracts.Properties.ColorNamesResources;
 
 namespace ExperimentalProbability.UI.Utilities
 {

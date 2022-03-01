@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using ExperimentalProbability.UI.Extensions;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
+using ExperimentalProbability.Contracts.Properties;
 using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI.CustomElements.Panels
