@@ -1,8 +1,9 @@
 ﻿using System.Windows.Controls;
+using ExperimentalProbability.Contracts.Utilities;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
 using ExperimentalProbability.UI.Utilities;
-using LocalResx = ExperimentalProbability.UI.Properties.LocalizableResources.ColoredBallsResources;
+using LocalResx = ExperimentalProbability.Contracts.Properties.ColoredBallsResources;
 
 namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
 {

@@ -5,12 +5,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Properties;
+using ExperimentalProbability.Contracts.Utilities;
 using ExperimentalProbability.UI.CustomElements.Panels;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
-using ExperimentalProbability.UI.Utilities;
 using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
@@ -87,39 +87,26 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             return colors;
         }
 
-        /*public List<Color> GeneratePool()
+        public BasicData GetCalculationData()
         {
-            var colors = GetSelectedColors();
-            var counts = GetColorCounts();
+            return new BasicData(NumberOfBalls.GetValue(), GetCalculationDataItems());
+        }
 
-            for (int i = 0; i < colors.Count; i++)
+        private List<Dictionary<string, object>> GetCalculationDataItems()
+        {
+            var items = new List<Dictionary<string, object>>(NumberOfColors.GetValue());
+
+            for (int i = 0; i < NumberOfColors.GetValue(); i++)
             {
-                if (!colors[i].Color.HasValue || counts[i].GetValue() > 0)
+                items.Add(new Dictionary<string, object>(2)
                 {
-                    colors.RemoveAt(i);
-                    counts.RemoveAt(i);
-                }
+                    { "color", GetColorValue(i) },
+                    { "count", GetColorCountValue(i) },
+                });
             }
 
-            var pool = new List<Color>(NumberOfBalls.GetValue());
-
-            if (NumberOfBalls.Validate() && NumberOfColors.Validate() && colors.Count > 0)
-            {
-                var random = new Random();
-
-                for (int i = 0; i < pool.Capacity; i++)
-                {
-                    var num = random.Next(0, colors.Count);
-                    if (counts[num].GetValue() > 0)
-                    {
-                        pool.Insert(i, colors[num].Color.Value);
-                        counts[num].Value -= 1;
-                    }
-                }
-            }
-
-            return pool;
-        }*/
+            return items;
+        }
 
         private List<Dictionary<string, string>> GetDescriptionItems()
         {
@@ -129,10 +116,10 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             {
                 for (int i = 0; i < Panel_ColorSelection.Children.Count; i++)
                 {
-                    var count = GetColorCount(i).GetValue();
+                    var count = GetColorCountValue(i);
                     var name = GetColorName(i);
 
-                    items.Add(new Dictionary<string, string>(1)
+                    items.Add(new Dictionary<string, string>(2)
                     {
                         { "count", count != 0 ? NumberTranslater.NumberToWord[count] : GeneralResources.String_NotAvailable },
                         { "name", name != string.Empty ? name : GeneralResources.String_NotAvailable },
@@ -146,6 +133,11 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
         private IntegerUpDown GetColorCount(int index)
         {
             return GetSelectionPanel(index).ColorCount;
+        }
+
+        private int GetColorCountValue(int index)
+        {
+            return GetColorCount(index).GetValue();
         }
 
         private string GetColorName(int index)
@@ -210,11 +202,6 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             }
 
             return result;
-        }
-
-        public BasicData GetCalculationData()
-        {
-            throw new NotImplementedException();
         }
     }
 }

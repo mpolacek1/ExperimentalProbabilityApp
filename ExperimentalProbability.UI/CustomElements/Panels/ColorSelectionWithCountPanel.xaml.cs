@@ -27,6 +27,11 @@ namespace ExperimentalProbability.UI.CustomElements.Panels
             return GetSelectionPanel().GetSelectedColor().Color;
         }
 
+        public ColorItem GetSelectedColor()
+        {
+            return GetSelectionPanel().GetSelectedColor();
+        }
+
         private ColorSelectionPanel GetSelectionPanel()
         {
             return (ColorSelectionPanel)Children[0];

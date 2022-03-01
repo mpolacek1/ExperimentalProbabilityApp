@@ -1,46 +1,46 @@
-﻿using ExperimentalProbability.Calculation.Models;
-using ExperimentalProbability.Calculations.Interfaces;
+﻿using System;
+using System.ComponentModel;
+using ExperimentalProbability.Calculation.Interfaces;
+using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Calculation.Validation;
 
-namespace ExperimentalProbability.Calculations.Types
+namespace ExperimentalProbability.Calculation.Calculations
 {
     public class ColoredBallsCalculation : ICalculationType
     {
-        public ColoredBallsCalculation(CalculationData data)
+        private readonly BaseCalculationValidator _validator;
+
+        private readonly CalculationData _data;
+
+        private readonly BackgroundWorker _worker;
+
+        private readonly Random _random;
+
+        public ColoredBallsCalculation(CalculationData data, BackgroundWorker worker)
         {
-            Data = data;
+            _validator = new ColoredBallsValidator();
+            _data = data;
+            _worker = worker;
+            _random = new Random();
+            ResultData = new CalculationResultData();
         }
 
-        private CalculationData Data { get; set; }
+        private CalculationResultData ResultData { get; set; }
 
-        private CalculationResultData ResultData { get; set; } = new CalculationResultData();
-
-        public CalculationResultData Calculate()
+        public CalculationResultData Calculate(DoWorkEventArgs e)
         {
-            if (!ValidateData(Data))
+            _validator.Validate(_data);
+
+            for (int i = 0; i < _data.SimulationsToRun; i++)
             {
+                if (_worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return null;
+                }
             }
 
             return ResultData;
-        }
-
-        public bool ValidateData(CalculationData data)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool ValidateTypeData(BasicData data)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool ValidateConditionData(BasicData data)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool ValidateInteger(int value, int minVale, int maxValue)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

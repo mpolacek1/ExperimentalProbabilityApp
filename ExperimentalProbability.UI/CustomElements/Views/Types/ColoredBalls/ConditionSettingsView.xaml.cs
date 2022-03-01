@@ -1,15 +1,16 @@
-﻿using ExperimentalProbability.Calculation.Models;
-using ExperimentalProbability.UI.CustomElements.Panels;
-using ExperimentalProbability.UI.Extensions;
-using ExperimentalProbability.UI.Interfaces;
-using ExperimentalProbability.UI.Models;
-using ExperimentalProbability.UI.Properties.LocalizableResources;
-using ExperimentalProbability.UI.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Properties;
+using ExperimentalProbability.Contracts.Utilities;
+using ExperimentalProbability.UI.CustomElements.Panels;
+using ExperimentalProbability.UI.Extensions;
+using ExperimentalProbability.UI.Interfaces;
+using ExperimentalProbability.UI.Models;
 using Xceed.Wpf.Toolkit;
 
 namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
@@ -34,7 +35,7 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             {
                 for (int i = 0; i < Panel_ColorSelection.Children.Count; i++)
                 {
-                    var name = ((ColorSelectionPanel)Panel_ColorSelection.Children[i]).GetSelectedColor().Name;
+                    var name = GetSelectionPanel(i).GetSelectedColor().Name;
 
                     items.Add(new Dictionary<string, string>(1)
                     {
@@ -51,6 +52,23 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
         {
             ((TypeSettingsView)Application.Current.GetCurrentSettings()).UpdateAvailableColors();
             UpdateAvailableColors();
+        }
+
+        public BasicData GetCalculationData()
+        {
+            return new BasicData(NumberOfTakenBalls.GetValue(), GetCalculationDataItems());
+        }
+
+        private List<Color?> GetCalculationDataItems()
+        {
+            var items = new List<Color?>(NumberOfTakenBalls.GetValue());
+
+            for (int i = 0; i < NumberOfTakenBalls.GetValue(); i++)
+            {
+                items.Add(GetSelectionPanel(i).GetSelectedColor().Color);
+            }
+
+            return items;
         }
 
         private void UpdateAvailableColors()
@@ -98,11 +116,6 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             Application.Current.UpdateSelectableData();
 
             Application.Current.UpdateDescription();
-        }
-
-        public BasicData GetCalculationData()
-        {
-            throw new NotImplementedException();
         }
     }
 }
