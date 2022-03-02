@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Text;
 using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Utilities;
 using LocalResx = ExperimentalProbability.Contracts.Properties.GeneralResources;
 
 namespace ExperimentalProbability.Calculation.Validation
@@ -22,12 +22,12 @@ namespace ExperimentalProbability.Calculation.Validation
         {
             if (number < min)
             {
-                ThrowValidationException(LocalResx.Error_Number_Beginning, elementName, LocalResx.Error_Number_Min, min);
+                ThrowValidationException(elementName, LocalResx.Error_Number_Min, min);
             }
 
             if (number > max)
             {
-                ThrowValidationException(LocalResx.Error_Number_Beginning, elementName, LocalResx.Error_Number_Max, max);
+                ThrowValidationException(elementName, LocalResx.Error_Number_Max, max);
             }
         }
 
@@ -35,15 +35,24 @@ namespace ExperimentalProbability.Calculation.Validation
 
         protected abstract void ValidateConditionData(CalculationData data);
 
-        protected void ThrowValidationException(string messBegining, string elementName, string messBetween, object value, char end = '.', char separator = ' ')
+        protected string AppendNumberPositionToString(int index, string elementName)
         {
-            var builder = new StringBuilder(messBegining);
-            builder.Append(separator);
+            return $"{NumberTranslater.NumberToPosition[index]} {elementName}";
+        }
+
+        protected void ThrowValidationException(string elementName, string messBetween, object value = null, char end = '.', char separator = ' ')
+        {
+            var builder = TextBuilder.InitializeStringBuilder(LocalResx.Error_Beginning, separator);
             builder.Append(elementName);
             builder.Append(separator);
             builder.Append(messBetween);
-            builder.Append(separator);
-            builder.Append(value);
+
+            if (!value.Equals(null))
+            {
+                builder.Append(separator);
+                builder.Append(value);
+            }
+
             builder.Append(end);
 
             throw new Exception(builder.ToString());

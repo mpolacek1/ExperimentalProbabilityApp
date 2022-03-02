@@ -129,8 +129,11 @@
   <data name="ElementName_SimulationsToRun" xml:space="preserve">
     <value>Simulations To Run</value>
   </data>
-  <data name="Error_Number_Beginning" xml:space="preserve">
+  <data name="Error_Beginning" xml:space="preserve">
     <value>The value given in</value>
+  </data>
+  <data name="Error_CannotBeEmpty" xml:space="preserve">
+    <value>cannot be empty</value>
   </data>
   <data name="Error_Number_Max" xml:space="preserve">
     <value>has exceeded the maximal value of</value>
@@ -193,7 +196,10 @@
     <value>Information</value>
   </data>
   <data name="MessageBox_Message_CalculationCanceled" xml:space="preserve">
-    <value>The running calculation was canceled.</value>
+    <value>The running calculation was successfully canceled.</value>
+  </data>
+  <data name="MessageBox_Message_CalculationFinished" xml:space="preserve">
+    <value>The calculation has finished successfully.</value>
   </data>
   <data name="String_ConditionInfo" xml:space="preserve">
     <value>The condition you are looking for is that</value>

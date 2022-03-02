@@ -1,5 +1,9 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 using ExperimentalProbability.Contracts.Utilities;
+using ExperimentalProbability.UI.CustomElements.Panels.ColoredBalls;
+using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
 using ExperimentalProbability.UI.Utilities;
@@ -22,12 +26,12 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             ((TextBlock)descriptions[1]).Text = BuildPoolDescription(typeData, separator);
             ((TextBlock)descriptions[2]).Text = DescriptionBuilder.BuildConditionDescription(conditionData, LocalResx.String_CalculationAction, separator);
 
-            //VisualizePool((Panel)((Panel)((Border)descriptions[3]).Child).Children[1]);
+            VisualizePool((Panel)((Panel)((Border)descriptions[3]).Child).Children[1]);
         }
 
         private string BuildPoolDescription(DescriptionData data, char separator)
         {
-            var builder = DescriptionBuilder.InitializeStringBuilder(DescriptionBuilder.BuildPoolDescription(data, LocalResx.String_PoolItem, separator), separator);
+            var builder = TextBuilder.InitializeStringBuilder(DescriptionBuilder.BuildPoolDescription(data, LocalResx.String_PoolItem, separator), separator);
 
             if (data.Items != null)
             {
@@ -47,33 +51,39 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
 
                     builder.Append(separator);
                     builder.Append(data.Items[i]["name"]);
-                    builder.Append(DescriptionBuilder.CorrectEndOfItemDesc(i, data.Items.Count, separator));
+                    builder.Append(TextBuilder.CorrectEndOfItemDesc(i, data.Items.Count, separator));
                 }
             }
             else
             {
-                builder.Append(DescriptionBuilder.GetNotAvailable());
+                builder.Append(TextBuilder.GetNotAvailable());
             }
 
             return builder.ToString();
         }
 
-        /*private void VisualizePool(Panel panel)
+        private void VisualizePool(Panel panel)
         {
-            panel.Children.Clear();
+            var typeSettings = (TypeSettingsView)Application.Current.GetCurrentSettings();
 
-            var settings = (TypeSettingsView)Application.Current.GetCurrentSettings();
-            settings.CurrentPool = settings.GeneratePool();
-
-            for (int i = 0; i < settings.CurrentPool.Count; i++)
+            if (typeSettings.Panel_ColorSelection.Children.Count == typeSettings.NumberOfColors.GetValue())
             {
-                var ellipse = new Ellipse
-                {
-                    Fill = new SolidColorBrush(settings.CurrentPool[i]),
-                };
+                panel.Children.Clear();
 
-                panel.Children.Add(ellipse);
+                var colorsAndCounts = ((TypeSettingsView)Application.Current.GetCurrentSettings()).GetColorsAndCounts();
+
+                for (int i = 0; i < colorsAndCounts.Count; i++)
+                {
+                    var color = (Color?)colorsAndCounts[i]["color"];
+                    var count = (int)colorsAndCounts[i]["count"];
+
+                    if (color.HasValue
+                        && count > 0)
+                    {
+                        panel.Children.Add(new PoolVisualizationPanel(count.ToString(), color.Value));
+                    }
+                }
             }
-        }*/
+        }
     }
 }

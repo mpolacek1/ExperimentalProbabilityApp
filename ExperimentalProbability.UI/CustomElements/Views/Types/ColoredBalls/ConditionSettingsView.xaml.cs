@@ -7,7 +7,7 @@ using System.Windows.Media;
 using ExperimentalProbability.Calculation.Models;
 using ExperimentalProbability.Contracts.Properties;
 using ExperimentalProbability.Contracts.Utilities;
-using ExperimentalProbability.UI.CustomElements.Panels;
+using ExperimentalProbability.UI.CustomElements.Panels.ColoredBalls;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
@@ -59,9 +59,9 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
             return new BasicData(NumberOfTakenBalls.GetValue(), GetCalculationDataItems());
         }
 
-        private List<Color?> GetCalculationDataItems()
+        private List<object> GetCalculationDataItems()
         {
-            var items = new List<Color?>(NumberOfTakenBalls.GetValue());
+            var items = new List<object>(NumberOfTakenBalls.GetValue());
 
             for (int i = 0; i < NumberOfTakenBalls.GetValue(); i++)
             {

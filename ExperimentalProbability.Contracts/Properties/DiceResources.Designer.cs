@@ -79,20 +79,11 @@ namespace ExperimentalProbability.Contracts.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dice Rolls.
+        ///   Looks up a localized string similar to Number of Dice Rolls.
         /// </summary>
         public static string ElementName_DiceRolls {
             get {
                 return ResourceManager.GetString("ElementName_DiceRolls", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dice Rolls Results.
-        /// </summary>
-        public static string ElementName_DiceRollsResults {
-            get {
-                return ResourceManager.GetString("ElementName_DiceRollsResults", resourceCulture);
             }
         }
         

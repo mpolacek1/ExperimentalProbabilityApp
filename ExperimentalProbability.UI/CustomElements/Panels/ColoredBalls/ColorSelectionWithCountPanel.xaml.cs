@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using Xceed.Wpf.Toolkit;
 
-namespace ExperimentalProbability.UI.CustomElements.Panels
+namespace ExperimentalProbability.UI.CustomElements.Panels.ColoredBalls
 {
     public partial class ColorSelectionWithCountPanel : StackPanel
     {

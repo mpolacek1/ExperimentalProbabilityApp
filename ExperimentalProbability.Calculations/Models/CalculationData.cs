@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System;
 
 namespace ExperimentalProbability.Calculation.Models
 {
-    public class CalculationData
+    public class CalculationData : ICloneable
     {
         public CalculationData(BasicData typeData, BasicData conditionData, int simulationsToRun)
         {
@@ -16,5 +16,10 @@ namespace ExperimentalProbability.Calculation.Models
         public BasicData ConditionData { get; set; }
 
         public int SimulationsToRun { get; set; }
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

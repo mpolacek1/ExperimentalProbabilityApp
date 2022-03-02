@@ -15,6 +15,10 @@ namespace ExperimentalProbability.UI
 {
     public partial class MainWindow : Window
     {
+        private const string _messageStyleKeyInfo = "Style_MessageBox_Info";
+
+        private const string _messageStyleKeyError = "Style_MessageBox_Error";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -41,25 +45,17 @@ namespace ExperimentalProbability.UI
 
             if (e.Cancelled)
             {
-                Message.Show(
-                    GeneralResources.MessageBox_Message_CalculationCanceled,
-                    GeneralResources.MessageBox_Caption_Information,
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information,
-                    (Style)Application.Current.FindResource("Style_MessageBox_Info"));
+                ShowInfoMessage(GeneralResources.MessageBox_Message_CalculationCanceled);
             }
             else if (e.Error != null)
             {
-                Message.Show(
-                    e.Error.Message,
-                    GeneralResources.MessageBox_Caption_Error,
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error,
-                    (Style)Application.Current.FindResource("Style_MessageBox_Error"));
+                ShowErrorMessage(e.Error.Message);
             }
             else
             {
                 View_Results.DisplayResult((CalculationResultData)e.Result);
+
+                ShowInfoMessage(GeneralResources.MessageBox_Message_CalculationFinished);
             }
         }
 
@@ -74,6 +70,21 @@ namespace ExperimentalProbability.UI
             }
 
             return newColors;
+        }
+
+        private void ShowInfoMessage(string message)
+        {
+            ShowMessage(message, GeneralResources.MessageBox_Caption_Information, MessageBoxImage.Information, _messageStyleKeyInfo);
+        }
+
+        private void ShowErrorMessage(string message)
+        {
+            ShowMessage(message, GeneralResources.MessageBox_Caption_Error, MessageBoxImage.Error, _messageStyleKeyError);
+        }
+
+        private void ShowMessage(string message, string caption, MessageBoxImage image, string style)
+        {
+            Message.Show(message, caption, MessageBoxButton.OK, image, (Style)Application.Current.FindResource(style));
         }
 
         private void UpdateVisibilityOfTypeViews(ComboBox selector)

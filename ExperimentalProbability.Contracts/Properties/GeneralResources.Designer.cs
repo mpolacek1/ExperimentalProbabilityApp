@@ -99,9 +99,18 @@ namespace ExperimentalProbability.Contracts.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The value given in.
         /// </summary>
-        public static string Error_Number_Beginning {
+        public static string Error_Beginning {
             get {
-                return ResourceManager.GetString("Error_Number_Beginning", resourceCulture);
+                return ResourceManager.GetString("Error_Beginning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cannot be empty.
+        /// </summary>
+        public static string Error_CannotBeEmpty {
+            get {
+                return ResourceManager.GetString("Error_CannotBeEmpty", resourceCulture);
             }
         }
         
@@ -286,11 +295,20 @@ namespace ExperimentalProbability.Contracts.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The running calculation was canceled..
+        ///   Looks up a localized string similar to The running calculation was successfully canceled..
         /// </summary>
         public static string MessageBox_Message_CalculationCanceled {
             get {
                 return ResourceManager.GetString("MessageBox_Message_CalculationCanceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The calculation has finished successfully..
+        /// </summary>
+        public static string MessageBox_Message_CalculationFinished {
+            get {
+                return ResourceManager.GetString("MessageBox_Message_CalculationFinished", resourceCulture);
             }
         }
         

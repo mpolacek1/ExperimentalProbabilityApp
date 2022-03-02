@@ -2,13 +2,13 @@
 {
     public class BasicData
     {
-        public BasicData(int numberOf, object items)
+        public BasicData(object numberOf, object items)
         {
             NumberOf = numberOf;
             Items = items;
         }
 
-        public int NumberOf { get; set; }
+        public object NumberOf { get; set; }
 
         public object Items { get; set; }
     }

@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ExperimentalProbability.UI.CustomElements.Panels
+namespace ExperimentalProbability.UI.CustomElements.Panels.Dice
 {
     public partial class SideSelectionPanel : WrapPanel
     {

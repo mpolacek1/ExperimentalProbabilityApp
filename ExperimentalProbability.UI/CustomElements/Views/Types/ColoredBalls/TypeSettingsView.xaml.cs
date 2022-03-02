@@ -7,7 +7,7 @@ using System.Windows.Media;
 using ExperimentalProbability.Calculation.Models;
 using ExperimentalProbability.Contracts.Properties;
 using ExperimentalProbability.Contracts.Utilities;
-using ExperimentalProbability.UI.CustomElements.Panels;
+using ExperimentalProbability.UI.CustomElements.Panels.ColoredBalls;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;
@@ -21,8 +21,6 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
         {
             InitializeComponent();
         }
-
-        public List<Color> CurrentPool { get; set; }
 
         public DescriptionData GetDescriptionData()
         {
@@ -89,10 +87,16 @@ namespace ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls
 
         public BasicData GetCalculationData()
         {
-            return new BasicData(NumberOfBalls.GetValue(), GetCalculationDataItems());
+            return new BasicData(
+                new Dictionary<string, int>(2)
+                {
+                    { "balls", NumberOfBalls.GetValue() },
+                    { "colors", NumberOfColors.GetValue() },
+                },
+                GetColorsAndCounts());
         }
 
-        private List<Dictionary<string, object>> GetCalculationDataItems()
+        public List<Dictionary<string, object>> GetColorsAndCounts()
         {
             var items = new List<Dictionary<string, object>>(NumberOfColors.GetValue());
 

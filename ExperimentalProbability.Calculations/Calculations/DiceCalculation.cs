@@ -44,7 +44,7 @@ namespace ExperimentalProbability.Calculation.Calculations
 
                 if (CheckCondition(GetRolls()))
                 {
-                    ResultData.ConditionsMet++;
+                    ResultData.ConditionMet++;
                 }
 
                 ResultData.SimulationsRun++;
@@ -55,11 +55,12 @@ namespace ExperimentalProbability.Calculation.Calculations
 
         private List<int> GetRolls()
         {
-            var rolls = new List<int>(_data.ConditionData.NumberOf);
+            var numberOfRolls = (int)_data.ConditionData.NumberOf;
+            var rolls = new List<int>(numberOfRolls);
 
-            for (int i = 0; i < _data.ConditionData.NumberOf; i++)
+            for (int i = 0; i < numberOfRolls; i++)
             {
-                rolls.Add(_random.Next(_minRollResult, _data.TypeData.NumberOf + 1));
+                rolls.Add(_random.Next(_minRollResult, (int)_data.TypeData.NumberOf + 1));
             }
 
             return rolls;

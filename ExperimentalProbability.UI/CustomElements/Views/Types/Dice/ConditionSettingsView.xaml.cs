@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using ExperimentalProbability.Calculation.Models;
 using ExperimentalProbability.Contracts.Properties;
 using ExperimentalProbability.Contracts.Utilities;
-using ExperimentalProbability.UI.CustomElements.Panels;
+using ExperimentalProbability.UI.CustomElements.Panels.Dice;
 using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.UI.Interfaces;
 using ExperimentalProbability.UI.Models;

@@ -6,13 +6,13 @@ namespace ExperimentalProbability.Calculation.Models
     {
         public int SimulationsRun { get; set; } = 0;
 
-        public int ConditionsMet { get; set; } = 0;
+        public int ConditionMet { get; set; } = 0;
 
-        public double Probability => GetProbability();
+        public decimal Probability => GetProbability();
 
-        public double GetProbability()
+        public decimal GetProbability()
         {
-            return Math.Round(Convert.ToDouble(ConditionsMet) / Convert.ToDouble(SimulationsRun), 4);
+            return Math.Round(Convert.ToDecimal(ConditionMet) / Convert.ToDecimal(SimulationsRun), 5);
         }
     }
 }

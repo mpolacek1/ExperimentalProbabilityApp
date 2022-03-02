@@ -3,11 +3,11 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using ExperimentalProbability.UI.Extensions;
 using ExperimentalProbability.Contracts.Properties;
+using ExperimentalProbability.UI.Extensions;
 using Xceed.Wpf.Toolkit;
 
-namespace ExperimentalProbability.UI.CustomElements.Panels
+namespace ExperimentalProbability.UI.CustomElements.Panels.ColoredBalls
 {
     public partial class ColorSelectionPanel : WrapPanel
     {

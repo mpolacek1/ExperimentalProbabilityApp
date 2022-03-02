@@ -22,14 +22,14 @@
             <Setter Property="Maximum" Value="100000000"/>
             <Setter Property="MaxLength" Value="9"/>
             <Setter Property="Minimum" Value="1000"/>
-            <Setter Property="Value" Value="{Binding RelativeSource={RelativeSource Self}, Path=Minimum}"/>
+            <Setter Property="Value" Value="100000"/>
         </Style.Setters>
     </Style>
     <Style x:Key="Style_IntegerUpDown_NumberOfBalls" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource Style_IntegerUpDown_Default}">
         <Style.Setters>
             <Setter Property="Maximum" Value="100"/>
             <Setter Property="MaxLength" Value="3"/>
-            <Setter Property="Minimum" Value="9"/>
+            <Setter Property="Minimum" Value="2"/>
         </Style.Setters>
     </Style>
     <Style x:Key="Style_IntegerUpDown_NumberOfColors" TargetType="xctk:IntegerUpDown" BasedOn="{StaticResource Style_IntegerUpDown_Default}">

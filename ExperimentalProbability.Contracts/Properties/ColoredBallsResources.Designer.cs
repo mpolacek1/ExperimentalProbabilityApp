@@ -88,38 +88,65 @@ namespace ExperimentalProbability.Contracts.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.
+        ///   Looks up a localized string similar to Color Count.
         /// </summary>
-        public static string IntegerUpDown_ColorNumber_Text {
+        public static string ElementName_ColorCount {
             get {
-                return ResourceManager.GetString("IntegerUpDown_ColorNumber_Text", resourceCulture);
+                return ResourceManager.GetString("ElementName_ColorCount", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 9.
+        ///   Looks up a localized string similar to the sum of all Color Counts.
         /// </summary>
-        public static string IntegerUpDown_NumberOfBalls_Text {
+        public static string ElementName_ColorCountSum {
             get {
-                return ResourceManager.GetString("IntegerUpDown_NumberOfBalls_Text", resourceCulture);
+                return ResourceManager.GetString("ElementName_ColorCountSum", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3.
+        ///   Looks up a localized string similar to Condition Color.
         /// </summary>
-        public static string IntegerUpDown_NumberOfColors_Text {
+        public static string ElementName_ConditionColor {
             get {
-                return ResourceManager.GetString("IntegerUpDown_NumberOfColors_Text", resourceCulture);
+                return ResourceManager.GetString("ElementName_ConditionColor", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3.
+        ///   Looks up a localized string similar to Number of balls.
         /// </summary>
-        public static string IntegerUpDown_NumberOfTakenBalls_Text {
+        public static string ElementName_NumberOfBalls {
             get {
-                return ResourceManager.GetString("IntegerUpDown_NumberOfTakenBalls_Text", resourceCulture);
+                return ResourceManager.GetString("ElementName_NumberOfBalls", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of Colors.
+        /// </summary>
+        public static string ElementName_NumberOfColors {
+            get {
+                return ResourceManager.GetString("ElementName_NumberOfColors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of Taken Balls.
+        /// </summary>
+        public static string ElementName_NumberOfTakenBalls {
+            get {
+                return ResourceManager.GetString("ElementName_NumberOfTakenBalls", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pool Color.
+        /// </summary>
+        public static string ElementName_PoolColor {
+            get {
+                return ResourceManager.GetString("ElementName_PoolColor", resourceCulture);
             }
         }
         

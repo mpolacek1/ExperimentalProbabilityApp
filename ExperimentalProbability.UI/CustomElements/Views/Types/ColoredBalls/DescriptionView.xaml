@@ -14,7 +14,7 @@
         <Border Style="{StaticResource Style_Border_Medium_Top}" Padding="0,5,0,0">
             <StackPanel>
                 <TextBlock Style="{StaticResource Style_TextBlock_Description_Header2}"/>
-                <WrapPanel x:Name="Panel_PoolVisualization"/>
+                <StackPanel x:Name="Panel_PoolVisualization"/>
             </StackPanel>
         </Border>
     </StackPanel>

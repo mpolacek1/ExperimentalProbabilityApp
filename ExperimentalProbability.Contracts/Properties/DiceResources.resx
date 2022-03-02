@@ -124,10 +124,7 @@
     <value>Dice Roll</value>
   </data>
   <data name="ElementName_DiceRolls" xml:space="preserve">
-    <value>Dice Rolls</value>
-  </data>
-  <data name="ElementName_DiceRollsResults" xml:space="preserve">
-    <value>Dice Rolls Results</value>
+    <value>Number of Dice Rolls</value>
   </data>
   <data name="ElementName_DiceType" xml:space="preserve">
     <value>Dice Type</value>

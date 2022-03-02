@@ -126,17 +126,26 @@
   <data name="ComboBox_ColorSelection_Text" xml:space="preserve">
     <value>Choose a color</value>
   </data>
-  <data name="IntegerUpDown_ColorNumber_Text" xml:space="preserve">
-    <value>1</value>
+  <data name="ElementName_ColorCount" xml:space="preserve">
+    <value>Color Count</value>
   </data>
-  <data name="IntegerUpDown_NumberOfBalls_Text" xml:space="preserve">
-    <value>9</value>
+  <data name="ElementName_ColorCountSum" xml:space="preserve">
+    <value>the sum of all Color Counts</value>
   </data>
-  <data name="IntegerUpDown_NumberOfColors_Text" xml:space="preserve">
-    <value>3</value>
+  <data name="ElementName_ConditionColor" xml:space="preserve">
+    <value>Condition Color</value>
   </data>
-  <data name="IntegerUpDown_NumberOfTakenBalls_Text" xml:space="preserve">
-    <value>3</value>
+  <data name="ElementName_NumberOfBalls" xml:space="preserve">
+    <value>Number of balls</value>
+  </data>
+  <data name="ElementName_NumberOfColors" xml:space="preserve">
+    <value>Number of Colors</value>
+  </data>
+  <data name="ElementName_NumberOfTakenBalls" xml:space="preserve">
+    <value>Number of Taken Balls</value>
+  </data>
+  <data name="ElementName_PoolColor" xml:space="preserve">
+    <value>Pool Color</value>
   </data>
   <data name="Label_ColorCount_Content" xml:space="preserve">
     <value>Color count:</value>
