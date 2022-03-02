@@ -1,174 +1,143 @@
-﻿using ExperimentalProbability.Calculations.Models;
-using ExperimentalProbability.Calculations.Types;
-using System;
-using System.Globalization;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using ExperimentalProbability.Calculation.Models;
+using ExperimentalProbability.Contracts.Properties;
+using ExperimentalProbability.UI.Extensions;
+using ExperimentalProbability.UI.Models;
+using ExperimentalProbability.UI.Utilities;
+using Xceed.Wpf.Toolkit;
+using Message = Xceed.Wpf.Toolkit.MessageBox;
 
 namespace ExperimentalProbability.UI
 {
     public partial class MainWindow : Window
     {
-        private readonly string[] Types = new string[3]
-        {
-            Properties.Resources.Type_Empty,
-            Properties.Resources.Type_BagOfColoredBalls,
-            Properties.Resources.Type_DiceRoll,
-        };
+        private const string _messageStyleKeyInfo = "Style_MessageBox_Info";
 
-        private readonly string[] Empty_Conditions = new string[1]
-        {
-            Properties.Resources.Condition_NotAvailable,
-        };
-
-        private readonly string[] BagOfColoredBalls_Conditions = new string[2]
-        {
-            Properties.Resources.BagOfColoredBalls_Condition_First,
-            Properties.Resources.BagOfColoredBalls_Condition_Second,
-        };
-
-        private readonly string[] DiceRoll_Conditions = new string[2]
-        {
-            Properties.Resources.DiceRoll_Condition_First,
-            Properties.Resources.DiceRoll_Condition_Second,
-        };
+        private const string _messageStyleKeyError = "Style_MessageBox_Error";
 
         public MainWindow()
         {
             InitializeComponent();
-            UpdateControlsContent();
         }
 
-        private void UpdateControlsContent()
+        public CalculationType CurrentType { get; set; }
+
+        public List<ColorItem> DefaultColors => GetDefaultColors();
+
+        public string[] Types { get; } = new string[2]
         {
-            Header_Settings.Text = Properties.Resources.Header_Settings;
-            Text_Type.Text = Properties.Resources.Text_Type;
-            Box_Types.ItemsSource = Types;
-            Text_Condition.Text = Properties.Resources.Text_Condition;
-            Text_Simulations.Text = Properties.Resources.Text_Simulations;
-            NumberOfSimulations.Text = Properties.Resources.Simulations_Default;
+            ColoredBallsResources.String_TypeName,
+            DiceResources.String_TypeName,
+        };
 
-            Header_Description.Text = Properties.Resources.Header_Description;
-            Header_Description_Type.Text = Properties.Resources.Header_Description_Type;
-            Header_Description_Condition.Text = Properties.Resources.Header_Description_Condition;
-
-            Header_Results.Text = Properties.Resources.Header_Results;
-
-            Button_Run.Content = Properties.Resources.Button_Run;
+        public void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = CurrentType.RunCalculation(e);
         }
 
-        private void Box_Types_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            string[] itemsSource = Empty_Conditions;
-            string descriptionType = "";
-            bool buttonEnabled = false;
+            Button_RunCalculation.Content = GeneralResources.Button_RunCalculation_Content;
 
-            switch (Box_Types.SelectedIndex)
+            if (e.Cancelled)
             {
-                case 1:
-                    itemsSource = BagOfColoredBalls_Conditions;
-                    descriptionType = Properties.Resources.Desription_BagOfColoredBalls;
-                    buttonEnabled = true;
-                    break;
-                case 2:
-                    itemsSource = DiceRoll_Conditions;
-                    descriptionType = Properties.Resources.Description_DiceRoll;
-                    buttonEnabled = true;
-                    break;
+                ShowInfoMessage(GeneralResources.MessageBox_Message_CalculationCanceled);
             }
-
-            Description_Type.Text = descriptionType;
-            Box_Conditions.ItemsSource = itemsSource;
-            Box_Conditions.SelectedIndex = 0;
-            Button_Run.IsEnabled = buttonEnabled;
-        }
-
-        private void Box_Conditions_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            switch (Box_Types.SelectedIndex)
+            else if (e.Error != null)
             {
-                case 1:
-                    Description_Condition.Text = GetConditionDescription(new string[2]
-                    {
-                        Properties.Resources.Description_BagOfColoredBalls_Condition_First,
-                        Properties.Resources.Description_BagOfColoredBalls_Condition_Second,
-                    });
-                    break;
-                case 2:
-                    Description_Condition.Text = GetConditionDescription(new string[2]
-                    {
-                        Properties.Resources.Description_DiceRoll_Condition_First,
-                        Properties.Resources.Description_DiceRoll_Condition_Second,
-                    });
-                    break;
-            }
-        }
-
-        private string GetConditionDescription(string[] descriptions)
-        {
-            string description = descriptions[0];
-
-            if (Box_Conditions.SelectedIndex == 1)
-            {
-                description = descriptions[1];
-            }
-
-            return description;
-        }
-
-        private async void Button_Run_Click(object sender, RoutedEventArgs e)
-        {
-            await DisplayResult(await RunCalculation(
-                new CalculationData(
-                    Box_Types.SelectedIndex,
-                    Box_Conditions.SelectedIndex,
-                    int.Parse(NumberOfSimulations.Text))));
-        }
-
-        private async Task<CalculationResultData> RunCalculation(CalculationData data)
-        {
-            IType calculation = null;
-
-            switch (data.Type)
-            {
-                case 1:
-                    calculation = new BagOfColoredBalls();
-                    break;
-                case 2:
-                    calculation = new DiceRoll(data.Condition);
-                    break;
-            }
-
-            return await calculation.Calculate(data.Condition, data.Simulations);
-        }
-
-        private async Task DisplayResult(CalculationResultData result)
-        {
-            Text_SimulationsRun.Text = await BuildResultText(Properties.Resources.Text_SimulationsRun, result.SimulationsRun);
-            Text_ConditionsMet.Text = await BuildResultText(Properties.Resources.Text_ConditionsMet, result.ConditionsMet);
-            Text_Probability.Text = await BuildResultText(Properties.Resources.Text_Probability, result.Probability);
-        }
-
-        private Task<string> BuildResultText(string text, IConvertible number)
-        {
-            StringBuilder builder = new StringBuilder();
-            builder.Append(text);
-            builder.Append(' ');
-            builder.Append(number);
-
-            if (number.GetType() == typeof(int))
-            {
-                builder.Append(' ');
-                builder.Append(Properties.Resources.String_Times);
+                ShowErrorMessage(e.Error.Message);
             }
             else
             {
-                builder.Append("%.");
+                View_Results.DisplayResult((CalculationResultData)e.Result);
+
+                ShowInfoMessage(GeneralResources.MessageBox_Message_CalculationFinished);
+            }
+        }
+
+        private static List<ColorItem> GetDefaultColors()
+        {
+            var defaultColors = new ColorPicker().AvailableColors;
+            var newColors = new List<ColorItem>();
+
+            for (int i = 0; i < defaultColors.Count; i++)
+            {
+                newColors.Add(new ColorItem(defaultColors[i].Color.Value, ColorNameTranslater.ColorNames[defaultColors[i].Name]));
             }
 
-            return Task.FromResult(builder.ToString());
+            return newColors;
+        }
+
+        private void ShowInfoMessage(string message)
+        {
+            ShowMessage(message, GeneralResources.MessageBox_Caption_Information, MessageBoxImage.Information, _messageStyleKeyInfo);
+        }
+
+        private void ShowErrorMessage(string message)
+        {
+            ShowMessage(message, GeneralResources.MessageBox_Caption_Error, MessageBoxImage.Error, _messageStyleKeyError);
+        }
+
+        private void ShowMessage(string message, string caption, MessageBoxImage image, string style)
+        {
+            Message.Show(message, caption, MessageBoxButton.OK, image, (Style)Application.Current.FindResource(style));
+        }
+
+        private void UpdateVisibilityOfTypeViews(ComboBox selector)
+        {
+            for (int i = 0; i < selector.Items.Count; i++)
+            {
+                if (i == selector.SelectedIndex)
+                {
+                    ChangeVisibilityOfTypeViews(i, Visibility.Visible);
+                }
+                else
+                {
+                    ChangeVisibilityOfTypeViews(i, Visibility.Collapsed);
+                }
+            }
+        }
+
+        private void ChangeVisibilityOfTypeViews(int index, Visibility visibility)
+        {
+            Panel_TypeSettings.ChangeVisibilityOfChild(index, visibility);
+            Panel_TypeConditions.ChangeVisibilityOfChild(index, visibility);
+            Panel_TypeDescriptions.ChangeVisibilityOfChild(index, visibility);
+        }
+
+        private void ComboBox_TypeSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Panel_Settings.ChangeVisibility(Visibility.Visible);
+            View_Tutorial.ChangeVisibility(Visibility.Collapsed);
+            Panel_Descriptions.ChangeVisibility(Visibility.Visible);
+            Button_RunCalculation.IsEnabled = true;
+
+            var selector = (ComboBox)sender;
+
+            CurrentType = new CalculationType(this, selector.SelectedIndex);
+
+            CurrentType.UpdateSelectableData();
+            CurrentType.UpdateDescription();
+            UpdateVisibilityOfTypeViews(selector);
+        }
+
+        private void Button_RunCalculation_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentType.SetCalculationData();
+            Button_RunCalculation.Content = GeneralResources.Button_CancelCalculation_Content;
+
+            try
+            {
+                CurrentType.Worker.RunWorkerAsync();
+            }
+            catch (InvalidOperationException)
+            {
+                CurrentType.Worker.CancelAsync();
+            }
         }
     }
 }

@@ -2,7 +2,23 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
+
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Properties\BorderResources.xaml"/>
+                <ResourceDictionary Source="Properties\ButtonResources.xaml"/>
+                <ResourceDictionary Source="Properties\ColorPickerResources.xaml"/>
+                <ResourceDictionary Source="Properties\ComboBoxResources.xaml"/>
+                <ResourceDictionary Source="Properties\EllipseResources.xaml"/>
+                <ResourceDictionary Source="Properties\IntegerUpDownResources.xaml"/>
+                <ResourceDictionary Source="Properties\LabelResources.xaml"/>
+                <ResourceDictionary Source="Properties\MessageBoxResources.xaml"/>
+                <ResourceDictionary Source="Properties\ScrollViewerResources.xaml"/>
+                <ResourceDictionary Source="Properties\TextBlockResources.xaml"/>
+                <ResourceDictionary Source="Properties\WindowResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
+    
 </Application>

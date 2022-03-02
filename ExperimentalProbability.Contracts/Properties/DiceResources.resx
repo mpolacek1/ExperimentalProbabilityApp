@@ -117,88 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BagOfColoredBalls_Condition_First" xml:space="preserve">
-    <value>Take three different balls in a row</value>
+  <data name="ComboBox_DiceSelection_Text" xml:space="preserve">
+    <value>Choose a dice</value>
   </data>
-  <data name="BagOfColoredBalls_Condition_Second" xml:space="preserve">
-    <value>Take three identical balls in a row</value>
+  <data name="ElementName_DiceRoll" xml:space="preserve">
+    <value>Dice Roll</value>
   </data>
-  <data name="Button_Run" xml:space="preserve">
-    <value>Run calculation</value>
+  <data name="ElementName_DiceRolls" xml:space="preserve">
+    <value>Number of Dice Rolls</value>
   </data>
-  <data name="Condition_NotAvailable" xml:space="preserve">
-    <value>N/A</value>
+  <data name="ElementName_DiceType" xml:space="preserve">
+    <value>Dice Type</value>
   </data>
-  <data name="Description_BagOfColoredBalls_Condition_First" xml:space="preserve">
-    <value>This condition is true if all three of the taken balls are a different color.</value>
+  <data name="Label_DiceSelection_Content" xml:space="preserve">
+    <value>Dice type: </value>
   </data>
-  <data name="Description_BagOfColoredBalls_Condition_Second" xml:space="preserve">
-    <value>This condition is true if all three of the taken balls are the same color.</value>
+  <data name="Label_NumberOfDiceRolls_Content" xml:space="preserve">
+    <value>Number of dice rolls:</value>
   </data>
-  <data name="Description_DiceRoll" xml:space="preserve">
-    <value>This type of calculation works with a six-sided dice.</value>
+  <data name="Label_NumberOfSides_Content" xml:space="preserve">
+    <value>Number of sides:</value>
   </data>
-  <data name="Description_DiceRoll_Condition_First" xml:space="preserve">
-    <value>This condition is true if the dice is rolled once and the rolled side has the number six on it.</value>
+  <data name="Label_SideSelection_Content" xml:space="preserve">
+    <value>Choose a side:</value>
   </data>
-  <data name="Description_DiceRoll_Condition_Second" xml:space="preserve">
-    <value>This condition is true if the dice is rolled twice and both rolled sides have the number six on them.</value>
+  <data name="String_CalculationAction" xml:space="preserve">
+    <value>side rolled is</value>
   </data>
-  <data name="Desription_BagOfColoredBalls" xml:space="preserve">
-    <value>This type of calculation works with a bag filled with nine colored balls.</value>
+  <data name="String_DiceType_Cube" xml:space="preserve">
+    <value>Six sided die</value>
   </data>
-  <data name="DiceRoll_Condition_First" xml:space="preserve">
-    <value>Roll a six</value>
+  <data name="String_DiceType_Dodecahedron" xml:space="preserve">
+    <value>Twelve sided die</value>
   </data>
-  <data name="DiceRoll_Condition_Second" xml:space="preserve">
-    <value>Roll two sixes in a row</value>
+  <data name="String_DiceType_Icosahedron" xml:space="preserve">
+    <value>Twenty sided die</value>
   </data>
-  <data name="Header_Description" xml:space="preserve">
-    <value>Calculation description</value>
+  <data name="String_DiceType_Octahedron" xml:space="preserve">
+    <value>Eight sided die</value>
   </data>
-  <data name="Header_Description_Condition" xml:space="preserve">
-    <value>Description of calculation condition:</value>
+  <data name="String_DiceType_PentagonalTrapezohedron" xml:space="preserve">
+    <value>Ten sided die</value>
   </data>
-  <data name="Header_Description_Type" xml:space="preserve">
-    <value>Description of calculation type:</value>
+  <data name="String_DiceType_Tetrahedron" xml:space="preserve">
+    <value>Four sided die</value>
   </data>
-  <data name="Header_Results" xml:space="preserve">
-    <value>Last calculation results</value>
+  <data name="String_PoolItem" xml:space="preserve">
+    <value>sided die.</value>
   </data>
-  <data name="Header_Settings" xml:space="preserve">
-    <value>Calculation settings</value>
+  <data name="String_TypeInfo" xml:space="preserve">
+    <value>die, that can have four, six, eight, ten, twelve or twenty sides.</value>
   </data>
-  <data name="Simulations_Default" xml:space="preserve">
-    <value>1000000</value>
-  </data>
-  <data name="String_Times" xml:space="preserve">
-    <value>times.</value>
-  </data>
-  <data name="Text_Condition" xml:space="preserve">
-    <value>Condition:</value>
-  </data>
-  <data name="Text_ConditionsMet" xml:space="preserve">
-    <value>Condition was met</value>
-  </data>
-  <data name="Text_Probability" xml:space="preserve">
-    <value>Probability of condition is</value>
-  </data>
-  <data name="Text_Simulations" xml:space="preserve">
-    <value>Amount of simulations:</value>
-  </data>
-  <data name="Text_SimulationsRun" xml:space="preserve">
-    <value>Simulation ran</value>
-  </data>
-  <data name="Text_Type" xml:space="preserve">
-    <value>Type:</value>
-  </data>
-  <data name="Type_BagOfColoredBalls" xml:space="preserve">
-    <value>Bag of colored balls</value>
-  </data>
-  <data name="Type_DiceRoll" xml:space="preserve">
-    <value>Dice roll</value>
-  </data>
-  <data name="Type_Empty" xml:space="preserve">
-    <value>None</value>
+  <data name="String_TypeName" xml:space="preserve">
+    <value>Pool: Dice</value>
   </data>
 </root>

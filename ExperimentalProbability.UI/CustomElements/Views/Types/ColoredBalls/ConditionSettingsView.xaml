@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls.ConditionSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExperimentalProbability.UI.CustomElements.Views.Types.ColoredBalls"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             Visibility="Collapsed"
+             Initialized="UserControl_Initialized">
+
+    <StackPanel>
+        <WrapPanel>
+            <Label Target="{Binding NumberOfTakenBalls}" Style="{StaticResource Style_Label_NumberOfTakenBalls}"/>
+            <xctk:IntegerUpDown x:Name="NumberOfTakenBalls" Style="{StaticResource Style_IntegerUpDown_NumberOfTakenItems}" ValueChanged="NumberOfTakenBalls_ValueChanged"/>
+        </WrapPanel>
+        <Border Style="{StaticResource Style_Border_Light_Top}" Margin="0,5,0,0">
+            <WrapPanel x:Name="Panel_ColorSelection"/>
+        </Border>
+    </StackPanel>
+
+</UserControl>

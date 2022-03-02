@@ -1,18 +1,25 @@
-﻿namespace ExperimentalProbability.Calculations.Models
+﻿using System;
+
+namespace ExperimentalProbability.Calculation.Models
 {
-    public class CalculationData
+    public class CalculationData : ICloneable
     {
-        public int Type { get; set; }
-
-        public int Condition { get; set; }
-
-        public int Simulations { get; set; }
-
-        public CalculationData(int type, int condition, int simulations)
+        public CalculationData(BasicData typeData, BasicData conditionData, int simulationsToRun)
         {
-            Type = type;
-            Condition = condition;
-            Simulations = simulations;
+            TypeData = typeData;
+            ConditionData = conditionData;
+            SimulationsToRun = simulationsToRun;
+        }
+
+        public BasicData TypeData { get; set; }
+
+        public BasicData ConditionData { get; set; }
+
+        public int SimulationsToRun { get; set; }
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
         }
     }
 }

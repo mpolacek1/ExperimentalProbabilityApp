@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties;assembly=ExperimentalProbability.Contracts">
+
+    <Style x:Key="Style_Window_MainWindow_Default" TargetType="Window">
+        <Style.Setters>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="FontFamily" Value="Yu Gothic"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="ShowInTaskbar" Value="True"/>
+            <Setter Property="Title" Value="{x:Static resx:GeneralResources.Window_MainWindow_Title}"/>
+        </Style.Setters>
+    </Style>
+    
+</ResourceDictionary>

@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <UseWPF>true</UseWPF>
     <StartupObject>ExperimentalProbability.UI.App</StartupObject>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -10,22 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExperimentalProbability.Calculations\ExperimentalProbability.Calculations.csproj" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.2.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+  <PropertyGroup>
+	<CodeAnalysisRuleSet>..\.ruleset</CodeAnalysisRuleSet>
+	<AssemblyName>ExperimentalProbability.UI</AssemblyName>
+	<ApplicationIcon></ApplicationIcon>
+	<Win32Resource />
+  </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\ExperimentalProbability.Calculations\ExperimentalProbability.Calculation.csproj" />
+    <ProjectReference Include="..\ExperimentalProbability.Contracts\ExperimentalProbability.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
