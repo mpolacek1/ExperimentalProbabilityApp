@@ -1,11 +1,11 @@
-﻿using ExperimentalProbability.Calculation.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ExperimentalProbability.Contracts.Models;
 using ExperimentalProbability.Contracts.Utilities;
-using LocalResx = ExperimentalProbability.Contracts.Properties.DiceResources;
+using LocalResx = ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.DiceResources;
 
-namespace ExperimentalProbability.Calculation.Validation
+namespace ExperimentalProbability.Calculation.Validation.Pool
 {
-    public class DiceValidator : BaseCalculationValidator
+    public class DiceDataValidator : BasePoolCalculationDataValidator
     {
         private const int _minSides = 4;
 

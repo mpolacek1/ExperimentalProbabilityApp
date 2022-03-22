@@ -1,11 +1,11 @@
-﻿using ExperimentalProbability.Calculation.Models;
-using ExperimentalProbability.Contracts.Properties;
+﻿using ExperimentalProbability.Contracts.Models;
+using ExperimentalProbability.Contracts.Properties.Resources;
 using System.Collections.Generic;
-using LocalResx = ExperimentalProbability.Contracts.Properties.ColoredBallsResources;
+using LocalResx = ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.ColoredBallsResources;
 
-namespace ExperimentalProbability.Calculation.Validation
+namespace ExperimentalProbability.Calculation.Validation.Pool
 {
-    public class ColoredBallsValidator : BaseCalculationValidator
+    public class ColoredBallsDataValidator : BasePoolCalculationDataValidator
     {
         private const int _minBalls = 2;
 
