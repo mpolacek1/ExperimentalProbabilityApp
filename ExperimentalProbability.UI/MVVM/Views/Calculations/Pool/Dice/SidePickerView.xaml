@@ -1,0 +1,24 @@
+﻿<UserControl
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.Dice.SidePickerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.Dice;assembly=ExperimentalProbability.Contracts"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice"
+    d:DataContext="{d:DesignInstance Type=vm:SidePickerViewModel}"
+    mc:Ignorable="d"
+    >
+    <WrapPanel Margin="0,0,5,5">
+        <Label
+            x:Name="SidePickerLabel"
+            Content="{x:Static resx:Resources.SidePicker}"
+            Target="{Binding ElementName=SidePicker}"
+            />
+        <ComboBox
+            x:Name="SidePicker"
+            ItemsSource="{Binding Path=SelectableSides, Mode=OneWay}"
+            SelectedItem="{Binding Path=SelectedSide, Mode=TwoWay}"
+            />
+    </WrapPanel>
+</UserControl>
