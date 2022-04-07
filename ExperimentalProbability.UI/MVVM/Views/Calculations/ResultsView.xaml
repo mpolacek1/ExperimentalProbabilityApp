@@ -1,0 +1,84 @@
+﻿<UserControl
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.ResultsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:lc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.General;assembly=ExperimentalProbability.Contracts"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations"
+    d:DataContext="{d:DesignInstance Type=vm:ResultsViewModel}"
+    mc:Ignorable="d"
+    >
+    <Border BorderThickness="0,2,0,0">
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                <Label Content="{Binding Path=ResultName, Mode=OneTime}" Target="{Binding ElementName=FinalResult}" />
+                <TextBlock
+                    x:Name="FinalResult"
+                    VerticalAlignment="Center"
+                    FontWeight="Bold"
+                    />
+            </StackPanel>
+            <Border BorderThickness="0,0,0,1" DockPanel.Dock="Top">
+                <Expander
+                    FontSize="14"
+                    Foreground="White"
+                    Style="{StaticResource ProgressResults_Expander}"
+                    >
+                    <ScrollViewer>
+                        <StackPanel>
+                            <ItemsControl x:Name="Results" Margin="0,0,0,10">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="10" Rows="10" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="30" />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <Label
+                                                HorizontalAlignment="Right"
+                                                HorizontalContentAlignment="Right"
+                                                Content="{Binding Path=Position, Mode=OneTime}"
+                                                Foreground="DarkCyan"
+                                                Target="{Binding ElementName=Result}"
+                                                />
+                                            <TextBlock
+                                                x:Name="Result"
+                                                Grid.Column="1"
+                                                Margin="5,0,5,0"
+                                                HorizontalAlignment="Left"
+                                                VerticalAlignment="Center"
+                                                Text="{Binding Path=FormattedResult, Mode=OneWay}"
+                                                />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                            <lc:CartesianChart
+                                Height="200"
+                                DataTooltip="{x:Null}"
+                                Hoverable="False"
+                                >
+                                <lc:CartesianChart.Series>
+                                    <lc:LineSeries Stroke="DarkCyan" Values="{Binding ChartResults}" />
+                                </lc:CartesianChart.Series>
+                                <lc:CartesianChart.AxisX>
+                                    <lc:Axis MaxValue="99" MinValue="0" />
+                                </lc:CartesianChart.AxisX>
+                                <lc:CartesianChart.AxisY>
+                                    <lc:Axis Title="{x:Static resx:Resources.Result_ChartAxisY_Title}" MinValue="0" />
+                                </lc:CartesianChart.AxisY>
+                            </lc:CartesianChart>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Expander>
+            </Border>
+        </DockPanel>
+    </Border>
+</UserControl>
