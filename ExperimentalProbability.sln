@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32106.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExperimentalProbability.UI", "ExperimentalProbability.UI\ExperimentalProbability.UI.csproj", "{1DFF67A2-83DE-4EA5-8FD2-E4D88FA05ADD}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExperimentalProbability.UI"
 		{5BC879E1-6F94-4B22-8591-537B244C9719} = {5BC879E1-6F94-4B22-8591-537B244C9719}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExperimentalProbability.Calculation", "ExperimentalProbability.Calculations\ExperimentalProbability.Calculation.csproj", "{5BC879E1-6F94-4B22-8591-537B244C9719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExperimentalProbability.Calculations", "ExperimentalProbability.Calculations\ExperimentalProbability.Calculations.csproj", "{5BC879E1-6F94-4B22-8591-537B244C9719}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B1DD4E82-F917-4D2D-B8C4-FD448D141789} = {B1DD4E82-F917-4D2D-B8C4-FD448D141789}
 	EndProjectSection
