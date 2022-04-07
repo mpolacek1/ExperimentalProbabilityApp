@@ -10,23 +10,47 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.2.0" />
+    <PackageReference Include="LiveCharts" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
   </ItemGroup>
 
   <PropertyGroup>
 	<CodeAnalysisRuleSet>..\.ruleset</CodeAnalysisRuleSet>
 	<AssemblyName>ExperimentalProbability.UI</AssemblyName>
-	<ApplicationIcon></ApplicationIcon>
-	<Win32Resource />
+	<ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExperimentalProbability.Calculations\ExperimentalProbability.Calculation.csproj" />
+    <ProjectReference Include="..\ExperimentalProbability.Calculations\ExperimentalProbability.Calculations.csproj" />
     <ProjectReference Include="..\ExperimentalProbability.Contracts\ExperimentalProbability.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MVVM\Views\TutorialView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MVVM\Views\TutorialView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>
