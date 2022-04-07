@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AliceBlue" xml:space="preserve">
+    <value>Alice Modrá</value>
+  </data>
+  <data name="AntiqueWhite" xml:space="preserve">
+    <value>Starožitná Bílá</value>
+  </data>
+  <data name="Aquamarine" xml:space="preserve">
+    <value>Akvamarín</value>
+  </data>
+  <data name="Azure" xml:space="preserve">
+    <value>Blankyt</value>
+  </data>
+  <data name="Beige" xml:space="preserve">
+    <value>Béžová</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Černá</value>
+  </data>
+  <data name="BlanchedAlmond" xml:space="preserve">
+    <value>Blanšírovaná Mandle</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Modrá</value>
+  </data>
+  <data name="BlueViolet" xml:space="preserve">
+    <value>Modrofialová</value>
+  </data>
+  <data name="Brown" xml:space="preserve">
+    <value>Hnědá</value>
+  </data>
+  <data name="BurlyWood" xml:space="preserve">
+    <value>Mohutně Dřevěná</value>
+  </data>
+  <data name="CadetBlue" xml:space="preserve">
+    <value>Kadetská Modrá</value>
+  </data>
+  <data name="Chocolate" xml:space="preserve">
+    <value>Čokoládová</value>
+  </data>
+  <data name="Coral" xml:space="preserve">
+    <value>Korálová</value>
+  </data>
+  <data name="CornflowerBlue" xml:space="preserve">
+    <value>Chrpově Modrá</value>
+  </data>
+  <data name="Cornsilk" xml:space="preserve">
+    <value>Kukuřičně Hedvábná</value>
+  </data>
+  <data name="Crimson" xml:space="preserve">
+    <value>Karmínová</value>
+  </data>
+  <data name="Cyan" xml:space="preserve">
+    <value>Azurová</value>
+  </data>
+  <data name="DarkBlue" xml:space="preserve">
+    <value>Tmavě Modrá</value>
+  </data>
+  <data name="DarkCyan" xml:space="preserve">
+    <value>Tmavě Azurová</value>
+  </data>
+  <data name="DarkGoldenrod" xml:space="preserve">
+    <value>Tmavý Zlatobýl</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Tmavě Šedá</value>
+  </data>
+  <data name="DarkGreen" xml:space="preserve">
+    <value>Tmavě Zelená</value>
+  </data>
+  <data name="DarkKhaki" xml:space="preserve">
+    <value>Tmavá Khaki</value>
+  </data>
+  <data name="DarkMagenta" xml:space="preserve">
+    <value>Tmavě Purpurová</value>
+  </data>
+  <data name="DarkOliveGreen" xml:space="preserve">
+    <value>Tmavá Olivově Zelená</value>
+  </data>
+  <data name="DarkOrange" xml:space="preserve">
+    <value>Tmavě Oranžová</value>
+  </data>
+  <data name="DarkOrchid" xml:space="preserve">
+    <value>Tmavá Orchidej</value>
+  </data>
+  <data name="DarkRed" xml:space="preserve">
+    <value>Tmavě Červená</value>
+  </data>
+  <data name="DarkSalmon" xml:space="preserve">
+    <value>Tmavě Lososová</value>
+  </data>
+  <data name="DarkSeaGreen" xml:space="preserve">
+    <value>Tmavě Mořská Zelená</value>
+  </data>
+  <data name="DarkSlateBlue" xml:space="preserve">
+    <value>Tmavě Břidlicová Modrá</value>
+  </data>
+  <data name="DarkSlateGray" xml:space="preserve">
+    <value>Tmavě Břidlicová Šedá</value>
+  </data>
+  <data name="DarkTurquoise" xml:space="preserve">
+    <value>Tmavě Tyrkysová</value>
+  </data>
+  <data name="DarkViolet" xml:space="preserve">
+    <value>Tmavě Fialová</value>
+  </data>
+  <data name="DeepPink" xml:space="preserve">
+    <value>Sytě Růžová</value>
+  </data>
+  <data name="DeepSkyBlue" xml:space="preserve">
+    <value>Tmavě Modrá Obloha</value>
+  </data>
+  <data name="DimGray" xml:space="preserve">
+    <value>Tlumená Šedá</value>
+  </data>
+  <data name="DodgerBlue" xml:space="preserve">
+    <value>Dodger Modrá</value>
+  </data>
+  <data name="Firebrick" xml:space="preserve">
+    <value>Šamotová Cihla</value>
+  </data>
+  <data name="FloralWhite" xml:space="preserve">
+    <value>Květinová Bílá</value>
+  </data>
+  <data name="ForestGreen" xml:space="preserve">
+    <value>Lesní Zelená</value>
+  </data>
+  <data name="Fuchsia" xml:space="preserve">
+    <value>Fuchsiová</value>
+  </data>
+  <data name="GhostWhite" xml:space="preserve">
+    <value>Duchová bílá</value>
+  </data>
+  <data name="Gold" xml:space="preserve">
+    <value>Zlatá</value>
+  </data>
+  <data name="Goldenrod" xml:space="preserve">
+    <value>Zlatobýl</value>
+  </data>
+  <data name="Gray" xml:space="preserve">
+    <value>Šedá</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Zelená</value>
+  </data>
+  <data name="GreenYellow" xml:space="preserve">
+    <value>Zelenožlutá</value>
+  </data>
+  <data name="Honeydew" xml:space="preserve">
+    <value>Medová</value>
+  </data>
+  <data name="HotPink" xml:space="preserve">
+    <value>Horká Růžová</value>
+  </data>
+  <data name="IndianRed" xml:space="preserve">
+    <value>Indická Červená</value>
+  </data>
+  <data name="Indigo" xml:space="preserve">
+    <value>Indigová</value>
+  </data>
+  <data name="Ivory" xml:space="preserve">
+    <value>Slonová Kost</value>
+  </data>
+  <data name="Lavender" xml:space="preserve">
+    <value>Levandulová</value>
+  </data>
+  <data name="LavenderBlush" xml:space="preserve">
+    <value>Levandulová Růžová</value>
+  </data>
+  <data name="LawnGreen" xml:space="preserve">
+    <value>Trávníková Zelená</value>
+  </data>
+  <data name="LemonChiffon" xml:space="preserve">
+    <value>Citronový šifón</value>
+  </data>
+  <data name="LightBlue" xml:space="preserve">
+    <value>Světle Modrá</value>
+  </data>
+  <data name="LightCoral" xml:space="preserve">
+    <value>Světle Korálová</value>
+  </data>
+  <data name="LightCyan" xml:space="preserve">
+    <value>Světle Azurová</value>
+  </data>
+  <data name="LightGoldenrodYellow" xml:space="preserve">
+    <value>Světle Zlatavě Žlutá</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Světle Šedá</value>
+  </data>
+  <data name="LightGreen" xml:space="preserve">
+    <value>Světle Zelená</value>
+  </data>
+  <data name="LightPink" xml:space="preserve">
+    <value>Světle Růžová</value>
+  </data>
+  <data name="LightSalmon" xml:space="preserve">
+    <value>Světle Lososová</value>
+  </data>
+  <data name="LightSeaGreen" xml:space="preserve">
+    <value>Světle Mořská Zelená</value>
+  </data>
+  <data name="LightSkyBlue" xml:space="preserve">
+    <value>Světle Modrá Obloha</value>
+  </data>
+  <data name="LightSlateGray" xml:space="preserve">
+    <value>Světle Břidlicově Šedá</value>
+  </data>
+  <data name="LightSteelBlue" xml:space="preserve">
+    <value>Světle Ocelově Modrá</value>
+  </data>
+  <data name="LightYellow" xml:space="preserve">
+    <value>Světle Žlutá</value>
+  </data>
+  <data name="Lime" xml:space="preserve">
+    <value>Limetková</value>
+  </data>
+  <data name="LimeGreen" xml:space="preserve">
+    <value>Limetkově Zelená</value>
+  </data>
+  <data name="Linen" xml:space="preserve">
+    <value>Plátno</value>
+  </data>
+  <data name="Magenta" xml:space="preserve">
+    <value>Purpurová</value>
+  </data>
+  <data name="Maroon" xml:space="preserve">
+    <value>Kaštanová</value>
+  </data>
+  <data name="MediumAquamarine" xml:space="preserve">
+    <value>Středně Akvamarínová</value>
+  </data>
+  <data name="MediumBlue" xml:space="preserve">
+    <value>Středně Modrá</value>
+  </data>
+  <data name="MediumOrchid" xml:space="preserve">
+    <value>Střední Orchidej</value>
+  </data>
+  <data name="MediumPurple" xml:space="preserve">
+    <value>Středně Fialová</value>
+  </data>
+  <data name="MediumSeaGreen" xml:space="preserve">
+    <value>Středně Mořská Zelená</value>
+  </data>
+  <data name="MediumSlateBlue" xml:space="preserve">
+    <value>Středně Břidlicově Modrá</value>
+  </data>
+  <data name="MediumSpringGreen" xml:space="preserve">
+    <value>Středně Jarní Zelená</value>
+  </data>
+  <data name="MediumTurquoise" xml:space="preserve">
+    <value>Středně Tyrkysová</value>
+  </data>
+  <data name="MediumVioletRed" xml:space="preserve">
+    <value>Středně Fialová Červená</value>
+  </data>
+  <data name="MidnightBlue" xml:space="preserve">
+    <value>Půlnoční Modrá</value>
+  </data>
+  <data name="MintCream" xml:space="preserve">
+    <value>Mentolová Krémová</value>
+  </data>
+  <data name="MistyRose" xml:space="preserve">
+    <value>Mlhavá Růže</value>
+  </data>
+  <data name="Moccasin" xml:space="preserve">
+    <value>Mokasínová</value>
+  </data>
+  <data name="NavajoWhite" xml:space="preserve">
+    <value>Bílá Navajo</value>
+  </data>
+  <data name="Navy" xml:space="preserve">
+    <value>Námořnická Modrá</value>
+  </data>
+  <data name="OldLace" xml:space="preserve">
+    <value>Stará Krajková</value>
+  </data>
+  <data name="Olive" xml:space="preserve">
+    <value>Olivová</value>
+  </data>
+  <data name="OliveDrab" xml:space="preserve">
+    <value>Olivově Žlutá</value>
+  </data>
+  <data name="Orange" xml:space="preserve">
+    <value>Oranžová</value>
+  </data>
+  <data name="OrangeRed" xml:space="preserve">
+    <value>Oranžově Červená</value>
+  </data>
+  <data name="Orchid" xml:space="preserve">
+    <value>Orchidej</value>
+  </data>
+  <data name="PaleGoldenrod" xml:space="preserve">
+    <value>Bledý Zlatobýl</value>
+  </data>
+  <data name="PaleGreen" xml:space="preserve">
+    <value>Bledě Zelená</value>
+  </data>
+  <data name="PaleTurquoise" xml:space="preserve">
+    <value>Bledě Tyrkysová</value>
+  </data>
+  <data name="PaleVioletRed" xml:space="preserve">
+    <value>Bledě Fialová Červená</value>
+  </data>
+  <data name="PapayaWhip" xml:space="preserve">
+    <value>Papaya Šlehačková</value>
+  </data>
+  <data name="PeachPuff" xml:space="preserve">
+    <value>Broskvová</value>
+  </data>
+  <data name="Peru" xml:space="preserve">
+    <value>Peruánská</value>
+  </data>
+  <data name="Pink" xml:space="preserve">
+    <value>Růžová</value>
+  </data>
+  <data name="Plum" xml:space="preserve">
+    <value>Švestková</value>
+  </data>
+  <data name="PowderBlue" xml:space="preserve">
+    <value>Práškově Modrá</value>
+  </data>
+  <data name="Purple" xml:space="preserve">
+    <value>Fialová</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Červená</value>
+  </data>
+  <data name="RosyBrown" xml:space="preserve">
+    <value>Růžově Hnědá</value>
+  </data>
+  <data name="RoyalBlue" xml:space="preserve">
+    <value>Královská Modrá</value>
+  </data>
+  <data name="SaddleBrown" xml:space="preserve">
+    <value>Sedlově Hnědá</value>
+  </data>
+  <data name="Salmon" xml:space="preserve">
+    <value>Lososová</value>
+  </data>
+  <data name="SandyBrown" xml:space="preserve">
+    <value>Pískově Hnědá</value>
+  </data>
+  <data name="SeaGreen" xml:space="preserve">
+    <value>Mořská Zelená</value>
+  </data>
+  <data name="SeaShell" xml:space="preserve">
+    <value>Mořská Mušle</value>
+  </data>
+  <data name="Sienna" xml:space="preserve">
+    <value>Siennová</value>
+  </data>
+  <data name="Silver" xml:space="preserve">
+    <value>Stříbrná</value>
+  </data>
+  <data name="Sky Blue" xml:space="preserve">
+    <value>Modrá Obloha</value>
+  </data>
+  <data name="SlateBlue" xml:space="preserve">
+    <value>Břidlicově Modrá</value>
+  </data>
+  <data name="SlateGray" xml:space="preserve">
+    <value>Břidlicově Šedá</value>
+  </data>
+  <data name="Snow" xml:space="preserve">
+    <value>Sněhová</value>
+  </data>
+  <data name="SpringGreen" xml:space="preserve">
+    <value>Jarní Zelená</value>
+  </data>
+  <data name="SteelBlue" xml:space="preserve">
+    <value>Ocelově Modrá</value>
+  </data>
+  <data name="Tan" xml:space="preserve">
+    <value>Opálená</value>
+  </data>
+  <data name="Teal" xml:space="preserve">
+    <value>Čajová</value>
+  </data>
+  <data name="Thistle" xml:space="preserve">
+    <value>Bodláková</value>
+  </data>
+  <data name="Tomato" xml:space="preserve">
+    <value>Rajčatová</value>
+  </data>
+  <data name="Turquoise" xml:space="preserve">
+    <value>Tyrkysová</value>
+  </data>
+  <data name="Violet" xml:space="preserve">
+    <value>Fialová</value>
+  </data>
+  <data name="Wheat" xml:space="preserve">
+    <value>Pšeničná</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>Bílá</value>
+  </data>
+  <data name="WhiteSmoke" xml:space="preserve">
+    <value>Kouřově Bílá</value>
+  </data>
+  <data name="Yellow" xml:space="preserve">
+    <value>Žlutá</value>
+  </data>
+  <data name="YellowGreen" xml:space="preserve">
+    <value>Žlutozelená</value>
+  </data>
+</root>
