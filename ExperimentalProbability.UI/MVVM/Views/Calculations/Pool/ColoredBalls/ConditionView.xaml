@@ -1,0 +1,42 @@
+﻿<UserControl
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.ColoredBalls.ConditionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.ColoredBalls;assembly=ExperimentalProbability.Contracts"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    d:DataContext="{d:DesignInstance Type=vm:ConditionViewModel}"
+    mc:Ignorable="d"
+    >
+    <Border Padding="0,5,0,5" BorderThickness="0,0,0,3">
+        <Expander Style="{StaticResource Condition_Expander}">
+            <StackPanel Margin="0,10,0,0">
+                <WrapPanel>
+                    <Label Content="{x:Static resx:Resources.NumberOfTakenBalls}" Target="{Binding ElementName=TakenBallsCount}" />
+                    <xctk:IntegerUpDown
+                        x:Name="TakenBallsCount"
+                        MaxLength="{Binding Path=MaxNumberOfTakenBallsLength, Mode=OneWay}"
+                        Maximum="{Binding Path=MaxNumberOfTakenBalls, Mode=OneWay}"
+                        Minimum="{Binding Path=MinNumberOfTakenBalls, Mode=OneTime}"
+                        Value="{Binding Path=NumberOfTakenBalls, Mode=TwoWay}"
+                        />
+                </WrapPanel>
+                <Border
+                    Margin="0,5,0,0"
+                    Padding="0,5,0,0"
+                    BorderThickness="0,2,0,0"
+                    >
+                    <ItemsControl x:Name="Items">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Border>
+            </StackPanel>
+        </Expander>
+    </Border>
+</UserControl>

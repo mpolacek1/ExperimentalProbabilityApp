@@ -1,0 +1,50 @@
+﻿<UserControl
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.ColoredBalls.PoolView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.ColoredBalls;assembly=ExperimentalProbability.Contracts"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    d:DataContext="{d:DesignInstance Type=vm:PoolViewModel}"
+    mc:Ignorable="d"
+    >
+    <Border Padding="0,5,0,5" BorderThickness="0,0,0,3">
+        <Expander Style="{StaticResource Pool_Expander}">
+            <StackPanel Margin="0,10,0,0">
+                <WrapPanel>
+                    <WrapPanel Margin="0,0,5,5">
+                        <Label Content="{x:Static resx:Resources.NumberOfBalls}" Target="{Binding ElementName=BallsCounter}" />
+                        <xctk:IntegerUpDown
+                            x:Name="BallsCounter"
+                            MaxLength="{Binding Path=MaxNumberOfBallsLength, Mode=OneTime}"
+                            Maximum="{Binding Path=MaxNumberOfBalls, Mode=OneTime}"
+                            Minimum="{Binding Path=MinNumberOfBalls, Mode=OneTime}"
+                            Value="{Binding Path=NumberOfBalls, Mode=TwoWay}"
+                            />
+                    </WrapPanel>
+                    <WrapPanel Margin="0,0,5,5">
+                        <Label Content="{x:Static resx:Resources.NumberOfColors}" Target="{Binding ElementName=ColorsCounter}" />
+                        <xctk:IntegerUpDown
+                            x:Name="ColorsCounter"
+                            MaxLength="{Binding Path=MaxNumberOfColorsLength, Mode=OneWay}"
+                            Maximum="{Binding Path=MaxNumberOfColors, Mode=OneWay}"
+                            Minimum="{Binding Path=MinNumberOfColors, Mode=OneTime}"
+                            Value="{Binding Path=NumberOfColors, Mode=TwoWay}"
+                            />
+                    </WrapPanel>
+                </WrapPanel>
+                <Border Padding="0,5,0,0" BorderThickness="0,2,0,0">
+                    <ItemsControl x:Name="Items">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Border>
+            </StackPanel>
+        </Expander>
+    </Border>
+</UserControl>

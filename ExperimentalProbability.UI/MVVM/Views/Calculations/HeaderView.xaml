@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.HeaderView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.General;assembly=ExperimentalProbability.Contracts"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    d:DataContext="{d:DesignInstance Type=vm:HeaderViewModel}"
+    mc:Ignorable="d"
+    >
+    <Border BorderThickness="0,0,0,3">
+        <StackPanel>
+            <TextBlock
+                FontSize="18"
+                FontWeight="Bold"
+                Text="{x:Static resx:Resources.Header_Header}"
+                />
+            <WrapPanel Margin="0,10,0,5">
+                <Label Content="{x:Static resx:Resources.Header_SimulationsToRun}" Target="{Binding ElementName=Sims}" />
+                <xctk:IntegerUpDown
+                    x:Name="Sims"
+                    Increment="{Binding Path=MinSimulations, Mode=OneTime}"
+                    MaxLength="{Binding Path=MaxSimulationsLength, Mode=OneTime}"
+                    Maximum="{Binding Path=MaxSimulations, Mode=OneTime}"
+                    Minimum="{Binding Path=MinSimulations, Mode=OneTime}"
+                    Value="{Binding Path=Simulations, Mode=TwoWay}"
+                    />
+            </WrapPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

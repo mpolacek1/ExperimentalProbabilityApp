@@ -1,24 +1,28 @@
-﻿<Application x:Class="ExperimentalProbability.UI.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="ExperimentalProbability.UI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mvvm="clr-namespace:ExperimentalProbability.UI.MVVM"
+    >
 
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Properties\BorderResources.xaml"/>
-                <ResourceDictionary Source="Properties\ButtonResources.xaml"/>
-                <ResourceDictionary Source="Properties\ColorPickerResources.xaml"/>
-                <ResourceDictionary Source="Properties\ComboBoxResources.xaml"/>
-                <ResourceDictionary Source="Properties\EllipseResources.xaml"/>
-                <ResourceDictionary Source="Properties\IntegerUpDownResources.xaml"/>
-                <ResourceDictionary Source="Properties\LabelResources.xaml"/>
-                <ResourceDictionary Source="Properties\MessageBoxResources.xaml"/>
-                <ResourceDictionary Source="Properties\ScrollViewerResources.xaml"/>
-                <ResourceDictionary Source="Properties\TextBlockResources.xaml"/>
-                <ResourceDictionary Source="Properties\WindowResources.xaml"/>
+                <ResourceDictionary>
+                    <mvvm:Bootstrapper x:Key="Bootstrapper" />
+                </ResourceDictionary>
+                <ResourceDictionary Source="Styles\Calculations\Pool\ConditionStyles.xaml" />
+                <ResourceDictionary Source="Styles\Calculations\Pool\PoolStyles.xaml" />
+                <ResourceDictionary Source="Styles\Calculations\ResultsStyles.xaml" />
+                <ResourceDictionary Source="Styles\DefaultStyles.xaml" />
+                <ResourceDictionary Source="Styles\MessageBoxStyles.xaml" />
+                <ResourceDictionary Source="Styles\ProgressBarStyle.xaml" />
+                <ResourceDictionary Source="Styles\ScrollBarStyle.xaml" />
+                <ResourceDictionary Source="Styles\ScrollViewerStyle.xaml" />
+                <ResourceDictionary Source="Styles\ShellStyles.xaml" />
+                <ResourceDictionary Source="Styles\TutorialStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-    
+
 </Application>

@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.ColoredBalls.ColorPickerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.ColoredBalls;assembly=ExperimentalProbability.Contracts"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    Margin="0,0,5,5"
+    d:DataContext="{d:DesignInstance Type=vm:ColorPickerViewModel}"
+    mc:Ignorable="d"
+    >
+    <WrapPanel>
+        <Label
+            x:Name="ColorPickerLabel"
+            Content="{x:Static resx:Resources.ColorPicker}"
+            Target="{Binding ElementName=ColorPicker}"
+            />
+        <xctk:ColorPicker
+            x:Name="ColorPicker"
+            AvailableColors="{Binding Path=AvailableColors, Mode=OneWay}"
+            FontSize="14"
+            FontWeight="Normal"
+            SelectedColor="{Binding Path=SelectedColor, Mode=OneWayToSource}"
+            />
+    </WrapPanel>
+
+</UserControl>

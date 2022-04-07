@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="TutorialComment" TargetType="{x:Type TextBlock}">
+        <Style.Setters>
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="Foreground" Value="#FFa4a7a8" />
+        </Style.Setters>
+    </Style>
+</ResourceDictionary>
