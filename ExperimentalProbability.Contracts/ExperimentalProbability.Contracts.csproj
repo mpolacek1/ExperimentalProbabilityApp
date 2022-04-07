@@ -16,54 +16,119 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\ColoredBallsResources.Designer.cs">
-      <DependentUpon>ColoredBallsResources.resx</DependentUpon>
+    <Compile Update="Properties\Resources\Calculations\General\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Properties\ColorNamesResources.Designer.cs">
-      <DependentUpon>ColorNamesResources.resx</DependentUpon>
+    <Compile Update="Properties\Resources\Calculations\Pool\ColoredBalls\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Properties\DiceResources.Designer.cs">
-      <DependentUpon>DiceResources.resx</DependentUpon>
+    <Compile Update="Properties\Resources\Calculations\Pool\Dice\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Properties\GeneralResources.Designer.cs">
-      <DependentUpon>GeneralResources.resx</DependentUpon>
+    <Compile Update="Properties\Resources\Calculations\Pool\General\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Properties\NumberStringsResources.Designer.cs">
-      <DependentUpon>NumberStringsResources.resx</DependentUpon>
+    <Compile Update="Properties\Resources\Calculations\TwoDPlane\General\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\Calculations\TwoDPlane\QuarterCircle\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\Colors\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\General\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\Numbers\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\Shell\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\Tutorial\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources\Validation\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\ColoredBallsResources.resx">
-      <LastGenOutput>ColoredBallsResources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Properties\Resources\Calculations\General\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\ColorNamesResources.resx">
-      <LastGenOutput>ColorNamesResources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Properties\Resources\Calculations\Pool\ColoredBalls\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\DiceResources.resx">
-      <LastGenOutput>DiceResources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Properties\Resources\Calculations\Pool\Dice\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\GeneralResources.resx">
-      <SubType>Designer</SubType>
-      <LastGenOutput>GeneralResources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Properties\Resources\Calculations\Pool\General\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\NumberStringsResources.resx">
-      <LastGenOutput>NumberStringsResources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Properties\Resources\Calculations\TwoDPlane\General\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Calculations\TwoDPlane\QuarterCircle\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Colors\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\General\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Numbers\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Shell\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Tutorial\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Validation\Resources.cs.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources\Validation\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
