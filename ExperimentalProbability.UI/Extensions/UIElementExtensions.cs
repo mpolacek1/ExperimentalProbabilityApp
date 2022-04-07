@@ -1,13 +1,19 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 
 namespace ExperimentalProbability.UI.Extensions
 {
     public static class UIElementExtensions
     {
-        public static void ChangeVisibility(this UIElement element, Visibility visibility)
+        public static void HideOrShow(this UIElement element, object determinationValue)
         {
-            element.Visibility = visibility;
+            if (determinationValue == null)
+            {
+                element.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                element.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
