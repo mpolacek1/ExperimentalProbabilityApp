@@ -124,9 +124,9 @@
     <value>Informace</value>
   </data>
   <data name="Message_Message_CalcCanceled" xml:space="preserve">
-    <value>byla úspěšně ukončena.</value>
+    <value>byl úspěšně ukončena.</value>
   </data>
   <data name="Message_Message_CalcFinished" xml:space="preserve">
-    <value>byla úspěšně dokončena.</value>
+    <value>byl úspěšně dokončena.</value>
   </data>
 </root>
