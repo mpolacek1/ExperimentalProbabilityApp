@@ -72,15 +72,10 @@ namespace ExperimentalProbability.Calculations.CalculationDataValidation.Pool
         {
             for (int i = default; i < colors.Length; i++)
             {
-                ValidateColor(colors[i], AppendNumberPositionToString(i, elementName));
-            }
-        }
-
-        private void ValidateColor(object color, string elementName)
-        {
-            if (color == null)
-            {
-                throw new ValidationException(elementName);
+                if (colors[i] == null)
+                {
+                    throw new ValidationException(AppendNumberPositionToString(i, elementName));
+                }
             }
         }
     }

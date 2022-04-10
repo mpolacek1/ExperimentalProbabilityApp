@@ -2,12 +2,11 @@
 using ExperimentalProbability.Contracts.Exceptions;
 using ExperimentalProbability.Contracts.Models;
 using ExperimentalProbability.Contracts.Properties.Resources.Validation;
-using ExperimentalProbability.Contracts.Utilities;
 using GeneralCalcResources = ExperimentalProbability.Contracts.Properties.Resources.Calculations.General.Resources;
 
 namespace ExperimentalProbability.Calculations.CalculationDataValidation
 {
-    public abstract class BaseCalculationDataValidator
+    public class CalculationDataValidator
     {
         public virtual void Validate(CalculationData data)
         {
@@ -25,11 +24,6 @@ namespace ExperimentalProbability.Calculations.CalculationDataValidation
             {
                 throw new ValidationException(elementName, Resources.Error_Number_Max, max);
             }
-        }
-
-        protected string AppendNumberPositionToString(int index, string elementName)
-        {
-            return string.Concat(NumberTranslater.NumberToPosition[index], ' ', elementName);
         }
     }
 }
