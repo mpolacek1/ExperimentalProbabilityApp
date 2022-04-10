@@ -3,7 +3,7 @@ using ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPl
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle
 {
-    public class ShellViewModel : BaseTwoDPlaneCalculationShellViewModel
+    public class ShellViewModel : BaseTwoDPlaneShellViewModel
     {
         public ShellViewModel()
             : base(Resources.DisplayName, new DescriptionViewModel(Resources.Function), typeof(QuarterCircleCalculation))

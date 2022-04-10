@@ -6,9 +6,9 @@ using ExperimentalProbability.UI.MVVM.Models.Calculations.TwoDPlane;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane
 {
-    public abstract class BaseTwoDPlaneCalculationShellViewModel : BaseCalculationShellViewModel
+    public abstract class BaseTwoDPlaneShellViewModel : BaseShellViewModel
     {
-        public BaseTwoDPlaneCalculationShellViewModel(string displayName, Screen descriptionVM, Type calcType)
+        public BaseTwoDPlaneShellViewModel(string displayName, Screen descriptionVM, Type calcType)
             : base(displayName, descriptionVM, Resources.Results_FinalResult_Pi, typeof(TwoDPlaneCalculationResultPlaceholder), calcType)
         {
         }

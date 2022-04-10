@@ -2,9 +2,9 @@
 
 namespace ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.Dice
 {
-    public partial class DiceShellView : UserControl
+    public partial class ShellView : UserControl
     {
-        public DiceShellView()
+        public ShellView()
         {
             InitializeComponent();
         }

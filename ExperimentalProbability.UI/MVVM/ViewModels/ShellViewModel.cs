@@ -24,17 +24,17 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels
 
         public void ShowColoredBallsCalc()
         {
-            ActivateWantedVM(typeof(ColoredBallsShellViewModel));
+            ActivateWantedVM(typeof(Calculations.Pool.ColoredBalls.ShellViewModel));
         }
 
         public void ShowDiceCalc()
         {
-            ActivateWantedVM(typeof(DiceShellViewModel));
+            ActivateWantedVM(typeof(Calculations.Pool.Dice.ShellViewModel));
         }
 
         public void ShowQuarterCircleCalc()
         {
-            ActivateWantedVM(typeof(QuarterCircleShellViewModel));
+            ActivateWantedVM(typeof(Calculations.TwoDPlane.QuarterCircle.ShellViewModel));
         }
 
         public void ActivateWantedVM(Type vm)

@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.ColoredBalls.ColoredBallsShellView"
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.ColoredBalls.ShellView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cal="http://www.caliburnproject.org"
@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls"
     Padding="5"
-    d:DataContext="{d:DesignInstance Type=vm:ColoredBallsShellViewModel}"
+    d:DataContext="{d:DesignInstance Type=vm:ShellViewModel}"
     mc:Ignorable="d"
     >
     <DockPanel>

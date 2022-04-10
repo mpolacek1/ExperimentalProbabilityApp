@@ -48,7 +48,7 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations
         {
             Progress = default;
 
-            var baseCalcVM = (BaseCalculationShellViewModel)Parent;
+            var baseCalcVM = (BaseShellViewModel)Parent;
 
             if (baseCalcVM.Worker.IsBusy)
             {

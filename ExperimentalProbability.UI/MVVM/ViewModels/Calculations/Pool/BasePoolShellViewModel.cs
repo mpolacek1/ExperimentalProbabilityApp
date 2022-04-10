@@ -5,9 +5,9 @@ using ExperimentalProbability.UI.MVVM.Models.Calculations.Pool;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool
 {
-    public abstract class BasePoolCalculationShellViewModel : BaseCalculationShellViewModel
+    public abstract class BasePoolShellViewModel : BaseShellViewModel
     {
-        public BasePoolCalculationShellViewModel(string displayName, Screen poolVM, Screen conditionVM, Screen descriptionVM, Type calcType)
+        public BasePoolShellViewModel(string displayName, Screen poolVM, Screen conditionVM, Screen descriptionVM, Type calcType)
             : base(displayName, descriptionVM, Resources.Result_FinalResult_Probability, typeof(PoolCalculationResultPlaceholder), calcType)
         {
             PoolVM = poolVM;

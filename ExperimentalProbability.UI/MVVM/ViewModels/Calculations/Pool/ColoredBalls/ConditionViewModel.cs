@@ -81,7 +81,7 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBa
 
         public DescriptionViewModel GetDescriptionVM()
         {
-            return ((ColoredBallsShellViewModel)Parent).GetDescriptionVM();
+            return ((ShellViewModel)Parent).GetDescriptionVM();
         }
 
         protected override void OnInitialize()

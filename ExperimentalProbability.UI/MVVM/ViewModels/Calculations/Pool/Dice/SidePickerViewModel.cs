@@ -43,7 +43,7 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice
             {
                 ((SidePickerView)GetView()).SidePickerLabel.HideOrShow(value);
 
-                ((DiceShellViewModel)((ConditionViewModel)Parent).Parent)
+                ((ShellViewModel)((ConditionViewModel)Parent).Parent)
                     .GetDescriptionVM()
                     .AddSideToSelectedConditionSides(_position, value);
 
