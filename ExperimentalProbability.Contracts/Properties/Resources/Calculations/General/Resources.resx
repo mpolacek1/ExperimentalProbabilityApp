@@ -138,9 +138,6 @@
   <data name="Header_SimulationsToRun" xml:space="preserve">
     <value>Simulations to run:</value>
   </data>
-  <data name="Results_FinalResult_Pi" xml:space="preserve">
-    <value>Approximate value of number Pi =</value>
-  </data>
   <data name="Results_ProgressResultsExpander_Hide" xml:space="preserve">
     <value>Hide - Progress results</value>
   </data>

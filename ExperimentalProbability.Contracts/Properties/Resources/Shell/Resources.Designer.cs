@@ -97,20 +97,20 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Shell {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to x^2 + y^2 = 1.
+        /// </summary>
+        public static string PiCalc {
+            get {
+                return ResourceManager.GetString("PiCalc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pool Calculations:.
         /// </summary>
         public static string PoolCalcs {
             get {
                 return ResourceManager.GetString("PoolCalcs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to x^2 + y^2 = 1.
-        /// </summary>
-        public static string QuarterCircleCalc {
-            get {
-                return ResourceManager.GetString("QuarterCircleCalc", resourceCulture);
             }
         }
         

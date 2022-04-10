@@ -71,6 +71,15 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Approximate value of number Pi =.
+        /// </summary>
+        public static string FinalResultName {
+            get {
+                return ResourceManager.GetString("FinalResultName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This calculation works in a 2-D plane where exists a quarter circle with a radius of 1. The quarter circle is wrapped in a square which side lenght is also 1. This type of calculation is used to calculate the approximate value of the irrational number Pi..
         /// </summary>
         public static string FullDescription {
