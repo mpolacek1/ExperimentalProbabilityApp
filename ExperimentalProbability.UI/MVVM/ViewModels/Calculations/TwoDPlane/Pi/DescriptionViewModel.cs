@@ -1,6 +1,6 @@
 ﻿using Caliburn.Micro;
 
-namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle
+namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.Pi
 {
     public class DescriptionViewModel : Screen
     {

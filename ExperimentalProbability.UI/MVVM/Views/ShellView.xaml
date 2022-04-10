@@ -56,8 +56,8 @@
                         />
                     <TextBlock Style="{StaticResource MenuComment}" Text="{x:Static resx:Resources.TwoDPlaneCalcs}" />
                     <RadioButton
-                        x:Name="ShowQuarterCircleCalc"
-                        Content="{x:Static resx:Resources.QuarterCircleCalc}"
+                        x:Name="ShowPiCalc"
+                        Content="{x:Static resx:Resources.PiCalc}"
                         Style="{StaticResource MenuButton}"
                         />
                 </StackPanel>

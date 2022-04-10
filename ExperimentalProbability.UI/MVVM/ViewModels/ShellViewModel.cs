@@ -2,9 +2,9 @@
 using System.Linq;
 using Caliburn.Micro;
 using ExperimentalProbability.Contracts.Properties.Resources.Shell;
-using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls;
-using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice;
-using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle;
+using ColoredBallsShellVM = ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls.ShellViewModel;
+using DiceShellVM = ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice.ShellViewModel;
+using PiShellVM = ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.Pi.ShellViewModel;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels
 {
@@ -24,17 +24,17 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels
 
         public void ShowColoredBallsCalc()
         {
-            ActivateWantedVM(typeof(Calculations.Pool.ColoredBalls.ShellViewModel));
+            ActivateWantedVM(typeof(ColoredBallsShellVM));
         }
 
         public void ShowDiceCalc()
         {
-            ActivateWantedVM(typeof(Calculations.Pool.Dice.ShellViewModel));
+            ActivateWantedVM(typeof(DiceShellVM));
         }
 
-        public void ShowQuarterCircleCalc()
+        public void ShowPiCalc()
         {
-            ActivateWantedVM(typeof(Calculations.TwoDPlane.QuarterCircle.ShellViewModel));
+            ActivateWantedVM(typeof(PiShellVM));
         }
 
         public void ActivateWantedVM(Type vm)

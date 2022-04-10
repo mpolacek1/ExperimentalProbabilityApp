@@ -8,8 +8,8 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane
 {
     public abstract class BaseTwoDPlaneShellViewModel : BaseShellViewModel
     {
-        public BaseTwoDPlaneShellViewModel(string displayName, Screen descriptionVM, Type calcType)
-            : base(displayName, descriptionVM, Resources.Results_FinalResult_Pi, typeof(TwoDPlaneCalculationResultPlaceholder), calcType)
+        public BaseTwoDPlaneShellViewModel(string displayName, Screen descriptionVM, string finalResultName, Type calcType)
+            : base(displayName, descriptionVM, finalResultName, typeof(TwoDPlaneCalculationResultPlaceholder), calcType)
         {
         }
 

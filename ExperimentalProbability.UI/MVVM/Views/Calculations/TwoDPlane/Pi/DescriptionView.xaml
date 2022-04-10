@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.TwoDPlane.QuarterCircle.DescriptionView"
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.TwoDPlane.Pi.DescriptionView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
     xmlns:gtdcResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.General;assembly=ExperimentalProbability.Contracts"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Pi;assembly=ExperimentalProbability.Contracts"
-    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle"
+    xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.Pi"
     d:DataContext="{d:DesignInstance Type=vm:DescriptionViewModel}"
     mc:Ignorable="d"
     >
