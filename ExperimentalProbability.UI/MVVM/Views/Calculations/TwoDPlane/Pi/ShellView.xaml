@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.TwoDPlane.QuarterCircle.QuarterCircleShellView"
+    x:Class="ExperimentalProbability.UI.MVVM.Views.Calculations.TwoDPlane.QuarterCircle.ShellView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cal="http://www.caliburnproject.org"
@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle"
     Padding="5"
-    d:DataContext="{d:DesignInstance Type=vm:QuarterCircleShellViewModel}"
+    d:DataContext="{d:DesignInstance Type=vm:ShellViewModel}"
     mc:Ignorable="d"
     >
     <DockPanel>

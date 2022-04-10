@@ -2,9 +2,9 @@
 
 namespace ExperimentalProbability.UI.MVVM.Views.Calculations.TwoDPlane.QuarterCircle
 {
-    public partial class QuarterCircleShellView : UserControl
+    public partial class ShellView : UserControl
     {
-        public QuarterCircleShellView()
+        public ShellView()
         {
             InitializeComponent();
         }

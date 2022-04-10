@@ -1,11 +1,11 @@
 ﻿using ExperimentalProbability.Calculations.Calculations.TwoDPlane;
-using ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.QuarterCircle;
+using ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Pi;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle
 {
-    public class QuarterCircleShellViewModel : BaseTwoDPlaneCalculationShellViewModel
+    public class ShellViewModel : BaseTwoDPlaneCalculationShellViewModel
     {
-        public QuarterCircleShellViewModel()
+        public ShellViewModel()
             : base(Resources.DisplayName, new DescriptionViewModel(Resources.Function), typeof(QuarterCircleCalculation))
         {
         }

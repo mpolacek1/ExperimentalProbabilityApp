@@ -6,7 +6,7 @@
     xmlns:gcResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.General;assembly=ExperimentalProbability.Contracts"
     xmlns:gtdcResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.General;assembly=ExperimentalProbability.Contracts"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.QuarterCircle;assembly=ExperimentalProbability.Contracts"
+    xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Pi;assembly=ExperimentalProbability.Contracts"
     xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle"
     d:DataContext="{d:DesignInstance Type=vm:DescriptionViewModel}"
     mc:Ignorable="d"
