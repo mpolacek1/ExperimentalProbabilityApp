@@ -91,9 +91,9 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBa
             }
         }
 
-        public ColoredBallsShellViewModel GetShellVM()
+        public ShellViewModel GetShellVM()
         {
-            return (ColoredBallsShellViewModel)Parent;
+            return (ShellViewModel)Parent;
         }
 
         public DescriptionViewModel GetDescriptionVM()

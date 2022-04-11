@@ -9,7 +9,7 @@ namespace ExperimentalProbability.Calculations.Calculations
 {
     public abstract class BaseCalculation : ICalculation
     {
-        private readonly BaseCalculationDataValidator _validator;
+        private readonly CalculationDataValidator _validator;
 
         private readonly BackgroundWorker _worker;
 
@@ -17,7 +17,7 @@ namespace ExperimentalProbability.Calculations.Calculations
 
         private CalculationResultData _resultData;
 
-        public BaseCalculation(BaseCalculationDataValidator validator, BackgroundWorker worker)
+        public BaseCalculation(CalculationDataValidator validator, BackgroundWorker worker)
         {
             _validator = validator;
             _worker = worker;

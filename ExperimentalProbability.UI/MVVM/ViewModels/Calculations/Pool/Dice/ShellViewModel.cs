@@ -7,9 +7,9 @@ using ExperimentalProbability.Contracts.Utilities;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice
 {
-    public class DiceShellViewModel : BasePoolCalculationShellViewModel
+    public class ShellViewModel : BasePoolShellViewModel
     {
-        public DiceShellViewModel()
+        public ShellViewModel()
             : base(Resources.DisplayName, new PoolViewModel(), new ConditionViewModel(), new DescriptionViewModel(), typeof(DiceCalculation))
         {
         }

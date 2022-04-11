@@ -139,7 +139,7 @@
     <value>Color count:</value>
   </data>
   <data name="DisplayName" xml:space="preserve">
-    <value>Pool Calculation: Bag of Colored Balls</value>
+    <value>Bag of Colored Balls</value>
   </data>
   <data name="ElementName_ConditionColor" xml:space="preserve">
     <value>Condition Color</value>

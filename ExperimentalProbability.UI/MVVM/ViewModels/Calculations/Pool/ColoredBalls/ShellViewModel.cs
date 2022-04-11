@@ -6,9 +6,9 @@ using ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.C
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls
 {
-    public class ColoredBallsShellViewModel : BasePoolCalculationShellViewModel
+    public class ShellViewModel : BasePoolShellViewModel
     {
-        public ColoredBallsShellViewModel()
+        public ShellViewModel()
             : base(Resources.DisplayName, new PoolViewModel(), new ConditionViewModel(), new DescriptionViewModel(), typeof(ColoredBallsCalculation))
         {
         }

@@ -132,6 +132,12 @@
   <data name="Description_PoolInfo" xml:space="preserve">
     <value>Současně je osudí složeno ze:</value>
   </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Výpočet s Osudím:</value>
+  </data>
+  <data name="FinalResultName" xml:space="preserve">
+    <value>Experimentální pravděpodobnost =</value>
+  </data>
   <data name="Header_Visualization" xml:space="preserve">
     <value>Visualizace osudí</value>
   </data>

@@ -12,13 +12,13 @@ using Message = Xceed.Wpf.Toolkit.MessageBox;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations
 {
-    public abstract class BaseCalculationShellViewModel : Conductor<Screen>.Collection.AllActive
+    public abstract class BaseShellViewModel : Conductor<Screen>.Collection.AllActive
     {
         private const string MESSAGE_STYLE_INFO = "MessageBox_Info";
 
         private const string MESSAGE_STYLE_ERROR = "MessageBox_Error";
 
-        public BaseCalculationShellViewModel(string displayName, Screen descriptionVM, string finalResultName, Type resultPlaceholderType, Type calcType)
+        public BaseShellViewModel(string displayName, Screen descriptionVM, string finalResultName, Type resultPlaceholderType, Type calcType)
         {
             DisplayName = displayName;
 

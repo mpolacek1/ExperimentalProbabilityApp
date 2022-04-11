@@ -134,24 +134,6 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Ge
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Experimental probability =.
-        /// </summary>
-        public static string Result_FinalResult_Probability {
-            get {
-                return ResourceManager.GetString("Result_FinalResult_Probability", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Approximate value of number Pi =.
-        /// </summary>
-        public static string Results_FinalResult_Pi {
-            get {
-                return ResourceManager.GetString("Results_FinalResult_Pi", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hide - Progress results.
         /// </summary>
         public static string Results_ProgressResultsExpander_Hide {

@@ -145,7 +145,7 @@
     <value>Four-sided Die</value>
   </data>
   <data name="DisplayName" xml:space="preserve">
-    <value>Pool Calculation: Dice</value>
+    <value>Dice</value>
   </data>
   <data name="ElementName_Dice" xml:space="preserve">
     <value>Chosen Dice</value>

@@ -75,7 +75,7 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice
 
         private DescriptionViewModel GetDescriptionVM()
         {
-            return ((DiceShellViewModel)Parent).GetDescriptionVM();
+            return ((ShellViewModel)Parent).GetDescriptionVM();
         }
     }
 }

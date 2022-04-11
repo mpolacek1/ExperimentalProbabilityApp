@@ -2,9 +2,9 @@
 
 namespace ExperimentalProbability.UI.MVVM.Views.Calculations.Pool.ColoredBalls
 {
-    public partial class ColoredBallsShellView : UserControl
+    public partial class ShellView : UserControl
     {
-        public ColoredBallsShellView()
+        public ShellView()
         {
             InitializeComponent();
         }

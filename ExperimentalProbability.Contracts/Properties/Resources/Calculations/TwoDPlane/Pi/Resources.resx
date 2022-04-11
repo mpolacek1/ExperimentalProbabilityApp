@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DisplayName" xml:space="preserve">
-    <value>2-D Plane Calculation: x^2 + y^2 = 1</value>
+  <data name="FinalResultName" xml:space="preserve">
+    <value>Approximate value of number Pi =</value>
   </data>
   <data name="FullDescription" xml:space="preserve">
     <value>This calculation works in a 2-D plane where exists a quarter circle with a radius of 1. The quarter circle is wrapped in a square which side lenght is also 1. This type of calculation is used to calculate the approximate value of the irrational number Pi.</value>

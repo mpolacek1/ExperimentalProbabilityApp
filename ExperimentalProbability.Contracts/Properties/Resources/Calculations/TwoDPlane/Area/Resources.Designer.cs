@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.Contracts.Properties.Resources.Shell {
+namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Area {
     using System;
     
     
@@ -39,7 +39,8 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Shell {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.Resources.Shell.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Are" +
+                            "a.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,83 +62,29 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Shell {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Approximate area of the function =.
+        /// </summary>
+        public static string FinalResultName {
+            get {
+                return ResourceManager.GetString("FinalResultName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This calculation works in a 2-D plane where exists a rectangle wrapped around the function y = (x^2 - 4) * sin(x). The side of the rectangle parallel to the axis X has the length of 10 and is limited by x = -5 and x = 5. The side of the rectangle parallel to the axis Y has the lenght of 40 and is limited by y = -20 and y = 20..
+        /// </summary>
+        public static string FullDescription {
+            get {
+                return ResourceManager.GetString("FullDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to y = (x^2 - 4) * sin(x).
         /// </summary>
-        public static string AreaCalc {
+        public static string Function {
             get {
-                return ResourceManager.GetString("AreaCalc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bag with colored balls.
-        /// </summary>
-        public static string ColoredBallsCalc {
-            get {
-                return ResourceManager.GetString("ColoredBallsCalc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A dice.
-        /// </summary>
-        public static string DiceCalc {
-            get {
-                return ResourceManager.GetString("DiceCalc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Experimental Probability.
-        /// </summary>
-        public static string DisplayName {
-            get {
-                return ResourceManager.GetString("DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Menu.
-        /// </summary>
-        public static string Header {
-            get {
-                return ResourceManager.GetString("Header", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to x^2 + y^2 = 1.
-        /// </summary>
-        public static string PiCalc {
-            get {
-                return ResourceManager.GetString("PiCalc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pool Calculations:.
-        /// </summary>
-        public static string PoolCalcs {
-            get {
-                return ResourceManager.GetString("PoolCalcs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tutorial.
-        /// </summary>
-        public static string Tutorial {
-            get {
-                return ResourceManager.GetString("Tutorial", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 2-D Plane Calculations:.
-        /// </summary>
-        public static string TwoDPlaneCalcs {
-            get {
-                return ResourceManager.GetString("TwoDPlaneCalcs", resourceCulture);
+                return ResourceManager.GetString("Function", resourceCulture);
             }
         }
     }

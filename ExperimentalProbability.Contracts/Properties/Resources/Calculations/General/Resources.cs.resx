@@ -138,9 +138,6 @@
   <data name="Header_SimulationsToRun" xml:space="preserve">
     <value>Počet simulací k provedení:</value>
   </data>
-  <data name="Results_FinalResult_Pi" xml:space="preserve">
-    <value>Přibližná hodnota čísla Pi =</value>
-  </data>
   <data name="Results_ProgressResultsExpander_Hide" xml:space="preserve">
     <value>Skrýt - Postupné výsledky</value>
   </data>
@@ -149,8 +146,5 @@
   </data>
   <data name="Result_ChartAxisY_Title" xml:space="preserve">
     <value>Výsledky</value>
-  </data>
-  <data name="Result_FinalResult_Probability" xml:space="preserve">
-    <value>Experimentální pravděpodobnost =</value>
   </data>
 </root>

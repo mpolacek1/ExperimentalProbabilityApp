@@ -107,6 +107,24 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Po
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pool Calculation:.
+        /// </summary>
+        public static string DisplayName {
+            get {
+                return ResourceManager.GetString("DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Experimental probability =.
+        /// </summary>
+        public static string FinalResultName {
+            get {
+                return ResourceManager.GetString("FinalResultName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pool visualization.
         /// </summary>
         public static string Header_Visualization {

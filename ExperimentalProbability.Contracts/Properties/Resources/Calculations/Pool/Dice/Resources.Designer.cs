@@ -143,7 +143,7 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Po
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pool Calculation: Dice.
+        ///   Looks up a localized string similar to Dice.
         /// </summary>
         public static string DisplayName {
             get {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.QuarterCircle {
+namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Pi {
     using System;
     
     
@@ -39,8 +39,8 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Qua" +
-                            "rterCircle.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Pi." +
+                            "Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -62,11 +62,11 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2-D Plane Calculation: x^2 + y^2 = 1.
+        ///   Looks up a localized string similar to Approximate value of number Pi =.
         /// </summary>
-        public static string DisplayName {
+        public static string FinalResultName {
             get {
-                return ResourceManager.GetString("DisplayName", resourceCulture);
+                return ResourceManager.GetString("FinalResultName", resourceCulture);
             }
         }
         

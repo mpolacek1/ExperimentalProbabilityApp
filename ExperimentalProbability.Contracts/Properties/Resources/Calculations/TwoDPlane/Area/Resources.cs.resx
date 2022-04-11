@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Description_FunctionPrefix" xml:space="preserve">
-    <value>Function prefix:</value>
+  <data name="FinalResultName" xml:space="preserve">
+    <value>Přibližný obsah dané funkce =</value>
   </data>
-  <data name="DisplayName" xml:space="preserve">
-    <value>2-D Plane Calculation:</value>
+  <data name="FullDescription" xml:space="preserve">
+    <value>Tento výpočet využívá 2D plochu, kde existuje obdelník, který obaluje funkci y = (x^2 - 4) * sin(x). Strana obdelníků rovnoběžná s osou X má délku 10 a je omezena v x = -5 a x = 5. Strana obdelníku rovnoběžná s osou Y má délku 40 a je omezena v y = -20 a y = 20.</value>
   </data>
 </root>

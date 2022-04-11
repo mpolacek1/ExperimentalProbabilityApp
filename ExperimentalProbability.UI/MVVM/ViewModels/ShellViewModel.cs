@@ -2,13 +2,13 @@
 using System.Linq;
 using Caliburn.Micro;
 using ExperimentalProbability.Contracts.Properties.Resources.Shell;
-using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls;
-using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice;
-using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane.QuarterCircle;
+using ExperimentalProbability.UI.MVVM.ViewModels.Calculations.TwoDPlane;
+using ColoredBallsShellVM = ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBalls.ShellViewModel;
+using DiceShellVM = ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice.ShellViewModel;
 
 namespace ExperimentalProbability.UI.MVVM.ViewModels
 {
-    public class ShellViewModel : Conductor<object>.Collection.OneActive
+    public class ShellViewModel : Conductor<Screen>.Collection.OneActive
     {
         public ShellViewModel()
         {
@@ -24,17 +24,22 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels
 
         public void ShowColoredBallsCalc()
         {
-            ActivateWantedVM(typeof(ColoredBallsShellViewModel));
+            ActivateWantedVM(typeof(ColoredBallsShellVM));
         }
 
         public void ShowDiceCalc()
         {
-            ActivateWantedVM(typeof(DiceShellViewModel));
+            ActivateWantedVM(typeof(DiceShellVM));
         }
 
-        public void ShowQuarterCircleCalc()
+        public void ShowPiCalc()
         {
-            ActivateWantedVM(typeof(QuarterCircleShellViewModel));
+            ActivateWantedVM(typeof(PiShellViewModel));
+        }
+
+        public void ShowAreaCalc()
+        {
+            ActivateWantedVM(typeof(AreaShellViewModel));
         }
 
         public void ActivateWantedVM(Type vm)
@@ -43,7 +48,7 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels
 
             if (item == null)
             {
-                ActivateItem(Activator.CreateInstance(vm));
+                ActivateItem((Screen)Activator.CreateInstance(vm));
             }
             else
             {

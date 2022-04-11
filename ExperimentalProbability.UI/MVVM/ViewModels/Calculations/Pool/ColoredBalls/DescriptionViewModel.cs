@@ -140,9 +140,9 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.ColoredBa
             return renderedBag.ToArray();
         }
 
-        private ColoredBallsShellViewModel GetShellVM()
+        private ShellViewModel GetShellVM()
         {
-            return (ColoredBallsShellViewModel)Parent;
+            return (ShellViewModel)Parent;
         }
     }
 }

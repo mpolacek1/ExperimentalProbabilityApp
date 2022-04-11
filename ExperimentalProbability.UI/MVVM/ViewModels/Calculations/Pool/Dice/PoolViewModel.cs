@@ -57,9 +57,9 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels.Calculations.Pool.Dice
             return selectableSides;
         }
 
-        private DiceShellViewModel GetShellVM()
+        private ShellViewModel GetShellVM()
         {
-            return (DiceShellViewModel)Parent;
+            return (ShellViewModel)Parent;
         }
     }
 }

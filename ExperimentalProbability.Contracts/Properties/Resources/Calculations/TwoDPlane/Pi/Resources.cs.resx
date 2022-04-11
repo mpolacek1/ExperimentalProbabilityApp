@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DisplayName" xml:space="preserve">
-    <value>Výpočet s 2D Plochou: x^2 + y^2 = 1</value>
+  <data name="FinalResultName" xml:space="preserve">
+    <value>Přibližná hodnota čísla Pi =</value>
   </data>
   <data name="FullDescription" xml:space="preserve">
     <value>Tento výpočet využívá 2D plochu, kde existuje čtvrtkruh s poloměrem 1. Tento čtvrtkruh je obalen čtvercem, který má délku strany 1. Tento výpočet se využívá pro získání přibližné hodnoty iracionálního číslo Pi.</value>

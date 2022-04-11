@@ -1,14 +1,14 @@
-﻿using ExperimentalProbability.Calculations.CalculationDataValidation.Calculations.TwoDPlane;
+﻿using ExperimentalProbability.Calculations.CalculationDataValidation;
 using ExperimentalProbability.Contracts.Models;
 using System;
 using System.ComponentModel;
 
 namespace ExperimentalProbability.Calculations.Calculations.TwoDPlane
 {
-    public class QuarterCircleCalculation : BaseCalculation
+    public class PiCalculation : BaseCalculation
     {
-        public QuarterCircleCalculation(BackgroundWorker worker)
-            : base(new QuarterCircleDataValidator(), worker)
+        public PiCalculation(BackgroundWorker worker)
+            : base(new CalculationDataValidator(), worker)
         {
         }
 
