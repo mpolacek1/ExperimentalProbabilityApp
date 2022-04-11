@@ -125,7 +125,7 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Po
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pool Calculation: Bag of Colored Balls.
+        ///   Looks up a localized string similar to Bag of Colored Balls.
         /// </summary>
         public static string DisplayName {
             get {

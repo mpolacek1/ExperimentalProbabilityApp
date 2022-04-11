@@ -132,6 +132,12 @@
   <data name="Description_PoolInfo" xml:space="preserve">
     <value>Currently the pool is made out of:</value>
   </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Pool Calculation:</value>
+  </data>
+  <data name="FinalResultName" xml:space="preserve">
+    <value>Experimental probability =</value>
+  </data>
   <data name="Header_Visualization" xml:space="preserve">
     <value>Pool visualization</value>
   </data>

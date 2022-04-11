@@ -61,6 +61,15 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Shell {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to y = (x^2 - 4) * sin(x).
+        /// </summary>
+        public static string AreaCalc {
+            get {
+                return ResourceManager.GetString("AreaCalc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bag with colored balls.
         /// </summary>
         public static string ColoredBallsCalc {
