@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColoredBallsCalc" xml:space="preserve">
-    <value>Pytlík s barevnými kuličkami</value>
-  </data>
-  <data name="DiceCalc" xml:space="preserve">
-    <value>Kostka</value>
-  </data>
   <data name="DisplayName" xml:space="preserve">
     <value>Experimentální Pravděpodobnost</value>
   </data>
@@ -131,9 +125,6 @@
   </data>
   <data name="PoolCalcs" xml:space="preserve">
     <value>Výpočty s Osudím:</value>
-  </data>
-  <data name="Tutorial" xml:space="preserve">
-    <value>Návod k použití</value>
   </data>
   <data name="TwoDPlaneCalcs" xml:space="preserve">
     <value>Výpočty s 2D Plochou:</value>

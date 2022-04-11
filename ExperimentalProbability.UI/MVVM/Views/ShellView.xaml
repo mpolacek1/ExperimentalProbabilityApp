@@ -4,9 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pccbResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.ColoredBalls;assembly=ExperimentalProbability.Contracts"
+    xmlns:pcdResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.Pool.Dice;assembly=ExperimentalProbability.Contracts"
     xmlns:resx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Shell;assembly=ExperimentalProbability.Contracts"
+    xmlns:tResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Tutorial;assembly=ExperimentalProbability.Contracts"
+    xmlns:tdpcaResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Area;assembly=ExperimentalProbability.Contracts"
+    xmlns:tdpcpResx="clr-namespace:ExperimentalProbability.Contracts.Properties.Resources.Calculations.TwoDPlane.Pi;assembly=ExperimentalProbability.Contracts"
     xmlns:vm="clr-namespace:ExperimentalProbability.UI.MVVM.ViewModels"
-    Title="{Binding Path=DisplayName, Mode=OneTime}"
+    Title="{x:Static resx:Resources.DisplayName}"
     d:DataContext="{d:DesignInstance Type=vm:ShellViewModel}"
     Background="#0A0909"
     FontFamily="Yu Gothic"
@@ -39,30 +44,30 @@
                 <StackPanel Margin="5,0,0,0">
                     <RadioButton
                         x:Name="ShowTutorial"
-                        Content="{x:Static resx:Resources.Tutorial}"
+                        Content="{x:Static tResx:Resources.DisplayName}"
                         IsChecked="True"
                         Style="{StaticResource MenuButton}"
                         />
                     <TextBlock Style="{StaticResource MenuComment}" Text="{x:Static resx:Resources.PoolCalcs}" />
                     <RadioButton
                         x:Name="ShowColoredBallsCalc"
-                        Content="{x:Static resx:Resources.ColoredBallsCalc}"
+                        Content="{x:Static pccbResx:Resources.DisplayName}"
                         Style="{StaticResource MenuButton}"
                         />
                     <RadioButton
                         x:Name="ShowDiceCalc"
-                        Content="{x:Static resx:Resources.DiceCalc}"
+                        Content="{x:Static pcdResx:Resources.DisplayName}"
                         Style="{StaticResource MenuButton}"
                         />
                     <TextBlock Style="{StaticResource MenuComment}" Text="{x:Static resx:Resources.TwoDPlaneCalcs}" />
                     <RadioButton
                         x:Name="ShowPiCalc"
-                        Content="{x:Static resx:Resources.PiCalc}"
+                        Content="{x:Static tdpcpResx:Resources.Function}"
                         Style="{StaticResource MenuButton}"
                         />
                     <RadioButton
                         x:Name="ShowAreaCalc"
-                        Content="{x:Static resx:Resources.AreaCalc}"
+                        Content="{x:Static tdpcaResx:Resources.Function}"
                         Style="{StaticResource MenuButton}"
                         />
                 </StackPanel>
