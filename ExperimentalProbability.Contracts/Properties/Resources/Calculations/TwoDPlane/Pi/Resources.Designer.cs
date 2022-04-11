@@ -62,15 +62,6 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2-D Plane Calculation: x^2 + y^2 = 1.
-        /// </summary>
-        public static string DisplayName {
-            get {
-                return ResourceManager.GetString("DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Approximate value of number Pi =.
         /// </summary>
         public static string FinalResultName {

@@ -69,5 +69,14 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
                 return ResourceManager.GetString("Description_FunctionPrefix", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2-D Plane Calculation:.
+        /// </summary>
+        public static string DisplayName {
+            get {
+                return ResourceManager.GetString("DisplayName", resourceCulture);
+            }
+        }
     }
 }

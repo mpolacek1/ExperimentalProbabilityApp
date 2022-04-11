@@ -120,4 +120,7 @@
   <data name="Description_FunctionPrefix" xml:space="preserve">
     <value>Předpis funkce: </value>
   </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Výpočet s 2D Plochou:</value>
+  </data>
 </root>

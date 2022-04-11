@@ -120,4 +120,7 @@
   <data name="Description_FunctionPrefix" xml:space="preserve">
     <value>Function prefix:</value>
   </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>2-D Plane Calculation:</value>
+  </data>
 </root>
