@@ -121,9 +121,9 @@
     <value>Approximate area of the function =</value>
   </data>
   <data name="FullDescription" xml:space="preserve">
-    <value>This calculation works in a 2-D plane where exists a rectangle wrapped around the function y = (x^2 - 4) * sin(x). The side of the rectangle parallel to the axis X has the length of 10 and is limited by x = -5 and x = 5. The side of the rectangle parallel to the axis Y has the lenght of 40 and is limited by y = -20 and y = 20.</value>
+    <value>This calculation works in a 2-D plane where exists a square wrapped around the function y = x^4. The square has a side with lenght 1.</value>
   </data>
   <data name="Function" xml:space="preserve">
-    <value>y = (x^2 - 4) * sin(x)</value>
+    <value>y = x^4</value>
   </data>
 </root>

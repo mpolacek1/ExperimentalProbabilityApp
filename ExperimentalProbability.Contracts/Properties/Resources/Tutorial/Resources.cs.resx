@@ -136,7 +136,7 @@
     <value>Pokud se zobrazí nějaké chyby, pokračujte podle instrukcí ve vyskacovacím okně</value>
   </data>
   <data name="FourthSecondStep" xml:space="preserve">
-    <value>Pokud se nezobrazí žádné chyby, počkejte na až se vypočítají všechny výsledky</value>
+    <value>Pokud se nezobrazí žádné chyby, počkejte až se vypočítají všechny výsledky</value>
   </data>
   <data name="FourthStep" xml:space="preserve">
     <value>Spusťte současný výpočet</value>

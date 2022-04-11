@@ -71,7 +71,7 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This calculation works in a 2-D plane where exists a rectangle wrapped around the function y = (x^2 - 4) * sin(x). The side of the rectangle parallel to the axis X has the length of 10 and is limited by x = -5 and x = 5. The side of the rectangle parallel to the axis Y has the lenght of 40 and is limited by y = -20 and y = 20..
+        ///   Looks up a localized string similar to This calculation works in a 2-D plane where exists a square wrapped around the function y = x^4. The square has a side with lenght 1..
         /// </summary>
         public static string FullDescription {
             get {
@@ -80,7 +80,7 @@ namespace ExperimentalProbability.Contracts.Properties.Resources.Calculations.Tw
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to y = (x^2 - 4) * sin(x).
+        ///   Looks up a localized string similar to y = x^4.
         /// </summary>
         public static string Function {
             get {

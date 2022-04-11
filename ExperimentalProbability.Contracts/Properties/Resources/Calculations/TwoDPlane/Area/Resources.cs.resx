@@ -121,6 +121,6 @@
     <value>Přibližný obsah dané funkce =</value>
   </data>
   <data name="FullDescription" xml:space="preserve">
-    <value>Tento výpočet využívá 2D plochu, kde existuje obdelník, který obaluje funkci y = (x^2 - 4) * sin(x). Strana obdelníků rovnoběžná s osou X má délku 10 a je omezena v x = -5 a x = 5. Strana obdelníku rovnoběžná s osou Y má délku 40 a je omezena v y = -20 a y = 20.</value>
+    <value>Tento výpočet využívá 2D plochu, kde existuje čtverec, který obaluje funkci y = x^4. Strana čtverce má délku 1.</value>
   </data>
 </root>
