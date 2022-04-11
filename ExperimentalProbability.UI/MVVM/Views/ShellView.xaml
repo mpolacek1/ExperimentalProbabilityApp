@@ -60,6 +60,11 @@
                         Content="{x:Static resx:Resources.PiCalc}"
                         Style="{StaticResource MenuButton}"
                         />
+                    <RadioButton
+                        x:Name="ShowAreaCalc"
+                        Content="{x:Static resx:Resources.AreaCalc}"
+                        Style="{StaticResource MenuButton}"
+                        />
                 </StackPanel>
             </StackPanel>
         </Border>
