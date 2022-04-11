@@ -56,13 +56,13 @@ namespace ExperimentalProbability.UI.MVVM.ViewModels
         {
             return new ViewModelPlaceholder[7]
             {
-                new ViewModelPlaceholder(TResx.DisplayName, true, typeof(TutorialViewModel), true),
+                new ViewModelPlaceholder(TResx.DisplayName, typeof(TutorialViewModel), true),
                 new ViewModelPlaceholder(Resources.PoolCalcs),
-                new ViewModelPlaceholder(PCCBResx.DisplayName, true, typeof(ColoredBallsShellVM)),
-                new ViewModelPlaceholder(PCDResx.DisplayName, true, typeof(DiceShellVM)),
+                new ViewModelPlaceholder(PCCBResx.DisplayName, typeof(ColoredBallsShellVM)),
+                new ViewModelPlaceholder(PCDResx.DisplayName, typeof(DiceShellVM)),
                 new ViewModelPlaceholder(Resources.TwoDPlaneCalcs),
-                new ViewModelPlaceholder(TDPCPResx.Function, true, typeof(PiShellViewModel)),
-                new ViewModelPlaceholder(TDPCAResx.Function, true, typeof(AreaShellViewModel)),
+                new ViewModelPlaceholder(TDPCPResx.Function, typeof(PiShellViewModel)),
+                new ViewModelPlaceholder(TDPCAResx.Function, typeof(AreaShellViewModel)),
             };
         }
     }

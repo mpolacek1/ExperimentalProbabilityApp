@@ -1,5 +1,4 @@
 ﻿using Caliburn.Micro;
-using ExperimentalProbability.UI.MVVM.ViewModels;
 using System;
 
 namespace ExperimentalProbability.UI.MVVM.Models
@@ -8,10 +7,10 @@ namespace ExperimentalProbability.UI.MVVM.Models
     {
         private bool _isShown;
 
-        public ViewModelPlaceholder(string name, bool isVMReference = false, Type type = null, bool isShown = false)
+        public ViewModelPlaceholder(string name, Type type = null, bool isShown = false)
         {
             Name = name;
-            IsViewModelReference = isVMReference;
+            IsViewModelReference = type != null;
             Type = type;
             IsShown = isShown;
         }
